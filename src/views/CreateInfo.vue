@@ -13,7 +13,7 @@
 					<div v-for="player in allPlayers">
 						<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
 						<label class="form-check-label" for="defaultCheck1">
-    						{{ player }}
+    						{{ player.name }}
 						</label>
 					</div>
 				</div>
@@ -38,7 +38,7 @@
 		},
 		methods: {
 			registerPlayer: function() {
-				this.$http.post('https://ultimate-fantasy-fe04f.firebaseio.com/players.json', this.player)
+				this.$http.post('https://ultimate-fantasy-fe04f.firebaseio.com/fantasy-teams.json', this.player)
 					.then(response => {
 						console.log(response)
 					}, error => {
