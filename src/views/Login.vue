@@ -32,7 +32,7 @@
 			return {
 				user: 'test1@gmail.com',
 				password: 'test111',
-				users: [],
+				users: []
 			}
 		},
 		methods: {
@@ -49,6 +49,19 @@
 						this.users = resultArray
 					})
 			},
+			getPlayers: function() {
+				this.$http.get(`https://ultimate-fantasy-fe04f.firebaseio.com/players.json`)
+					.then(response => {
+						return response.json()
+					})
+					.then(data => {
+						const resultArray = []
+						for (let key in data) {
+							resultArray.push(data[key])
+						}
+						this.$store.state.allPlayers = resultArray
+					})
+			},
 			login: function() {
 				for(let i in this.users){
 					if(this.user == this.users[i].email && this.password == this.users[i].password) {
@@ -61,6 +74,7 @@
 		},
 		beforeMount: function() {
 			this.getUsers()
+			this.getPlayers()
 		}
 	}
 </script>
