@@ -30,8 +30,8 @@
 	export default {
 		data: function() {
 			return {
-				user: 'test1@gmail.com',
-				password: 'test111',
+				user: 'test0@test.com',
+				password: 'test000',
 				users: []
 			}
 		},
@@ -47,6 +47,7 @@
 							resultArray.push(data[key])
 						}
 						this.users = resultArray
+						this.$store.state.allUsers = resultArray
 					})
 			},
 			getPlayers: function() {

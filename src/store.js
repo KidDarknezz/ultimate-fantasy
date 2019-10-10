@@ -6,6 +6,15 @@ Vue.use(Vuex)
 export const store = new Vuex.Store({
   state: {
   	allPlayers: [],
+  	allUsers: [],
+  	newUser: {
+		userId: '',
+		name: '',
+		email: '',
+		password: '',
+		roster: [],
+		teamName: ''
+	}
   },
   mutations: {
 
