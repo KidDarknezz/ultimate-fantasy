@@ -1,15 +1,26 @@
 <template>
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-">
-				<h3>Home</h3>
-				<p>Hola, {{ loginUser.name }}</p>
-				<p>Tu equipo es: {{ loginTeam.name }}</p>
-				<p>Tu Fantasy Score es de: {{ fantasyScore }}</p>
-				<p>Tu roster es: {{ loginTeam.roster }}</p>
-			</div>
-		</div>
-	</div>
+	<b-container>
+		<b-row style="height: 7vh">
+			<b-col cols="12">
+				<h3>{{ loginTeam.name }}</h3>
+			</b-col>
+		</b-row>
+		<b-row style="height: 10vh">
+			<b-col cols="12">
+				<h4 class="score">Puntos<br>{{ fantasyScore }}</h4>
+			</b-col>
+		</b-row>
+		<b-row style="height: 75vh">
+			<b-col cols="12">
+				<p>Ranking</p>
+			</b-col>			
+			<b-col cols="12" class="teams-list">
+				<b-list-group>
+					<b-list-group-item v-for="team in allTeams">{{ team.name }} - <span>0000</span></b-list-group-item>
+				</b-list-group>
+			</b-col>
+		</b-row>
+	</b-container>
 </template>
 
 <script>
@@ -18,7 +29,8 @@
 			return {
 				loginUser: {},
 				loginTeam: {},
-				fantasyScore: 0
+				fantasyScore: 0,
+				allTeams: []
 			}
 		},
 		methods: {
@@ -41,6 +53,19 @@
 						this.calculateScore()
 					})
 			},
+			getAllTeams: function() {
+				this.$http.get(`https://ultimate-fantasy-fe04f.firebaseio.com/fantasy-teams.json`)
+					.then(response => {
+						return response.json()
+					})
+					.then(data => {
+						const resultArray = []
+						for (let key in data) {
+							resultArray.push(data[key])
+						}
+						this.allTeams = resultArray
+					})
+			},
 			calculateScore: function() {
 				for (let i in this.loginTeam.roster) {
 					for (let j in this.$store.state.allPlayers) {
@@ -54,7 +79,18 @@
 		beforeMount: function() {
 			this.getUser()
 			this.getTeam()
+			this.getAllTeams()
 		}
 	}
 </script>
 
+<style>
+	.score {
+		text-align: center;
+	}
+
+	.teams-list {
+		height: 90%;
+		overflow: scroll;
+	}
+</style>

@@ -1,53 +1,47 @@
 <template>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-3">
-				<label>New player</label>
-				<input type="text" class="form-control" v-model="player.name">
-				<br>
-				<button class="btn btn-success" @click="registerPlayer">Submit</button>
-				<hr>
-				<label>New Team</label>
-				<input type="text" class="form-control" v-model="team.name" style="margin-bottom: 15px;">
-				<div class="form-check">
-					<div v-for="player in allPlayers">
-						<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-						<label class="form-check-label" for="defaultCheck1">
-    						{{ player.name }}
-						</label>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	<b-container>
+		<b-row>
+			<b-col cols="12">
+				<h3>Importar Data</h3>
+			</b-col>
+		</b-row>
+		<b-row>
+			<b-col cols="12" style="margin-top: 20px;">
+				<textarea class="form-control" rows="12" v-model="importedData"></textarea>
+			</b-col>
+			<b-col cols="12">
+				<button class="btn btn-info" style="margin-top: 20px;" @click="importData">IMPORTAR</button>
+			</b-col>
+		</b-row>
+	</b-container>
 </template>
 
 <script>
 	export default {
 		data: function() {
-			return {
-				player: {
-					name: '',
-				},
-				allPlayers: [],
-				team: {
-					name: '',
-					roster: []
+			return{
+				importedData: '',
+				patchScore: {
+					score: 0
 				}
 			}
 		},
 		methods: {
-			registerPlayer: function() {
-				this.$http.post('https://ultimate-fantasy-fe04f.firebaseio.com/fantasy-teams.json', this.player)
-					.then(response => {
-						console.log(response)
-					}, error => {
-						console.log(error)
-					})
+			importData: function() {
+				let jsonImportedData = JSON.parse(this.importedData)
+				for(let j in jsonImportedData) {
+					for (let i in this.$store.state.allPlayers) {
+						if (this.$store.state.allPlayers[i].playerId == jsonImportedData[j].playerId) {
+							this.patchScore.score = this.$store.state.allPlayers[i].score + jsonImportedData[j].score
+						}
+					}
+					this.patchNewScore(jsonImportedData[j].playerId)
+				}
+				
 			},
-			getAllPlayers: function() {
-				this.$http.get('https://ultimate-fantasy-fe04f.firebaseio.com/players.json').
-					then(response => {
+			getPlayers: function() {
+				this.$http.get(`https://ultimate-fantasy-fe04f.firebaseio.com/players.json`)
+					.then(response => {
 						return response.json()
 					})
 					.then(data => {
@@ -55,19 +49,25 @@
 						for (let key in data) {
 							resultArray.push(data[key])
 						}
-						this.allPlayers = resultArray
-						console.log(resultArray)
+						this.$store.state.allPlayers = resultArray
 					})
+			},
+			patchNewScore: function(playerId) {
+				this.$http.patch(`https://ultimate-fantasy-fe04f.firebaseio.com/players/${playerId}.json`, this.patchScore)
+				.then(response => {
+					console.log(response)
+				})
+				.then(err => {
+					console.log(err)
+				})
 			}
 		},
 		beforeMount: function() {
-			this.getAllPlayers()
+			this.getPlayers()
 		}
 	}
 </script>
 
 <style>
-	.container {
-		margin-top: 30px;
-	}
+
 </style>

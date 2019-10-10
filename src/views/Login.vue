@@ -1,29 +1,29 @@
 <template>
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-2">
-				<h3>Login</h3>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-12">
+	<b-container>
+		<b-row class="row" style="padding-top: 30px;">
+			<b-col>
+				<h3>DEM<i>tasy</i></h3>
+			</b-col>
+		</b-row>
+		<b-row style="margin-top: 50px">
+			<b-col cols="12">
 				<label>Correo:</label>
 				<input type="email" class="form-control" placeholder="test@test.com" v-model="user">
-			</div>
-			<div class="col-xs-12">
+			</b-col>
+			<b-col cols="12" style="margin-top: 20px;">
 				<label>Contraseña:</label>
 				<input type="password" class="form-control" placeholder="password" v-model="password">
-			</div>
-		</div>
+			</b-col>
+		</b-row>
 		<br>
-		<div class="row">
-			<div class="col-xs-12">
-				<button class="btn btn-success" @click="login">Login</button>
+		<b-row>
+			<b-col cols="12">
+				<button class="btn btn-success" @click="login">Iniciar sesion</button>
 				<br>
 				<router-link to="/create-account">Crear cuenta</router-link>
-			</div>
-		</div>
-	</div>
+			</b-col>
+		</b-row>
+	</b-container>
 </template>
 
 <script>
@@ -78,3 +78,12 @@
 		}
 	}
 </script>
+
+<style>
+	h3 {
+		text-align: center;
+	}
+	.container {
+		margin-top: 30px;
+	}
+</style>
