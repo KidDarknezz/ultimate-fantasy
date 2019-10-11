@@ -30,24 +30,22 @@
 	export default {
 		data: function() {
 			return {
-				user: 'test0@test.com',
-				password: 'test000',
-				users: []
+				user: '',
+				password: ''
 			}
 		},
 		methods: {
 			getUsers: function() {
 				this.$http.get('https://ultimate-fantasy-fe04f.firebaseio.com/users.json')
 					.then(response => {
-						return response.json()
-					})
-					.then(data => {
-						const resultArray = []
-						for (let key in data) {
-							resultArray.push(data[key])
+						const data = response.data
+						const users = []
+						for (let i in data) {
+							const user = data[i]
+							user.id = i
+							users.push(user)
 						}
-						this.users = resultArray
-						this.$store.state.allUsers = resultArray
+						this.$store.state.allUsers = users
 					})
 			},
 			getPlayers: function() {
@@ -64,9 +62,9 @@
 					})
 			},
 			login: function() {
-				for(let i in this.users){
-					if(this.user == this.users[i].email && this.password == this.users[i].password) {
-						localStorage.userId = this.users[i].userId
+				for(let i in this.$store.state.allUsers){
+					if(this.user == this.$store.state.allUsers[i].email && this.password == this.$store.state.allUsers[i].password) {
+						localStorage.userId = this.$store.state.allUsers[i].id
 						this.$router.push('home')
 						break
 					}

@@ -16,7 +16,7 @@
 			</b-col>			
 			<b-col cols="12" class="teams-list">
 				<b-list-group>
-					<b-list-group-item v-for="team in this.$store.state.allUsers">{{ team.name }} - <span>0000</span></b-list-group-item>
+					<b-list-group-item v-for="team in this.$store.state.allUsers">{{ team.teamName }} - <span>0000</span></b-list-group-item>
 				</b-list-group>
 			</b-col>
 		</b-row>

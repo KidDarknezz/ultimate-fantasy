@@ -47,8 +47,6 @@
 						}
 						this.allPlayers = resultArray
 					})
-			},
-			addPlayer: function(playerId) {
 			}
 		},
 		beforeMount: function() {

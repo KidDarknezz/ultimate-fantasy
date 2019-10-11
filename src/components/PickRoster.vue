@@ -29,12 +29,13 @@
 			// if(this.selected.length >= 4 || this.selected.length <= 2) {
 			// 	alert("Es olbigatorio seleccionar 3 jugadores")
 			// }
-			this.$store.state.newUser.userId = this.$store.state.allPlayers.length
 			this.$store.state.newUser.roster = (this.selected)
 			console.log(this.$store.state.newUser)
 			this.$http.post(`https://ultimate-fantasy-fe04f.firebaseio.com/users.json`, this.$store.state.newUser)
 				.then(response => {
 					console.log(response)
+					alert("Tu equipo se ha creado con exito, puedes iniciar sesion")
+					this.$router.push('/')
 				})
 				.then(err => {
 					console.log(err)
