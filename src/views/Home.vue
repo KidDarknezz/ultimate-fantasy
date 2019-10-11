@@ -16,7 +16,11 @@
 			</b-col>			
 			<b-col cols="12" class="teams-list">
 				<b-list-group>
-					<b-list-group-item v-for="team in this.$store.state.allUsers">{{ team.teamName }} - <span>0000</span></b-list-group-item>
+					<b-list-group-item v-for="team in this.$store.state.allUsers">
+						<span>{{ team.teamName }}</span> - 
+						<span>{{ team.score }}</span><br>
+						<span>{{ team.name }}</span>
+					</b-list-group-item>
 				</b-list-group>
 			</b-col>
 		</b-row>
@@ -50,10 +54,28 @@
 						}
 					}
 				}
+			},
+			calculateRanking: function() {
+				for(let i in this.$store.state.allUsers) {
+					var score = 0
+					for(let j in this.$store.state.allUsers[i].roster) {
+						for(let k in this.$store.state.allPlayers) {
+							if (this.$store.state.allUsers[i].roster[j] == this.$store.state.allPlayers[k].playerId) {
+								score += this.$store.state.allPlayers[k].score
+							}
+						}
+					}
+					this.$store.state.allUsers[i].score = score
+				}
+				this.sortRanking()
+			},
+			sortRanking: function() {
+				this.$store.state.allUsers.sort((a, b) => (a.score > b.score) ? -1 : 1)
 			}
 		},
 		beforeMount: function() {
 			this.getUser()
+			this.calculateRanking()
 		}
 	}
 </script>
