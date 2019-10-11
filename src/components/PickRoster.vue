@@ -1,16 +1,15 @@
 <template>
 	<b-row>
 		<b-col cols="12">
+			<p>Selecciona 3 jugadores por equipo</p>
+			<p>{{ this.$store.state.allOriginTeams[teamStep].name }}</p>
 			<b-form-group>
 				<b-form-checkbox-group id="checkbox-group-2" v-model="selected" name="flavour-2" stacked>
-					<b-form-checkbox :value="player.playerId" v-for="player in options">{{ player.name }}</b-form-checkbox>
-					<!-- <b-form-checkbox value="apple">Apple</b-form-checkbox>
-					<b-form-checkbox value="pineapple">Pineapple</b-form-checkbox>
-					<b-form-checkbox value="grape">Grape</b-form-checkbox> -->
+					<b-form-checkbox :value="player.playerId" v-for="player in options" v-if="player.originTeam == teamStep">{{ player.name }}</b-form-checkbox>
 				</b-form-checkbox-group>
 			</b-form-group>
-			<div>Selected: <strong>{{ selected }}</strong></div>
-			<button class="btn btn-success" @click="checkPicks">Check</button>
+			<button class="btn btn-success" @click="checkPicks" v-if="teamStep != (this.$store.state.allOriginTeams.length - 1)">Siguiente</button>
+			<button class="btn btn-success" @click="createAccount" v-if="teamStep == (this.$store.state.allOriginTeams.length - 1)">Finalizar</button>
 		</b-col>
 	</b-row>
 </template>
@@ -21,16 +20,25 @@
 		return {
 			counter: 0,
 			selected: [], // Must be an array reference!
-			options: this.$store.state.allPlayers
+			options: this.$store.state.allPlayers,
+			teamStep: 0,
+			counter: 0
 		}
 	},
 	methods: {
 		checkPicks: function() {
-			// if(this.selected.length >= 4 || this.selected.length <= 2) {
-			// 	alert("Es olbigatorio seleccionar 3 jugadores")
-			// }
+			if (this.teamStep < this.$store.state.allOriginTeams.length) {
+				if ((this.selected.length % 3) == 0) {
+					this.teamStep++
+					console.log(this.$store.state.allOriginTeams.length)
+				}
+				if ((this.selected.length % 3) != 0) {
+					alert("Seleccione 3")
+				}	
+			} 
+		},
+		createAccount: function() {
 			this.$store.state.newUser.roster = (this.selected)
-			console.log(this.$store.state.newUser)
 			this.$http.post(`https://ultimate-fantasy-fe04f.firebaseio.com/users.json`, this.$store.state.newUser)
 				.then(response => {
 					console.log(response)
@@ -40,6 +48,7 @@
 				.then(err => {
 					console.log(err)
 				})
+			console.log(this.$store.state.newUser)
 		}
 	}
   }

@@ -18,11 +18,27 @@
 	export default {
 		data: function() {
 			return {
-				step: false
+				step: false,
+				originTeams: []
 			}
 		},
 		methods: {
-
+			getAllOriginTeams: function() {
+				this.$http.get(`https://ultimate-fantasy-fe04f.firebaseio.com/teams.json`)
+					.then(response => {
+						return response.json()
+					})
+					.then(data => {
+						const resultArray = []
+						for (let key in data) {
+							resultArray.push(data[key])
+						}
+						this.$store.state.allOriginTeams = resultArray
+					})
+			}
+		},
+		beforeMount: function() {
+			this.getAllOriginTeams()
 		},
 		components: {
 			'account-form': AccountForm,
