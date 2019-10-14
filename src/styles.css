@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&display=swap');
+
+body {
+	font-family: 'Comfortaa', cursive;
+}
+
+.container {
+	margin-top: 0;
+}
+
+.heading {
+	padding: 45px 0;
+	color: #fff;
+	background-color: #32a55a;
+	border-bottom-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+}
+
+.heading h4 {
+	font-size: 40px;
+	margin-bottom: 0;
+	font-weight: 700;
+	color: #ffff36;
+	text-align: center;
+}
+
+.heading h4 span {
+	font-size: 17px;
+	font-weight: 300;
+	color: #fff;
+}
+
+.content {
+	margin-top: 20px;
+}
+
+.ranking-name {
+	font-weight: 700;
+	font-size: 15px;
+}
+
+.ranking-score {
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.ranking-owner {
+	font-weight: 300;
+	font-size: 13px;
+}
+
+input {
+	margin-bottom: 20px;
+}

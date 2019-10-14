@@ -1,6 +1,6 @@
 <template>
 	<b-container>
-		<b-row class="row" style="padding-top: 30px;">
+		<b-row class="row" style="padding-top: 70px;">
 			<b-col>
 				<h3>DEM<i>tasy</i></h3>
 			</b-col>
@@ -19,7 +19,7 @@
 		<b-row>
 			<b-col cols="12">
 				<button class="btn btn-success" @click="login">Iniciar sesion</button>
-				<br>
+				<br><br>
 				<router-link to="/create-account">Crear cuenta</router-link>
 			</b-col>
 		</b-row>

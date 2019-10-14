@@ -1,14 +1,14 @@
 <template>
 	<b-container>
-		<b-row>
+		<b-row class="heading">
 			<b-col cols="12">
 				<h3 v-if="!step">Crear cuenta</h3>
 				<h3 v-if="step">Selecciona tu roster</h3>
 			</b-col>
 		</b-row>
-		<account-form v-if="!step"></account-form>
+		<account-form v-if="!step" class="content"></account-form>
 		<button class="btn btn-success" @click="step = !step" v-if="!step">Seleccionar roster</button>
-		<pick-roster v-if="step"></pick-roster>
+		<pick-roster v-if="step" class="content"></pick-roster>
 	</b-container>
 </template>
 

@@ -1,25 +1,23 @@
 <template>
 	<b-container>
-		<b-row style="height: 7vh">
+		<b-row class="heading">
 			<b-col cols="12">
 				<h3>{{ loginUser.teamName }}</h3>
 			</b-col>
-		</b-row>
-		<b-row style="height: 10vh">
 			<b-col cols="12">
-				<h4 class="score">Puntos<br>{{ fantasyScore }}</h4>
+				<h4 class="score"><span>Puntos</span><br>{{ fantasyScore }}</h4>
 			</b-col>
 		</b-row>
-		<b-row style="height: 75vh">
+		<b-row class="content">
 			<b-col cols="12">
-				<p>Ranking</p>
+				<p style="font-weight: 700;">Ranking</p>
 			</b-col>			
 			<b-col cols="12" class="teams-list">
 				<b-list-group>
 					<router-link :to="`/team/${team.id}`" tag="b-list-group-item" v-for="team in this.$store.state.allUsers" >
-						<span>{{ team.teamName }}</span> - 
-						<span>{{ team.score }}</span><br>
-						<span>{{ team.name }}</span>
+						<span class="ranking-name">{{ team.teamName }}</span> - 
+						<span class="ranking-score">{{ team.score }}</span> Pts.<br>
+						<span class="ranking-owner">{{ team.name }}</span>
 					</router-link>
 				</b-list-group>
 			</b-col>
@@ -81,12 +79,5 @@
 </script>
 
 <style>
-	.score {
-		text-align: center;
-	}
 
-	.teams-list {
-		height: 90%;
-		overflow: scroll;
-	}
 </style>
