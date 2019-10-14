@@ -5,6 +5,7 @@ import CreateInfo from '@/views/CreateInfo.vue'
 import Login from '@/views/Login.vue'
 import CreateAccount from '@/views/CreateAccount.vue'
 import CreateRoster from '@/views/CreateRoster.vue'
+import TeamRoster from '@/views/TeamRoster.vue'
 
 Vue.use(Router)
 
@@ -44,6 +45,11 @@ export default new Router({
       path: '/create-roster',
       name: 'create-roster',
       component: CreateRoster
+    },
+    {
+      path: '/team/:id',
+      name: '',
+      component: TeamRoster
     }
   ]
 })

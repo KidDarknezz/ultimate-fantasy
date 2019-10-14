@@ -16,11 +16,11 @@
 			</b-col>			
 			<b-col cols="12" class="teams-list">
 				<b-list-group>
-					<b-list-group-item v-for="team in this.$store.state.allUsers">
+					<router-link :to="`/team/${team.id}`" tag="b-list-group-item" v-for="team in this.$store.state.allUsers" >
 						<span>{{ team.teamName }}</span> - 
 						<span>{{ team.score }}</span><br>
 						<span>{{ team.name }}</span>
-					</b-list-group-item>
+					</router-link>
 				</b-list-group>
 			</b-col>
 		</b-row>

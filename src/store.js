@@ -8,13 +8,13 @@ export const store = new Vuex.Store({
   	allPlayers: [],
   	allUsers: [],
     allOriginTeams: [],
-  	newUser: {
-		name: '',
-		email: '',
-		password: '',
-		roster: [],
-		teamName: ''
-	}
+    	newUser: {
+  		name: '',
+  		email: '',
+  		password: '',
+  		roster: [],
+  		teamName: ''
+    }
   },
   mutations: {
 
