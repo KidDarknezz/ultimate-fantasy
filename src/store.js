@@ -8,7 +8,7 @@ export const store = new Vuex.Store({
   	allPlayers: [],
   	allUsers: [],
     allOriginTeams: [],
-    	newUser: {
+    newUser: {
   		name: '',
   		email: '',
   		password: '',

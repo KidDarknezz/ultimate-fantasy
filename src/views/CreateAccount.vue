@@ -7,7 +7,7 @@
 			</b-col>
 		</b-row>
 		<account-form v-if="!step" class="content"></account-form>
-		<button class="btn btn-success" @click="step = !step" v-if="!step">Seleccionar roster</button>
+		<button @click="validateForm" class="btn btn-success" v-if="!step">Seleccionar roster</button>
 		<pick-roster v-if="step" class="content"></pick-roster>
 	</b-container>
 </template>
@@ -35,6 +35,14 @@
 						}
 						this.$store.state.allOriginTeams = resultArray
 					})
+			},
+			validateForm: function() {
+				let newUser = this.$store.state.newUser
+				if(newUser.name == "" || newUser.email == "" || newUser.password == "" || newUser.teamName == "") {
+					alert("Porfavor llena todos los campos")
+				} else {
+					this.step = !this.step
+				}
 			}
 		},
 		beforeMount: function() {
