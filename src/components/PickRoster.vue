@@ -35,10 +35,10 @@
 	methods: {
 		checkPicks: function() {
 			if (this.teamStep < this.$store.state.allOriginTeams.length) {
-				if ((this.selected.length % 3) == 0) {
+				if ((this.selected.length % 3) == 0 && this.selected.length > 0) {
 					this.teamStep++
 				}
-				if ((this.selected.length % 3) != 0) {
+				if ((this.selected.length % 3) != 0 || this.selected.length == 0) {
 					alert("Seleccione 3")
 				}	
 			} 
