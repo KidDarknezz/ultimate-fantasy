@@ -8,11 +8,11 @@
 		<b-row style="margin-top: 50px">
 			<b-col cols="12">
 				<label>Correo:</label>
-				<input type="email" class="form-control" placeholder="test@test.com" v-model="user">
+				<input type="email" class="form-control" placeholder="test@test.com" v-model="user" v-on:keyup.enter="login">
 			</b-col>
 			<b-col cols="12" style="margin-top: 20px;">
 				<label>Contraseña:</label>
-				<input type="password" class="form-control" placeholder="password" v-model="password">
+				<input type="password" class="form-control" placeholder="password" v-model="password" v-on:keyup.enter="login">
 			</b-col>
 		</b-row>
 		<br>
