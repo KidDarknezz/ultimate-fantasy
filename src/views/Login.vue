@@ -66,9 +66,10 @@
 					if(this.user == this.$store.state.allUsers[i].email && this.password == this.$store.state.allUsers[i].password) {
 						localStorage.userId = this.$store.state.allUsers[i].id
 						this.$router.push('home')
-						break
+						return
 					}
 				}
+				alert("Usuario incorrecto")
 			}
 		},
 		beforeMount: function() {
