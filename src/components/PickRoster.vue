@@ -1,7 +1,10 @@
 <template>
 	<b-row>
 		<b-col cols="12">
-			<p style="text-align: center;">Selecciona 3 jugadores por equipo</p>
+			<p style="text-align: center;">
+				Selecciona 3 jugadores del equipo 
+				<strong>{{ this.$store.state.allOriginTeams[teamStep].name }}</strong>
+			</p>
 			<!-- <p>{{ this.$store.state.allOriginTeams[teamStep].name }}</p> -->
 			<b-img :src="logos[teamStep]" center fluid style="width: 25%; margin-bottom: 20px;"></b-img>
 			<b-form-group>
@@ -19,11 +22,10 @@
   export default {
     data() {
 		return {
-			counter: 0,
-			selected: [], // Must be an array reference!
+			selected: [],
 			options: this.$store.state.allPlayers,
 			teamStep: 0,
-			counter: 0,
+			rosterCounter: 3,
 			logos: [
 				'https://ultiranks.com/wp-content/uploads/2019/09/Raiders_logo.png',
 				'https://ultiranks.com/wp-content/uploads/2019/09/Owls_logo.png',
@@ -35,26 +37,29 @@
 	methods: {
 		checkPicks: function() {
 			if (this.teamStep < this.$store.state.allOriginTeams.length) {
-				if ((this.selected.length % 3) == 0 && this.selected.length > 0) {
+				if ((this.selected.length % this.rosterCounter) == 0 && this.selected.length > 0) {
 					this.teamStep++
-				}
-				if ((this.selected.length % 3) != 0 || this.selected.length == 0) {
+					this.rosterCounter += 3
+					return true
+				} else {
 					alert("Seleccione 3")
 				}	
 			} 
 		},
 		createAccount: function() {
 			this.$store.state.newUser.roster = (this.selected)
-			this.$http.post(`https://ultimate-fantasy-fe04f.firebaseio.com/users.json`, this.$store.state.newUser)
-				.then(response => {
-					console.log(response)
-					alert("Tu equipo se ha creado con exito, puedes iniciar sesion")
-					this.$router.push('/')
-				})
-				.then(err => {
-					console.log(err)
-				})
-			console.log(this.$store.state.newUser)
+			let sendData = this.checkPicks()
+			if(sendData) {
+				this.$http.post(`https://ultimate-fantasy-fe04f.firebaseio.com/users.json`, this.$store.state.newUser)
+					.then(response => {
+						console.log(response)
+						alert("Tu equipo se ha creado con exito, puedes iniciar sesion")
+						this.$router.push('/')
+					})
+					.then(err => {
+						console.log(err)
+					})
+			}
 		}
 	}
   }
