@@ -140,3 +140,77 @@
 [info] i  functions: Finished "helloWorld" in ~1s
 [debug] [2019-11-08T17:30:27.051Z] [worker-helloWorld-b4b9f85e-a4ab-4079-b6b7-f8c87dfdba8c]: IDLE
 [debug] [2019-11-08T17:30:35.401Z] File C:\Users\diego\Desktop\ultimate-fantasy\functions\index.js changed, reloading triggers
+[debug] [2019-11-08T17:30:36.401Z] [worker-pool]: Shutting down IDLE worker (helloWorld)
+[debug] [2019-11-08T17:30:36.417Z] [worker-~diagnostic~-42c10039-1b9f-416b-af1d-0ddd96cc194f]: BUSY
+[debug] [2019-11-08T17:30:36.417Z] [worker-helloWorld-b4b9f85e-a4ab-4079-b6b7-f8c87dfdba8c]: exited
+[debug] [2019-11-08T17:30:36.417Z] [worker-helloWorld-b4b9f85e-a4ab-4079-b6b7-f8c87dfdba8c]: FINISHED
+[debug] [2019-11-08T17:30:36.770Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions","node_version":"10.16.0"}
+[debug] [2019-11-08T17:30:36.772Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T17:30:36.775Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-08T17:30:36.776Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-08T17:30:36.777Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-08T17:30:36.898Z] [worker-~diagnostic~-42c10039-1b9f-416b-af1d-0ddd96cc194f]: exited
+[debug] [2019-11-08T17:30:36.899Z] [worker-~diagnostic~-42c10039-1b9f-416b-af1d-0ddd96cc194f]: FINISHED
+[debug] [2019-11-08T17:33:02.601Z] File C:\Users\diego\Desktop\ultimate-fantasy\functions\libs\auth.js changed, reloading triggers
+[debug] [2019-11-08T17:33:03.611Z] [worker-~diagnostic~-cd95484a-92cc-4a2c-81cb-00f6450874c0]: BUSY
+[debug] [2019-11-08T17:33:04.006Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions","node_version":"10.16.0"}
+[debug] [2019-11-08T17:33:04.008Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T17:33:04.011Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-08T17:33:04.013Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-08T17:33:04.014Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-08T17:33:04.143Z] [worker-~diagnostic~-cd95484a-92cc-4a2c-81cb-00f6450874c0]: exited
+[debug] [2019-11-08T17:33:04.143Z] [worker-~diagnostic~-cd95484a-92cc-4a2c-81cb-00f6450874c0]: FINISHED
+[debug] [2019-11-08T17:33:54.647Z] File C:\Users\diego\Desktop\ultimate-fantasy\functions\libs\auth.js changed, reloading triggers
+[debug] [2019-11-08T17:33:55.664Z] [worker-~diagnostic~-33adb7c9-4f98-43da-991e-cb08d4caf48c]: BUSY
+[debug] [2019-11-08T17:33:56.021Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions","node_version":"10.16.0"}
+[debug] [2019-11-08T17:33:56.023Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T17:33:56.025Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-08T17:33:56.027Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-08T17:33:56.028Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-08T17:33:56.160Z] [worker-~diagnostic~-33adb7c9-4f98-43da-991e-cb08d4caf48c]: exited
+[debug] [2019-11-08T17:33:56.160Z] [worker-~diagnostic~-33adb7c9-4f98-43da-991e-cb08d4caf48c]: FINISHED
+[debug] [2019-11-08T17:34:01.837Z] File C:\Users\diego\Desktop\ultimate-fantasy\functions\test\integration\lib\auth.test.js changed, reloading triggers
+[debug] [2019-11-08T17:34:02.846Z] [worker-~diagnostic~-2d100366-e66f-46de-a1f4-02328400fa6b]: BUSY
+[debug] [2019-11-08T17:34:03.184Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions","node_version":"10.16.0"}
+[debug] [2019-11-08T17:34:03.186Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T17:34:03.189Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-08T17:34:03.190Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-08T17:34:03.191Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-08T17:34:03.315Z] [worker-~diagnostic~-2d100366-e66f-46de-a1f4-02328400fa6b]: exited
+[debug] [2019-11-08T17:34:03.315Z] [worker-~diagnostic~-2d100366-e66f-46de-a1f4-02328400fa6b]: FINISHED
+[debug] [2019-11-08T17:34:37.132Z] File C:\Users\diego\Desktop\ultimate-fantasy\functions\libs\auth.js changed, reloading triggers
+[debug] [2019-11-08T17:34:38.141Z] [worker-~diagnostic~-d82146cb-5d66-43ff-a991-d436be535835]: BUSY
+[debug] [2019-11-08T17:34:38.512Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions","node_version":"10.16.0"}
+[debug] [2019-11-08T17:34:38.514Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T17:34:38.518Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-08T17:34:38.521Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-08T17:34:38.523Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-08T17:34:38.667Z] [worker-~diagnostic~-d82146cb-5d66-43ff-a991-d436be535835]: exited
+[debug] [2019-11-08T17:34:38.667Z] [worker-~diagnostic~-d82146cb-5d66-43ff-a991-d436be535835]: FINISHED
+[debug] [2019-11-08T17:34:50.707Z] File C:\Users\diego\Desktop\ultimate-fantasy\functions\libs\auth.js changed, reloading triggers
+[debug] [2019-11-08T17:34:51.722Z] [worker-~diagnostic~-ba4fea18-31c6-4cb4-8100-042dfd3f9991]: BUSY
+[debug] [2019-11-08T17:34:52.091Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions","node_version":"10.16.0"}
+[debug] [2019-11-08T17:34:52.093Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T17:34:52.095Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-08T17:34:52.097Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-08T17:34:52.097Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-08T17:34:52.207Z] [worker-~diagnostic~-ba4fea18-31c6-4cb4-8100-042dfd3f9991]: exited
+[debug] [2019-11-08T17:34:52.208Z] [worker-~diagnostic~-ba4fea18-31c6-4cb4-8100-042dfd3f9991]: FINISHED
+[debug] [2019-11-08T17:35:00.437Z] File C:\Users\diego\Desktop\ultimate-fantasy\functions\libs\auth.js changed, reloading triggers
+[debug] [2019-11-08T17:35:01.445Z] [worker-~diagnostic~-7dd622cc-a6ba-48ef-91dd-b797d4d6231b]: BUSY
+[debug] [2019-11-08T17:35:01.788Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions","node_version":"10.16.0"}
+[debug] [2019-11-08T17:35:01.790Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T17:35:01.792Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-08T17:35:01.793Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-08T17:35:01.794Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-08T17:35:01.902Z] [worker-~diagnostic~-7dd622cc-a6ba-48ef-91dd-b797d4d6231b]: exited
+[debug] [2019-11-08T17:35:01.902Z] [worker-~diagnostic~-7dd622cc-a6ba-48ef-91dd-b797d4d6231b]: FINISHED
+[debug] [2019-11-08T17:35:37.586Z] File C:\Users\diego\Desktop\ultimate-fantasy\functions\libs\auth.js changed, reloading triggers
+[debug] [2019-11-08T17:35:38.597Z] [worker-~diagnostic~-ff6f0996-5a09-4b09-9e56-04c8692906ef]: BUSY
+[debug] [2019-11-08T17:35:38.931Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions","node_version":"10.16.0"}
+[debug] [2019-11-08T17:35:38.932Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T17:35:38.935Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-08T17:35:38.936Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-08T17:35:38.937Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-08T17:35:39.052Z] [worker-~diagnostic~-ff6f0996-5a09-4b09-9e56-04c8692906ef]: exited
+[debug] [2019-11-08T17:35:39.052Z] [worker-~diagnostic~-ff6f0996-5a09-4b09-9e56-04c8692906ef]: FINISHED
