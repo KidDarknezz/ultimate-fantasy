@@ -6,9 +6,10 @@
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build",
         "lint": "vue-cli-service lint",
-        "deploy": "vue-sli-service build && firebase deploy"
+        "deploy": "vue-cli-service build && firebase deploy"
     },
     "dependencies": {
+        "axios": "^0.19.0",
         "bootstrap": "^4.3.1",
         "bootstrap-vue": "^2.0.3",
         "core-js": "^2.6.5",
