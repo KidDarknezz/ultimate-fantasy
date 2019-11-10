@@ -7,49 +7,65 @@ import CreateAccount from '@/views/CreateAccount.vue'
 import CreateRoster from '@/views/CreateRoster.vue'
 import TeamRoster from '@/views/TeamRoster.vue'
 
+import * as firebase from 'firebase/app'
+import 'firebase/auth'
+
 Vue.use(Router)
 
-export default new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes: [
-    {
-      path: '/home',
-      name: 'home',
-      component: Home
-    },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
-    },
-    {
-      path: '/create-info',
-      name: 'create-info',
-      component: CreateInfo
-    },
-    {
-      path: '/',
-      name: 'login',
-      component: Login
-    },
-    {
-      path: '/create-account',
-      name: 'create-account',
-      component: CreateAccount
-    },
-    {
-      path: '/create-roster',
-      name: 'create-roster',
-      component: CreateRoster
-    },
-    {
-      path: '/team/:id',
-      name: '',
-      component: TeamRoster
+const ifNotAuthenticated = (to, from, next) => {
+    if (!firebase.auth().currentUser) {
+        next()
+        return
     }
-  ]
+    next('/')
+}
+
+const ifAuthenticated = (to, from, next) => {
+    if (firebase.auth().currentUser) {
+        next()
+        return
+    }
+    next('/login')
+}
+
+export default new Router({
+    mode: 'history',
+    base: process.env.BASE_URL,
+    routes: [
+        {
+            path: '/home',
+            name: 'home',
+            component: Home,
+            beforeEnter: ifAuthenticated,
+        },
+        {
+            path: '/create-info',
+            name: 'create-info',
+            component: CreateInfo,
+            beforeEnter: ifAuthenticated,
+        },
+        {
+            path: '/',
+            name: 'login',
+            component: Login,
+            beforeEnter: ifNotAuthenticated,
+        },
+        {
+            path: '/create-account',
+            name: 'create-account',
+            component: CreateAccount,
+        },
+        {
+            path: '/create-roster',
+            name: 'create-roster',
+            component: CreateRoster,
+            beforeEnter: ifNotAuthenticated,
+        },
+        {
+            path: '/team/:id',
+            name: '',
+            component: TeamRoster,
+            beforeEnter: ifNotAuthenticated,
+        },
+    ],
 })

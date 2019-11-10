@@ -14,7 +14,8 @@
 <script>
 import AccountForm from '@/components/AccountForm.vue'
 import PickRoster from '@/components/PickRoster.vue'
-import firebase from 'firebase/app'
+import * as firebase from 'firebase/app'
+import 'firebase/auth'
 
 export default {
     components: {
