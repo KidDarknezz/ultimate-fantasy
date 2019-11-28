@@ -89,7 +89,8 @@ export default {
                 .auth()
                 .signInWithEmailAndPassword(this.email, this.password)
                 .then(() => {
-                    localStorage.userId = firebase.auth().currentUser.uuid
+                    console.log(firebase.auth().currentUser)
+                    localStorage.userId = firebase.auth().currentUser.uid
                     this.$router.push('home')
                 })
                 .catch(error => {
