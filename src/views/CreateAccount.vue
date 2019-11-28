@@ -22,7 +22,7 @@ export default {
         'account-form': AccountForm,
         'pick-roster': PickRoster,
     },
-    data: function() {
+    data() {
         return {
             step: false,
             originTeams: [],
