@@ -1,5 +1,13 @@
 <template>
     <b-container>
+        <b-alert
+            :show="dismissCountDown"
+            dismissible
+            variant="danger"
+            @dismissed="0"
+            @dismiss-count-down="countDownChanged"
+        >{{errorMessage}}</b-alert>
+
         <b-row class="row" style="padding-top: 70px;">
             <b-col>
                 <h3>
@@ -51,9 +59,16 @@ export default {
         return {
             email: '',
             password: '',
+            errorCode: '',
+            errorMessage: '',
+            dismissSecs: 10,
+            dismissCountDown: 0,
         }
     },
     methods: {
+        countDownChanged(dismissCountDown) {
+            this.dismissCountDown = dismissCountDown
+        },
         getUsers: function() {
             this.$http
                 .get('https://ultimate-fantasy-fe04f.firebaseio.com/users.json')
@@ -95,9 +110,9 @@ export default {
                 })
                 .catch(error => {
                     // Handle Errors here.
-                    console.log(error)
-                    var errorCode = error.code
-                    var errorMessage = error.message
+                    this.dismissCountDown = this.dismissSecs
+                    this.errorCode = error.code
+                    this.errorMessage = error.message
                     // ...
                 })
         },
