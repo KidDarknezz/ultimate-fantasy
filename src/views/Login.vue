@@ -6,7 +6,7 @@
             variant="danger"
             @dismissed="0"
             @dismiss-count-down="countDownChanged"
-        >{{errorMessage}}</b-alert>
+        >{{ errorMessage }}</b-alert>
 
         <b-row class="row" style="padding-top: 70px;">
             <b-col>
@@ -65,48 +65,53 @@ export default {
             dismissCountDown: 0,
         }
     },
+    computed: {
+        user() {
+            return this.$store.getters.user
+        },
+    },
     methods: {
         countDownChanged(dismissCountDown) {
             this.dismissCountDown = dismissCountDown
         },
-        getUsers: function() {
-            this.$http
-                .get('https://ultimate-fantasy-fe04f.firebaseio.com/users.json')
-                .then(response => {
-                    const data = response.data
-                    const users = []
-                    for (let i in data) {
-                        const user = data[i]
-                        user.id = i
-                        users.push(user)
-                    }
-                    this.$store.state.allUsers = users
-                })
-        },
-        getPlayers: function() {
-            this.$http
-                .get(
-                    `https://ultimate-fantasy-fe04f.firebaseio.com/players.json`
-                )
-                .then(response => {
-                    return response.json()
-                })
-                .then(data => {
-                    const resultArray = []
-                    for (let key in data) {
-                        resultArray.push(data[key])
-                    }
-                    this.$store.state.allPlayers = resultArray
-                })
-        },
-        login() {
+        // getUsers: function() {
+        //     this.$http
+        //         .get('https://ultimate-fantasy-fe04f.firebaseio.com/users.json')
+        //         .then(response => {
+        //             const data = response.data
+        //             const users = []
+        //             for (let i in data) {
+        //                 const user = data[i]
+        //                 user.id = i
+        //                 users.push(user)
+        //             }
+        //             this.$store.state.allUsers = users
+        //         })
+        // },
+        // getPlayers: function() {
+        //     this.$http
+        //         .get(
+        //             `https://ultimate-fantasy-fe04f.firebaseio.com/players.json`
+        //         )
+        //         .then(response => {
+        //             return response.json()
+        //         })
+        //         .then(data => {
+        //             const resultArray = []
+        //             for (let key in data) {
+        //                 resultArray.push(data[key])
+        //             }
+        //             this.$store.state.allPlayers = resultArray
+        //         })
+        // },
+        async login() {
             firebase
                 .auth()
                 .signInWithEmailAndPassword(this.email, this.password)
-                .then(() => {
-                    console.log(firebase.auth().currentUser)
-                    localStorage.userId = firebase.auth().currentUser.uid
-                    this.$router.push('home')
+                .then(async () => {
+                    let user = await firebase.auth().currentUser
+                    await this.$store.dispatch('setCurrentUser', user)
+                    this.$router.push('/')
                 })
                 .catch(error => {
                     // Handle Errors here.
@@ -116,10 +121,6 @@ export default {
                     // ...
                 })
         },
-    },
-    beforeMount: function() {
-        this.getUsers()
-        this.getPlayers()
     },
 }
 </script>
