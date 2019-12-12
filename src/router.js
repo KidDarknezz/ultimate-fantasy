@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
-import CreateInfo from '@/views/CreateInfo.vue'
+import store from '@/store/store'
+
+import Home from '@/views/Home.vue'
 import Login from '@/views/Login.vue'
+import CreateInfo from '@/views/CreateInfo.vue'
 import CreateAccount from '@/views/CreateAccount.vue'
 import CreateRoster from '@/views/CreateRoster.vue'
 import TeamRoster from '@/views/TeamRoster.vue'
@@ -11,21 +13,10 @@ import * as firebase from 'firebase/app'
 import 'firebase/auth'
 
 Vue.use(Router)
-
-const ifNotAuthenticated = (to, from, next) => {
-    if (!firebase.auth().currentUser) {
-        next()
-        return
-    }
-    next('/')
-}
-
 const ifAuthenticated = (to, from, next) => {
-    if (firebase.auth().currentUser) {
+    if (store.getters.isAuthenticated) {
         next()
-        return
-    }
-    next('/login')
+    } else next('/login')
 }
 
 export default new Router({
@@ -48,7 +39,6 @@ export default new Router({
             path: '/login',
             name: 'login',
             component: Login,
-            beforeEnter: ifNotAuthenticated,
         },
         {
             path: '/create-account',
@@ -59,13 +49,13 @@ export default new Router({
             path: '/create-roster',
             name: 'create-roster',
             component: CreateRoster,
-            beforeEnter: ifNotAuthenticated,
+            // beforeEnter: ifNotAuthenticated,
         },
         {
             path: '/team/:id',
             name: '',
             component: TeamRoster,
-            beforeEnter: ifNotAuthenticated,
+            // beforeEnter: ifNotAuthenticated,
         },
     ],
 })
