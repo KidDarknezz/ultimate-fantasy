@@ -33,7 +33,7 @@ export default new Router({
     base: process.env.BASE_URL,
     routes: [
         {
-            path: '/home',
+            path: '/',
             name: 'home',
             component: Home,
             beforeEnter: ifAuthenticated,
@@ -45,7 +45,7 @@ export default new Router({
             beforeEnter: ifAuthenticated,
         },
         {
-            path: '/',
+            path: '/login',
             name: 'login',
             component: Login,
             beforeEnter: ifNotAuthenticated,
