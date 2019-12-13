@@ -1,5 +1,12 @@
 <template>
     <b-container>
+        <b-alert
+            :show="dismissCountDown"
+            dismissible
+            variant="danger"
+            @dismissed="0"
+            @dismiss-count-down="countDownChanged"
+        >{{ errorMessage }}</b-alert>
         <b-row class="heading">
             <b-col cols="12">
                 <h3 v-if="!step">Crear cuenta</h3>
@@ -26,22 +33,31 @@ export default {
         return {
             step: false,
             originTeams: [],
+            errorCode: '',
+            errorMessage: '',
+            dismissSecs: 10,
+            dismissCountDown: 0,
         }
     },
     methods: {
-        createUserAccount(user) {
+        countDownChanged(dismissCountDown) {
+            this.dismissCountDown = dismissCountDown
+        },
+        async createUserAccount(user) {
             firebase
                 .auth()
                 .createUserWithEmailAndPassword(user.email, user.password)
-                .then(alert('Account Created Successfully!'))
-                .then(() => {
+                // .then(alert('Account Created Successfully!'))
+                .then(async () => {
+                    let user = await firebase.auth().currentUser
+                    await this.$store.dispatch('setCurrentUser', user)
                     this.step = true
                 })
                 .catch(error => {
                     // Handle Errors here.
-                    console.log(error)
-                    var errorCode = error.code
-                    var errorMessage = error.message
+                    this.dismissCountDown = this.dismissSecs
+                    this.errorCode = error.code
+                    this.errorMessage = error.message
                     // ...
                 })
         },
