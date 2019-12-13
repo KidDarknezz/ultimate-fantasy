@@ -4,6 +4,7 @@ export default {
     state: {
         user: '',
         token: localStorage.getItem('user-token') || '',
+        uid: localStorage.getItem('uid') || '',
         userModuleError: '',
     },
     mutations: {
@@ -28,17 +29,21 @@ export default {
                 commit('setUser', user)
                 commit('setToken', token)
                 localStorage.setItem('user-token', token)
+                localStorage.setItem('uid', user.uid)
             } catch (error) {
                 console.log(`Error in store: ${error}`)
                 return error
             }
         },
-        setUserLogout: async ({commit, dispatch}) => {
+        UserLogout: async ({commit, dispatch}) => {
+            commit('setUser', {})
             localStorage.removeItem('user-token')
+            localStorage.removeItem('uid')
         },
     },
     getters: {
         user: state => state.user,
+        uid: state => state.uid,
         isAuthenticated: state => !!state.token,
     },
 }

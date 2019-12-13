@@ -11,6 +11,7 @@
                     {{ fantasyScore }}
                 </h4>
             </b-col>
+            <b-button @click="logout()" variant="danger">Log Out</b-button>
         </b-row>
         <b-row class="content">
             <b-col cols="12">
@@ -46,6 +47,10 @@ export default {
         }
     },
     methods: {
+        async logout() {
+            await this.$store.dispatch('UserLogout')
+            this.$router.push('/login')
+        },
         getUser() {
             this.$http
                 .get(
