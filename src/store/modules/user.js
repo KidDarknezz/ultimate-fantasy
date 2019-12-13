@@ -11,6 +11,9 @@ export default {
         setUser: (state, payload) => {
             state.user = payload
         },
+        setUid: (state, payload) => {
+            state.uid = payload
+        },
         setToken: (state, payload) => {
             state.token = payload
         },
@@ -27,6 +30,7 @@ export default {
             try {
                 let token = await user.getIdToken()
                 commit('setUser', user)
+                commit('setUid', user.uid)
                 commit('setToken', token)
                 localStorage.setItem('user-token', token)
                 localStorage.setItem('uid', user.uid)

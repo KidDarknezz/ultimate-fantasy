@@ -8,12 +8,12 @@
                 <h4 class="score">
                     <span>Puntos</span>
                     <br />
-                    {{ fantasyScore }}
+                    <!-- {{ fantasyScore }} -->
                 </h4>
             </b-col>
             <b-button @click="logout()" variant="danger">Log Out</b-button>
         </b-row>
-        <b-row class="content">
+        <!-- <b-row class="content">
             <b-col cols="12">
                 <p style="font-weight: 700;">Ranking</p>
             </b-col>
@@ -34,11 +34,13 @@
                     </router-link>
                 </b-list-group>
             </b-col>
-        </b-row>
+        </b-row>-->
     </b-container>
 </template>
 
 <script>
+import * as firebase from 'firebase/app'
+import 'firebase/auth'
 export default {
     data() {
         return {
@@ -46,10 +48,26 @@ export default {
             fantasyScore: 0,
         }
     },
+    computed: {
+        user() {
+            return this.$store.getters.user
+        },
+        uid() {
+            return this.$store.getters.uid
+        },
+    },
     methods: {
         async logout() {
-            await this.$store.dispatch('UserLogout')
-            this.$router.push('/login')
+            firebase
+                .auth()
+                .signOut()
+                .then(async () => {
+                    await this.$store.dispatch('UserLogout')
+                    this.$router.push('/login')
+                })
+                .catch(error => {
+                    console.log(error)
+                })
         },
         getUser() {
             this.$http
@@ -101,10 +119,10 @@ export default {
             )
         },
     },
-    beforeMount() {
-        this.getUser()
-        this.calculateRanking()
-    },
+    // beforeMount() {
+    //     this.getUser()
+    //     this.calculateRanking()
+    // },
 }
 </script>
 
