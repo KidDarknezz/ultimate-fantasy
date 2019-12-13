@@ -41,11 +41,14 @@
 <script>
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
+import 'firebase/firestore'
+
 export default {
     data() {
         return {
             loginUser: {},
             fantasyScore: 0,
+            rosterPicked: null,
         }
     },
     computed: {
@@ -119,10 +122,20 @@ export default {
             )
         },
     },
-    // beforeMount() {
-    //     this.getUser()
-    //     this.calculateRanking()
-    // },
+    async beforeMount() {
+        var db = firebase.firestore()
+        db.collection('Users')
+            .doc(this.uid)
+            .get()
+            .then(doc => {
+                if (doc.exists) {
+                    this.rosterPicked = doc.data().rosterPicked
+                }
+            })
+            .catch(function(error) {
+                console.log('Error getting document:', error)
+            })
+    },
 }
 </script>
 
