@@ -8,9 +8,7 @@ import CreateInfo from '@/views/CreateInfo.vue'
 import CreateAccount from '@/views/CreateAccount.vue'
 import CreateRoster from '@/views/CreateRoster.vue'
 import TeamRoster from '@/views/TeamRoster.vue'
-
-import * as firebase from 'firebase/app'
-import 'firebase/auth'
+import UpdateInfo from '@/views/UpdateInfo.vue'
 
 Vue.use(Router)
 const ifAuthenticated = (to, from, next) => {
@@ -56,6 +54,12 @@ export default new Router({
             name: '',
             component: TeamRoster,
             // beforeEnter: ifNotAuthenticated,
+        },
+        {
+            path: '/update-info',
+            name: '',
+            component: UpdateInfo,
+            beforeEnter: ifAuthenticated,
         },
     ],
 })
