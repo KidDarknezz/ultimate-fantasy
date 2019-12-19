@@ -6,7 +6,8 @@
             variant="danger"
             @dismissed="0"
             @dismiss-count-down="countDownChanged"
-        >{{ errorMessage }}</b-alert>
+            >{{ errorMessage }}</b-alert
+        >
 
         <b-row class="row" style="padding-top: 70px;">
             <b-col>
@@ -41,7 +42,9 @@
         <br />
         <b-row>
             <b-col cols="12">
-                <button class="btn btn-success" @click="login">Iniciar sesion</button>
+                <button class="btn btn-success" @click="login">
+                    Iniciar sesion
+                </button>
                 <br />
                 <br />
                 <router-link to="/create-account">Crear cuenta</router-link>
@@ -74,36 +77,6 @@ export default {
         countDownChanged(dismissCountDown) {
             this.dismissCountDown = dismissCountDown
         },
-        // getUsers: function() {
-        //     this.$http
-        //         .get('https://ultimate-fantasy-fe04f.firebaseio.com/users.json')
-        //         .then(response => {
-        //             const data = response.data
-        //             const users = []
-        //             for (let i in data) {
-        //                 const user = data[i]
-        //                 user.id = i
-        //                 users.push(user)
-        //             }
-        //             this.$store.state.allUsers = users
-        //         })
-        // },
-        // getPlayers: function() {
-        //     this.$http
-        //         .get(
-        //             `https://ultimate-fantasy-fe04f.firebaseio.com/players.json`
-        //         )
-        //         .then(response => {
-        //             return response.json()
-        //         })
-        //         .then(data => {
-        //             const resultArray = []
-        //             for (let key in data) {
-        //                 resultArray.push(data[key])
-        //             }
-        //             this.$store.state.allPlayers = resultArray
-        //         })
-        // },
         async login() {
             firebase
                 .auth()

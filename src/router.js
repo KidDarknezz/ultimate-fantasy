@@ -16,6 +16,12 @@ const ifAuthenticated = (to, from, next) => {
         next()
     } else next('/login')
 }
+const ifAuthenticatedAndAdmin = (to, from, next) => {
+    console.log(`Esto es en el router: ${!!store.getters.isAdmin}`)
+    if (store.getters.isAuthenticated && store.getters.isAdmin) {
+        next()
+    } else next('/')
+}
 
 export default new Router({
     mode: 'history',
@@ -31,7 +37,7 @@ export default new Router({
             path: '/create-info',
             name: 'create-info',
             component: CreateInfo,
-            beforeEnter: ifAuthenticated,
+            beforeEnter: ifAuthenticatedAndAdmin,
         },
         {
             path: '/login',
@@ -47,19 +53,19 @@ export default new Router({
             path: '/create-roster',
             name: 'create-roster',
             component: CreateRoster,
-            // beforeEnter: ifNotAuthenticated,
+            beforeEnter: ifAuthenticatedAndAdmin,
         },
         {
             path: '/team/:id',
             name: '',
             component: TeamRoster,
-            // beforeEnter: ifNotAuthenticated,
+            // beforeEnter: ifAuthenticatedAndAdmin,
         },
         {
             path: '/update-info',
             name: '',
             component: UpdateInfo,
-            beforeEnter: ifAuthenticated,
+            beforeEnter: ifAuthenticatedAndAdmin,
         },
     ],
 })
