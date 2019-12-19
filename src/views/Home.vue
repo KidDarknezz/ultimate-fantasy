@@ -13,6 +13,15 @@
             </b-col>
             <b-button @click="logout()" variant="danger">Log Out</b-button>
         </b-row>
+        <b-row v-if="admin">
+            <b-col cols="12">
+                <h4>YOu are an admin</h4>
+                <router-link to="/create-info">Crear Info</router-link><br />
+                <router-link to="/create-roster">Crear roster</router-link
+                ><br />
+                <router-link to="/update-info">Update Info</router-link>
+            </b-col>
+        </b-row>
         <!-- <b-row class="content">
             <b-col cols="12">
                 <p style="font-weight: 700;">Ranking</p>
@@ -57,6 +66,9 @@ export default {
         },
         uid() {
             return this.$store.getters.uid
+        },
+        admin() {
+            return this.$store.getters.isAdmin
         },
     },
     methods: {

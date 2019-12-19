@@ -6,7 +6,8 @@
             variant="danger"
             @dismissed="0"
             @dismiss-count-down="countDownChanged"
-        >{{ errorMessage }}</b-alert>
+            >{{ errorMessage }}</b-alert
+        >
         <b-row class="heading">
             <b-col cols="12">
                 <h3>Crear cuenta</h3>
@@ -15,7 +16,12 @@
         <b-row>
             <b-col cols="12">
                 <label>Nombre:</label>
-                <input type="text" class="form-control" placeholder="John Doe" v-model="name" />
+                <input
+                    type="text"
+                    class="form-control"
+                    placeholder="John Doe"
+                    v-model="name"
+                />
                 <label>Email:</label>
                 <input
                     type="email"
@@ -33,7 +39,9 @@
                 <label>Nombra tu equipo fantasy</label>
                 <input type="text" class="form-control" v-model="teamName" />
                 <br />
-                <button @click="createUserAccount" class="btn btn-success">Seleccionar roster</button>
+                <button @click="createUserAccount" class="btn btn-success">
+                    Seleccionar roster
+                </button>
             </b-col>
         </b-row>
     </b-container>
@@ -85,6 +93,7 @@ export default {
                                 userEmail: this.email,
                                 userCredit: 300,
                                 rosterPicked: false,
+                                isAdmin: false,
                             })
                             .then(() => {
                                 alert('Usuario creado con exito')
