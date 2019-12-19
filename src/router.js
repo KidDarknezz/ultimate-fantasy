@@ -17,7 +17,6 @@ const ifAuthenticated = (to, from, next) => {
     } else next('/login')
 }
 const ifAuthenticatedAndAdmin = (to, from, next) => {
-    console.log(`Esto es en el router: ${!!store.getters.isAdmin}`)
     if (store.getters.isAuthenticated && store.getters.isAdmin) {
         next()
     } else next('/')
