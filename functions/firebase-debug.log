@@ -1078,3 +1078,38 @@ SyntaxError: Unexpected token 'for'
 [info] i  functions: Finished "updateInfo" in ~2s
 [debug] [2019-12-19T17:52:44.362Z] [worker-updateInfo-b886eead-a158-4c44-84cc-fc862313aa1b]: IDLE
 [debug] [2019-12-19T17:52:44.362Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2019-12-20T01:30:42.810Z] ----------------------------------------------------------------------
+[debug] [2019-12-20T01:30:42.812Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\diego\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2019-12-20T01:30:42.812Z] CLI Version:   7.7.0
+[debug] [2019-12-20T01:30:42.812Z] Platform:      win32
+[debug] [2019-12-20T01:30:42.812Z] Node Version:  v10.16.0
+[debug] [2019-12-20T01:30:42.813Z] Time:          Thu Dec 19 2019 20:30:42 GMT-0500 (Colombia Standard Time)
+[debug] [2019-12-20T01:30:42.813Z] ----------------------------------------------------------------------
+[debug] [2019-12-20T01:30:42.813Z] 
+[debug] [2019-12-20T01:30:42.826Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-12-20T01:30:42.826Z] > authorizing via signed-in user
+[debug] [2019-12-20T01:30:42.826Z] [iam] checking project ultimate-fantasy-fe04f for permissions ["firebase.projects.get"]
+[debug] [2019-12-20T01:30:42.827Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-12-20T01:30:42.828Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-12-20T01:30:43.326Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-20T01:30:43.337Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/ultimate-fantasy-fe04f:testIamPermissions  
+
+[debug] [2019-12-20T01:30:43.918Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-20T01:30:43.918Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/ultimate-fantasy-fe04f  
+ 
+[debug] [2019-12-20T01:30:44.523Z] <<< HTTP RESPONSE 200
+[warn] !  Your requested "node" version "8" doesn't match your global version "10"
+[info] +  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\Users\diego\Desktop\ultimate-fantasy\functions" for Cloud Functions...
+[debug] [2019-12-20T01:30:47.107Z] [worker-~diagnostic~-b9526ecc-a3fb-40fa-ba15-e01f37340f59]: BUSY
+[debug] [2019-12-20T01:30:47.432Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions","node_version":"10.16.0"}
+[debug] [2019-12-20T01:30:47.433Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-12-20T01:30:47.437Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-20T01:30:47.439Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-20T01:30:47.440Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] +  functions[helloWorld]: http function initialized (http://localhost:5000/ultimate-fantasy-fe04f/us-central1/helloWorld).
+[info] +  functions[updateInfo]: http function initialized (http://localhost:5000/ultimate-fantasy-fe04f/us-central1/updateInfo).
+[debug] [2019-12-20T01:30:47.696Z] [worker-~diagnostic~-b9526ecc-a3fb-40fa-ba15-e01f37340f59]: exited
+[debug] [2019-12-20T01:30:47.696Z] [worker-~diagnostic~-b9526ecc-a3fb-40fa-ba15-e01f37340f59]: FINISHED
+[debug] [2019-12-20T01:53:18.802Z] File C:\Users\diego\Desktop\ultimate-fantasy\functions\index.js changed, reloading triggers
