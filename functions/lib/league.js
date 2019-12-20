@@ -39,7 +39,27 @@ async function updateScores(object) {
                 CurrentData[equipo] = doc.data()
             })
     }
-    console.log(JSON.stringify(CurrentData))
+    for await (const equipo of Object.keys(Data)) {
+        Data[equipo].Jugadores.forEach((player, index) => {
+            CurrentData[equipo].Jugadores[index].Asist +=
+                Data[equipo].Jugadores[index].Asist
+            CurrentData[equipo].Jugadores[index].Gol +=
+                Data[equipo].Jugadores[index].Gol
+            CurrentData[equipo].Jugadores[index].Def +=
+                Data[equipo].Jugadores[index].Def
+        })
+    }
+    Object.keys(Data).forEach(equipo => {
+        db.collection(name)
+            .doc(equipo)
+            .update(CurrentData[equipo])
+            .then(() => {
+                Promise.resolve()
+            })
+            .catch(err => {
+                Promise.reject(err)
+            })
+    })
 }
 
 async function getCurrentPlayers(Liga, Equipo) {
