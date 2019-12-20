@@ -4,11 +4,11 @@ import store from '@/store/store'
 
 import Home from '@/views/Home.vue'
 import Login from '@/views/Login.vue'
-import CreateInfo from '@/views/CreateInfo.vue'
+import CreateLeague from '@/views/CreateLeague.vue'
 import CreateAccount from '@/views/CreateAccount.vue'
 import CreateRoster from '@/views/CreateRoster.vue'
 import TeamRoster from '@/views/TeamRoster.vue'
-import UpdateInfo from '@/views/UpdateInfo.vue'
+import UpdateLeague from '@/views/UpdateLeague.vue'
 
 Vue.use(Router)
 const ifAuthenticated = (to, from, next) => {
@@ -33,9 +33,9 @@ export default new Router({
             beforeEnter: ifAuthenticated,
         },
         {
-            path: '/create-info',
-            name: 'create-info',
-            component: CreateInfo,
+            path: '/create-league',
+            name: 'create-league',
+            component: CreateLeague,
             beforeEnter: ifAuthenticatedAndAdmin,
         },
         {
@@ -61,9 +61,9 @@ export default new Router({
             // beforeEnter: ifAuthenticatedAndAdmin,
         },
         {
-            path: '/update-info',
+            path: '/update-league',
             name: '',
-            component: UpdateInfo,
+            component: UpdateLeague,
             beforeEnter: ifAuthenticatedAndAdmin,
         },
     ],

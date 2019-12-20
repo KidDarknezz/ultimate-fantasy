@@ -14,9 +14,7 @@
                     placeholder="Choose a file or drop it here..."
                     drop-placeholder="Drop file here..."
                 ></b-form-file>
-                <b-button @click="ExcelToJSON(file)" variant="primary"
-                    >Upload</b-button
-                >
+                <b-button @click="ExcelToJSON(file)" variant="primary">Upload</b-button>
             </b-col>
         </b-row>
     </b-container>
@@ -25,7 +23,6 @@
 <script>
 import xlsxParser from 'xlsx-parse-json'
 import * as api from '@/api/api'
-import {type} from 'os'
 
 export default {
     data() {
@@ -38,7 +35,7 @@ export default {
             xlsxParser
                 .onFileSelection(file)
                 .then(data => {
-                    api.updateInfo(data)
+                    api.updateleague(data)
                 })
                 .catch(error => {
                     console.log(`Error: ${error}`)
