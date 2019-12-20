@@ -42,6 +42,11 @@ export default {
                 })
         },
     },
+    beforeMount() {
+        api.returnleaguenames().then(data => {
+            console.log(data)
+        })
+    },
 }
 </script>
 
