@@ -17,3 +17,7 @@ export const createleague = data =>
     Request.post('/createleague', data, {
         'Content-Type': 'application/json',
     })
+export const returnleaguenames = () =>
+    Request.get('/returnleaguenames', {
+        'Content-Type': 'application/json',
+    })
