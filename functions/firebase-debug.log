@@ -913,3 +913,337 @@
 [warn] ⚠  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to /Users/lexel/Dropbox/Documents/ultimate-fantasy.json. Non-emulated services will access production using these credentials. Be careful!
 [debug] [2019-12-20T18:11:38.605Z] [runtime-status] [27277] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/lexel/Desktop/ultimate-fantasy/functions/node_modules/firebase-functions/lib/index.js"}
 [debug] [2019-12-20T18:11:38.699Z] [worker-~diagnostic~-74661b38-4b3c-4cb5-9df8-2a57d452192b]: IDLE
+[debug] [2019-12-20T18:16:40.796Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-20T18:16:40.796Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-20T18:16:40.796Z] Accepted request OPTIONS /ultimate-fantasy-fe04f/us-central1/createleague --> createleague
+[debug] [2019-12-20T18:16:40.796Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2019-12-20T18:16:40.796Z] [worker-pool] Cleaned up workers for updateleague: 1 --> 0
+[debug] [2019-12-20T18:16:40.800Z] [worker-pool] addWorker(createleague)
+[debug] [2019-12-20T18:16:40.800Z] [worker-pool] Adding worker with key createleague, total=1
+[debug] [2019-12-20T18:16:40.800Z] [worker-pool] submitWork(triggerId=createleague)
+[debug] [2019-12-20T18:16:40.800Z] [worker-createleague-81a4b673-e602-485c-8d6d-5a2cc85de80c]: Assigning socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_29723.sock
+[debug] [2019-12-20T18:16:40.800Z] [worker-createleague-81a4b673-e602-485c-8d6d-5a2cc85de80c]: BUSY
+[debug] [2019-12-20T18:16:41.016Z] [runtime-status] [29723] Functions runtime initialized. {"cwd":"/Users/lexel/Desktop/ultimate-fantasy/functions","node_version":"12.14.0"}
+[debug] [2019-12-20T18:16:41.018Z] [runtime-status] [29723] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2019-12-20T18:16:41.019Z] [runtime-status] [29723] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"/Users/lexel/Desktop/ultimate-fantasy/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-12-20T18:16:41.020Z] [runtime-status] [29723] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/lexel/Desktop/ultimate-fantasy/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to /Users/lexel/Dropbox/Documents/ultimate-fantasy.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-12-20T18:16:41.021Z] [runtime-status] [29723] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/lexel/Desktop/ultimate-fantasy/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-12-20T18:16:41.113Z] [runtime-status] [29723] Trigger "createleague" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "createleague"
+[debug] [2019-12-20T18:16:41.113Z] [runtime-status] [29723] triggerDefinition {"httpsTrigger":{},"name":"createleague","entryPoint":"createleague"}
+[debug] [2019-12-20T18:16:41.113Z] [runtime-status] [29723] Running createleague in mode HTTPS
+[debug] [2019-12-20T18:16:41.116Z] [runtime-status] [29723] Attempting to listen to socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_29723.sock
+[debug] [2019-12-20T18:16:41.118Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-20T18:16:41.124Z] [runtime-status] [29723] Ephemeral server handling OPTIONS request
+[debug] [2019-12-20T18:16:41.128Z] [runtime-status] [29723] Ephemeral server survived.
+[debug] [2019-12-20T18:16:41.131Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2019-12-20T18:16:41.131Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2019-12-20T18:16:41.131Z] Accepted request POST /ultimate-fantasy-fe04f/us-central1/createleague --> createleague
+[debug] [2019-12-20T18:16:41.135Z] [worker-pool] addWorker(createleague)
+[debug] [2019-12-20T18:16:41.135Z] [worker-pool] Adding worker with key createleague, total=2
+[debug] [2019-12-20T18:16:41.135Z] [worker-pool] submitWork(triggerId=createleague)
+[debug] [2019-12-20T18:16:41.135Z] [worker-createleague-c224a87e-9b49-4bcd-afa5-22f3664aa7c2]: Assigning socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_29724.sock
+[debug] [2019-12-20T18:16:41.135Z] [worker-createleague-c224a87e-9b49-4bcd-afa5-22f3664aa7c2]: BUSY
+[info] i  functions: Finished "createleague" in ~1s
+[debug] [2019-12-20T18:16:41.136Z] [worker-createleague-81a4b673-e602-485c-8d6d-5a2cc85de80c]: IDLE
+[debug] [2019-12-20T18:16:41.136Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-20T18:16:41.334Z] [runtime-status] [29724] Functions runtime initialized. {"cwd":"/Users/lexel/Desktop/ultimate-fantasy/functions","node_version":"12.14.0"}
+[debug] [2019-12-20T18:16:41.335Z] [runtime-status] [29724] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2019-12-20T18:16:41.336Z] [runtime-status] [29724] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"/Users/lexel/Desktop/ultimate-fantasy/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-12-20T18:16:41.337Z] [runtime-status] [29724] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/lexel/Desktop/ultimate-fantasy/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to /Users/lexel/Dropbox/Documents/ultimate-fantasy.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-12-20T18:16:41.338Z] [runtime-status] [29724] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/lexel/Desktop/ultimate-fantasy/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-12-20T18:16:41.427Z] [runtime-status] [29724] Trigger "createleague" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "createleague"
+[debug] [2019-12-20T18:16:41.427Z] [runtime-status] [29724] triggerDefinition {"httpsTrigger":{},"name":"createleague","entryPoint":"createleague"}
+[debug] [2019-12-20T18:16:41.427Z] [runtime-status] [29724] Running createleague in mode HTTPS
+[debug] [2019-12-20T18:16:41.431Z] [runtime-status] [29724] Attempting to listen to socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_29724.sock
+[debug] [2019-12-20T18:16:41.433Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-20T18:16:41.448Z] [runtime-status] [29724] Ephemeral server handling POST request
+[debug] [2019-12-20T18:16:41.659Z] [runtime-status] [29724] Ephemeral server survived.
+[info] i  functions: Finished "createleague" in ~1s
+[debug] [2019-12-20T18:16:41.674Z] [worker-createleague-c224a87e-9b49-4bcd-afa5-22f3664aa7c2]: IDLE
+[debug] [2019-12-20T18:16:41.674Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  [+]Updated Succesfully Trepaquesube
+[info] >  [+]Updated Succesfully Los Mortales
+[info] >  [+]Updated Succesfully Gravity
+[info] >  [+]Updated Succesfully Nigeria ni sabe
+[info] >  [+]Updated Succesfully Avengers
+[debug] [2019-12-20T18:21:12.768Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-20T18:21:12.768Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-20T18:21:12.768Z] Accepted request GET /ultimate-fantasy-fe04f/us-central1/returnleaguenames --> returnleaguenames
+[debug] [2019-12-20T18:21:12.773Z] [worker-pool] addWorker(returnleaguenames)
+[debug] [2019-12-20T18:21:12.773Z] [worker-pool] Adding worker with key returnleaguenames, total=1
+[debug] [2019-12-20T18:21:12.773Z] [worker-pool] submitWork(triggerId=returnleaguenames)
+[debug] [2019-12-20T18:21:12.773Z] [worker-returnleaguenames-2f33b23d-1d31-49ca-a11f-8ad6dfb8a130]: Assigning socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_31933.sock
+[debug] [2019-12-20T18:21:12.773Z] [worker-returnleaguenames-2f33b23d-1d31-49ca-a11f-8ad6dfb8a130]: BUSY
+[debug] [2019-12-20T18:21:13.115Z] [runtime-status] [31933] Functions runtime initialized. {"cwd":"/Users/lexel/Desktop/ultimate-fantasy/functions","node_version":"12.14.0"}
+[debug] [2019-12-20T18:21:13.116Z] [runtime-status] [31933] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2019-12-20T18:21:13.119Z] [runtime-status] [31933] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"/Users/lexel/Desktop/ultimate-fantasy/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-12-20T18:21:13.120Z] [runtime-status] [31933] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/lexel/Desktop/ultimate-fantasy/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to /Users/lexel/Dropbox/Documents/ultimate-fantasy.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-12-20T18:21:13.122Z] [runtime-status] [31933] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/lexel/Desktop/ultimate-fantasy/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-12-20T18:21:13.275Z] [runtime-status] [31933] Trigger "returnleaguenames" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "returnleaguenames"
+[debug] [2019-12-20T18:21:13.276Z] [runtime-status] [31933] triggerDefinition {"httpsTrigger":{},"name":"returnleaguenames","entryPoint":"returnleaguenames"}
+[debug] [2019-12-20T18:21:13.276Z] [runtime-status] [31933] Running returnleaguenames in mode HTTPS
+[debug] [2019-12-20T18:21:13.279Z] [runtime-status] [31933] Attempting to listen to socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_31933.sock
+[debug] [2019-12-20T18:21:13.281Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-20T18:21:13.286Z] [runtime-status] [31933] Ephemeral server handling GET request
+[debug] [2019-12-20T18:21:13.622Z] [runtime-status] [31933] Ephemeral server survived.
+[info] i  functions: Finished "returnleaguenames" in ~1s
+[debug] [2019-12-20T18:21:14.506Z] [worker-returnleaguenames-2f33b23d-1d31-49ca-a11f-8ad6dfb8a130]: IDLE
+[debug] [2019-12-20T18:21:14.506Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2019-12-20T18:21:23.524Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-20T18:21:23.524Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-20T18:21:23.524Z] Accepted request GET /ultimate-fantasy-fe04f/us-central1/returnleaguenames --> returnleaguenames
+[debug] [2019-12-20T18:21:23.524Z] [worker-pool] submitWork(triggerId=returnleaguenames)
+[debug] [2019-12-20T18:21:23.524Z] [worker-returnleaguenames-2f33b23d-1d31-49ca-a11f-8ad6dfb8a130]: Assigning socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_31933.sock
+[debug] [2019-12-20T18:21:23.524Z] [worker-returnleaguenames-2f33b23d-1d31-49ca-a11f-8ad6dfb8a130]: BUSY
+[debug] [2019-12-20T18:21:23.526Z] [runtime-status] [31933] Trigger "returnleaguenames" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "returnleaguenames"
+[debug] [2019-12-20T18:21:23.526Z] [runtime-status] [31933] triggerDefinition {"httpsTrigger":{},"name":"returnleaguenames","entryPoint":"returnleaguenames"}
+[debug] [2019-12-20T18:21:23.526Z] [runtime-status] [31933] Running returnleaguenames in mode HTTPS
+[debug] [2019-12-20T18:21:23.527Z] [runtime-status] [31933] Attempting to listen to socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_31933.sock
+[debug] [2019-12-20T18:21:23.527Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-20T18:21:23.530Z] [runtime-status] [31933] Ephemeral server handling GET request
+[debug] [2019-12-20T18:21:23.530Z] [runtime-status] [31933] Ephemeral server survived.
+[info] i  functions: Finished "returnleaguenames" in ~1s
+[debug] [2019-12-20T18:21:23.699Z] [worker-returnleaguenames-2f33b23d-1d31-49ca-a11f-8ad6dfb8a130]: IDLE
+[debug] [2019-12-20T18:21:23.699Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2019-12-20T18:21:31.826Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-20T18:21:31.826Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-20T18:21:31.826Z] Accepted request GET /ultimate-fantasy-fe04f/us-central1/returnleaguenames --> returnleaguenames
+[debug] [2019-12-20T18:21:31.826Z] [worker-pool] submitWork(triggerId=returnleaguenames)
+[debug] [2019-12-20T18:21:31.827Z] [worker-returnleaguenames-2f33b23d-1d31-49ca-a11f-8ad6dfb8a130]: Assigning socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_31933.sock
+[debug] [2019-12-20T18:21:31.827Z] [worker-returnleaguenames-2f33b23d-1d31-49ca-a11f-8ad6dfb8a130]: BUSY
+[debug] [2019-12-20T18:21:31.827Z] [runtime-status] [31933] Trigger "returnleaguenames" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "returnleaguenames"
+[debug] [2019-12-20T18:21:31.827Z] [runtime-status] [31933] triggerDefinition {"httpsTrigger":{},"name":"returnleaguenames","entryPoint":"returnleaguenames"}
+[debug] [2019-12-20T18:21:31.827Z] [runtime-status] [31933] Running returnleaguenames in mode HTTPS
+[debug] [2019-12-20T18:21:31.828Z] [runtime-status] [31933] Attempting to listen to socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_31933.sock
+[debug] [2019-12-20T18:21:31.829Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-20T18:21:31.831Z] [runtime-status] [31933] Ephemeral server handling GET request
+[debug] [2019-12-20T18:21:31.831Z] [runtime-status] [31933] Ephemeral server survived.
+[info] i  functions: Finished "returnleaguenames" in ~1s
+[debug] [2019-12-20T18:21:31.994Z] [worker-returnleaguenames-2f33b23d-1d31-49ca-a11f-8ad6dfb8a130]: IDLE
+[debug] [2019-12-20T18:21:31.994Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2019-12-20T18:21:55.731Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-20T18:21:55.731Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-20T18:21:55.731Z] Accepted request GET /ultimate-fantasy-fe04f/us-central1/returnleaguenames --> returnleaguenames
+[debug] [2019-12-20T18:21:55.731Z] [worker-pool] submitWork(triggerId=returnleaguenames)
+[debug] [2019-12-20T18:21:55.731Z] [worker-returnleaguenames-2f33b23d-1d31-49ca-a11f-8ad6dfb8a130]: Assigning socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_31933.sock
+[debug] [2019-12-20T18:21:55.731Z] [worker-returnleaguenames-2f33b23d-1d31-49ca-a11f-8ad6dfb8a130]: BUSY
+[debug] [2019-12-20T18:21:55.732Z] [runtime-status] [31933] Trigger "returnleaguenames" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "returnleaguenames"
+[debug] [2019-12-20T18:21:55.732Z] [runtime-status] [31933] triggerDefinition {"httpsTrigger":{},"name":"returnleaguenames","entryPoint":"returnleaguenames"}
+[debug] [2019-12-20T18:21:55.732Z] [runtime-status] [31933] Running returnleaguenames in mode HTTPS
+[debug] [2019-12-20T18:21:55.732Z] [runtime-status] [31933] Attempting to listen to socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_31933.sock
+[debug] [2019-12-20T18:21:55.733Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-20T18:21:55.736Z] [runtime-status] [31933] Ephemeral server handling GET request
+[debug] [2019-12-20T18:21:55.736Z] [runtime-status] [31933] Ephemeral server survived.
+[info] i  functions: Finished "returnleaguenames" in ~1s
+[debug] [2019-12-20T18:21:55.896Z] [worker-returnleaguenames-2f33b23d-1d31-49ca-a11f-8ad6dfb8a130]: IDLE
+[debug] [2019-12-20T18:21:55.896Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2019-12-20T18:23:18.447Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-20T18:23:18.447Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-20T18:23:18.447Z] Accepted request GET /ultimate-fantasy-fe04f/us-central1/returnleaguenames --> returnleaguenames
+[debug] [2019-12-20T18:23:18.447Z] [worker-pool] submitWork(triggerId=returnleaguenames)
+[debug] [2019-12-20T18:23:18.447Z] [worker-returnleaguenames-2f33b23d-1d31-49ca-a11f-8ad6dfb8a130]: Assigning socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_31933.sock
+[debug] [2019-12-20T18:23:18.447Z] [worker-returnleaguenames-2f33b23d-1d31-49ca-a11f-8ad6dfb8a130]: BUSY
+[debug] [2019-12-20T18:23:18.448Z] [runtime-status] [31933] Trigger "returnleaguenames" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "returnleaguenames"
+[debug] [2019-12-20T18:23:18.449Z] [runtime-status] [31933] triggerDefinition {"httpsTrigger":{},"name":"returnleaguenames","entryPoint":"returnleaguenames"}
+[debug] [2019-12-20T18:23:18.449Z] [runtime-status] [31933] Running returnleaguenames in mode HTTPS
+[debug] [2019-12-20T18:23:18.449Z] [runtime-status] [31933] Attempting to listen to socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_31933.sock
+[debug] [2019-12-20T18:23:18.450Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-20T18:23:18.452Z] [runtime-status] [31933] Ephemeral server handling GET request
+[debug] [2019-12-20T18:23:18.452Z] [runtime-status] [31933] Ephemeral server survived.
+[info] i  functions: Finished "returnleaguenames" in ~1s
+[debug] [2019-12-20T18:23:18.623Z] [worker-returnleaguenames-2f33b23d-1d31-49ca-a11f-8ad6dfb8a130]: IDLE
+[debug] [2019-12-20T18:23:18.623Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2019-12-20T18:23:33.275Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-20T18:23:33.275Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-20T18:23:33.275Z] Accepted request OPTIONS /ultimate-fantasy-fe04f/us-central1/createleague --> createleague
+[debug] [2019-12-20T18:23:33.275Z] [worker-pool] submitWork(triggerId=createleague)
+[debug] [2019-12-20T18:23:33.275Z] [worker-createleague-81a4b673-e602-485c-8d6d-5a2cc85de80c]: Assigning socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_29723.sock
+[debug] [2019-12-20T18:23:33.275Z] [worker-createleague-81a4b673-e602-485c-8d6d-5a2cc85de80c]: BUSY
+[debug] [2019-12-20T18:23:33.276Z] [runtime-status] [29723] Trigger "createleague" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "createleague"
+[debug] [2019-12-20T18:23:33.277Z] [runtime-status] [29723] triggerDefinition {"httpsTrigger":{},"name":"createleague","entryPoint":"createleague"}
+[debug] [2019-12-20T18:23:33.277Z] [runtime-status] [29723] Running createleague in mode HTTPS
+[debug] [2019-12-20T18:23:33.277Z] [runtime-status] [29723] Attempting to listen to socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_29723.sock
+[debug] [2019-12-20T18:23:33.278Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-20T18:23:33.281Z] [runtime-status] [29723] Ephemeral server handling OPTIONS request
+[debug] [2019-12-20T18:23:33.281Z] [runtime-status] [29723] Ephemeral server survived.
+[info] i  functions: Finished "createleague" in ~1s
+[debug] [2019-12-20T18:23:33.282Z] [worker-createleague-81a4b673-e602-485c-8d6d-5a2cc85de80c]: IDLE
+[debug] [2019-12-20T18:23:33.282Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2019-12-20T18:23:33.287Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-20T18:23:33.287Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-20T18:23:33.287Z] Accepted request POST /ultimate-fantasy-fe04f/us-central1/createleague --> createleague
+[debug] [2019-12-20T18:23:33.287Z] [worker-pool] submitWork(triggerId=createleague)
+[debug] [2019-12-20T18:23:33.287Z] [worker-createleague-81a4b673-e602-485c-8d6d-5a2cc85de80c]: Assigning socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_29723.sock
+[debug] [2019-12-20T18:23:33.287Z] [worker-createleague-81a4b673-e602-485c-8d6d-5a2cc85de80c]: BUSY
+[debug] [2019-12-20T18:23:33.293Z] [runtime-status] [29723] Trigger "createleague" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "createleague"
+[debug] [2019-12-20T18:23:33.293Z] [runtime-status] [29723] triggerDefinition {"httpsTrigger":{},"name":"createleague","entryPoint":"createleague"}
+[debug] [2019-12-20T18:23:33.293Z] [runtime-status] [29723] Running createleague in mode HTTPS
+[debug] [2019-12-20T18:23:33.294Z] [runtime-status] [29723] Attempting to listen to socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_29723.sock
+[debug] [2019-12-20T18:23:33.295Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-20T18:23:33.310Z] [runtime-status] [29723] Ephemeral server handling POST request
+[debug] [2019-12-20T18:23:33.674Z] [runtime-status] [29723] Ephemeral server survived.
+[info] i  functions: Finished "createleague" in ~1s
+[debug] [2019-12-20T18:23:33.688Z] [worker-createleague-81a4b673-e602-485c-8d6d-5a2cc85de80c]: IDLE
+[debug] [2019-12-20T18:23:33.689Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  [+]Updated Succesfully Trepaquesube
+[info] >  [+]Updated Succesfully Gravity
+[info] >  [+]Updated Succesfully Los Mortales
+[info] >  [+]Updated Succesfully Nigeria ni sabe
+[info] >  [+]Updated Succesfully Avengers
+[debug] [2019-12-20T18:24:27.122Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-20T18:24:27.122Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-20T18:24:27.122Z] Accepted request GET /ultimate-fantasy-fe04f/us-central1/returnleaguenames --> returnleaguenames
+[debug] [2019-12-20T18:24:27.122Z] [worker-pool] submitWork(triggerId=returnleaguenames)
+[debug] [2019-12-20T18:24:27.122Z] [worker-returnleaguenames-2f33b23d-1d31-49ca-a11f-8ad6dfb8a130]: Assigning socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_31933.sock
+[debug] [2019-12-20T18:24:27.122Z] [worker-returnleaguenames-2f33b23d-1d31-49ca-a11f-8ad6dfb8a130]: BUSY
+[debug] [2019-12-20T18:24:27.123Z] [runtime-status] [31933] Trigger "returnleaguenames" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "returnleaguenames"
+[debug] [2019-12-20T18:24:27.123Z] [runtime-status] [31933] triggerDefinition {"httpsTrigger":{},"name":"returnleaguenames","entryPoint":"returnleaguenames"}
+[debug] [2019-12-20T18:24:27.123Z] [runtime-status] [31933] Running returnleaguenames in mode HTTPS
+[debug] [2019-12-20T18:24:27.124Z] [runtime-status] [31933] Attempting to listen to socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_31933.sock
+[debug] [2019-12-20T18:24:27.124Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-20T18:24:27.126Z] [runtime-status] [31933] Ephemeral server handling GET request
+[debug] [2019-12-20T18:24:27.126Z] [runtime-status] [31933] Ephemeral server survived.
+[info] i  functions: Finished "returnleaguenames" in ~1s
+[debug] [2019-12-20T18:24:27.284Z] [worker-returnleaguenames-2f33b23d-1d31-49ca-a11f-8ad6dfb8a130]: IDLE
+[debug] [2019-12-20T18:24:27.284Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2019-12-20T18:25:01.523Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-20T18:25:01.523Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-20T18:25:01.523Z] Accepted request GET /ultimate-fantasy-fe04f/us-central1/returnleaguenames --> returnleaguenames
+[debug] [2019-12-20T18:25:01.523Z] [worker-pool] submitWork(triggerId=returnleaguenames)
+[debug] [2019-12-20T18:25:01.523Z] [worker-returnleaguenames-2f33b23d-1d31-49ca-a11f-8ad6dfb8a130]: Assigning socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_31933.sock
+[debug] [2019-12-20T18:25:01.523Z] [worker-returnleaguenames-2f33b23d-1d31-49ca-a11f-8ad6dfb8a130]: BUSY
+[debug] [2019-12-20T18:25:01.523Z] [runtime-status] [31933] Trigger "returnleaguenames" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "returnleaguenames"
+[debug] [2019-12-20T18:25:01.524Z] [runtime-status] [31933] triggerDefinition {"httpsTrigger":{},"name":"returnleaguenames","entryPoint":"returnleaguenames"}
+[debug] [2019-12-20T18:25:01.524Z] [runtime-status] [31933] Running returnleaguenames in mode HTTPS
+[debug] [2019-12-20T18:25:01.524Z] [runtime-status] [31933] Attempting to listen to socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_31933.sock
+[debug] [2019-12-20T18:25:01.525Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-20T18:25:01.527Z] [runtime-status] [31933] Ephemeral server handling GET request
+[debug] [2019-12-20T18:25:01.527Z] [runtime-status] [31933] Ephemeral server survived.
+[info] i  functions: Finished "returnleaguenames" in ~1s
+[debug] [2019-12-20T18:25:01.700Z] [worker-returnleaguenames-2f33b23d-1d31-49ca-a11f-8ad6dfb8a130]: IDLE
+[debug] [2019-12-20T18:25:01.700Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2019-12-20T18:25:16.501Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-20T18:25:16.501Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-20T18:25:16.501Z] Accepted request OPTIONS /ultimate-fantasy-fe04f/us-central1/createleague --> createleague
+[debug] [2019-12-20T18:25:16.502Z] [worker-pool] submitWork(triggerId=createleague)
+[debug] [2019-12-20T18:25:16.502Z] [worker-createleague-81a4b673-e602-485c-8d6d-5a2cc85de80c]: Assigning socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_29723.sock
+[debug] [2019-12-20T18:25:16.502Z] [worker-createleague-81a4b673-e602-485c-8d6d-5a2cc85de80c]: BUSY
+[debug] [2019-12-20T18:25:16.502Z] [runtime-status] [29723] Trigger "createleague" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "createleague"
+[debug] [2019-12-20T18:25:16.502Z] [runtime-status] [29723] triggerDefinition {"httpsTrigger":{},"name":"createleague","entryPoint":"createleague"}
+[debug] [2019-12-20T18:25:16.502Z] [runtime-status] [29723] Running createleague in mode HTTPS
+[debug] [2019-12-20T18:25:16.503Z] [runtime-status] [29723] Attempting to listen to socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_29723.sock
+[debug] [2019-12-20T18:25:16.504Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-20T18:25:16.506Z] [runtime-status] [29723] Ephemeral server handling OPTIONS request
+[debug] [2019-12-20T18:25:16.507Z] [runtime-status] [29723] Ephemeral server survived.
+[info] i  functions: Finished "createleague" in ~1s
+[debug] [2019-12-20T18:25:16.507Z] [worker-createleague-81a4b673-e602-485c-8d6d-5a2cc85de80c]: IDLE
+[debug] [2019-12-20T18:25:16.507Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2019-12-20T18:25:16.511Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-20T18:25:16.511Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-20T18:25:16.511Z] Accepted request POST /ultimate-fantasy-fe04f/us-central1/createleague --> createleague
+[debug] [2019-12-20T18:25:16.511Z] [worker-pool] submitWork(triggerId=createleague)
+[debug] [2019-12-20T18:25:16.511Z] [worker-createleague-81a4b673-e602-485c-8d6d-5a2cc85de80c]: Assigning socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_29723.sock
+[debug] [2019-12-20T18:25:16.511Z] [worker-createleague-81a4b673-e602-485c-8d6d-5a2cc85de80c]: BUSY
+[debug] [2019-12-20T18:25:16.520Z] [runtime-status] [29723] Trigger "createleague" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "createleague"
+[debug] [2019-12-20T18:25:16.520Z] [runtime-status] [29723] triggerDefinition {"httpsTrigger":{},"name":"createleague","entryPoint":"createleague"}
+[debug] [2019-12-20T18:25:16.520Z] [runtime-status] [29723] Running createleague in mode HTTPS
+[debug] [2019-12-20T18:25:16.520Z] [runtime-status] [29723] Attempting to listen to socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_29723.sock
+[debug] [2019-12-20T18:25:16.524Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-20T18:25:16.527Z] [runtime-status] [29723] Ephemeral server handling POST request
+[debug] [2019-12-20T18:25:16.532Z] [runtime-status] [29723] Ephemeral server survived.
+[info] i  functions: Finished "createleague" in ~1s
+[debug] [2019-12-20T18:25:16.540Z] [worker-createleague-81a4b673-e602-485c-8d6d-5a2cc85de80c]: IDLE
+[debug] [2019-12-20T18:25:16.540Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  [+]Updated Succesfully Trepaquesube
+[info] >  [+]Updated Succesfully Nigeria ni sabe
+[info] >  [+]Updated Succesfully Los Mortales
+[info] >  [+]Updated Succesfully Avengers
+[info] >  [+]Updated Succesfully Gravity
+[debug] [2019-12-20T18:25:48.374Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-20T18:25:48.374Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-20T18:25:48.374Z] Accepted request GET /ultimate-fantasy-fe04f/us-central1/returnleaguenames --> returnleaguenames
+[debug] [2019-12-20T18:25:48.374Z] [worker-pool] submitWork(triggerId=returnleaguenames)
+[debug] [2019-12-20T18:25:48.374Z] [worker-returnleaguenames-2f33b23d-1d31-49ca-a11f-8ad6dfb8a130]: Assigning socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_31933.sock
+[debug] [2019-12-20T18:25:48.375Z] [worker-returnleaguenames-2f33b23d-1d31-49ca-a11f-8ad6dfb8a130]: BUSY
+[debug] [2019-12-20T18:25:48.375Z] [runtime-status] [31933] Trigger "returnleaguenames" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "returnleaguenames"
+[debug] [2019-12-20T18:25:48.375Z] [runtime-status] [31933] triggerDefinition {"httpsTrigger":{},"name":"returnleaguenames","entryPoint":"returnleaguenames"}
+[debug] [2019-12-20T18:25:48.375Z] [runtime-status] [31933] Running returnleaguenames in mode HTTPS
+[debug] [2019-12-20T18:25:48.376Z] [runtime-status] [31933] Attempting to listen to socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_31933.sock
+[debug] [2019-12-20T18:25:48.376Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-20T18:25:48.379Z] [runtime-status] [31933] Ephemeral server handling GET request
+[debug] [2019-12-20T18:25:48.379Z] [runtime-status] [31933] Ephemeral server survived.
+[info] i  functions: Finished "returnleaguenames" in ~1s
+[debug] [2019-12-20T18:25:48.547Z] [worker-returnleaguenames-2f33b23d-1d31-49ca-a11f-8ad6dfb8a130]: IDLE
+[debug] [2019-12-20T18:25:48.547Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2019-12-20T18:25:55.728Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2019-12-20T18:25:55.728Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-20T18:25:55.729Z] Accepted request OPTIONS /ultimate-fantasy-fe04f/us-central1/updateleague --> updateleague
+[debug] [2019-12-20T18:25:55.733Z] [worker-pool] addWorker(updateleague)
+[debug] [2019-12-20T18:25:55.733Z] [worker-pool] Adding worker with key updateleague, total=1
+[debug] [2019-12-20T18:25:55.733Z] [worker-pool] submitWork(triggerId=updateleague)
+[debug] [2019-12-20T18:25:55.733Z] [worker-updateleague-7564cb69-427f-4f99-8ed5-69f7f6fa1504]: Assigning socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_34470.sock
+[debug] [2019-12-20T18:25:55.733Z] [worker-updateleague-7564cb69-427f-4f99-8ed5-69f7f6fa1504]: BUSY
+[debug] [2019-12-20T18:25:56.076Z] [runtime-status] [34470] Functions runtime initialized. {"cwd":"/Users/lexel/Desktop/ultimate-fantasy/functions","node_version":"12.14.0"}
+[debug] [2019-12-20T18:25:56.077Z] [runtime-status] [34470] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2019-12-20T18:25:56.079Z] [runtime-status] [34470] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"/Users/lexel/Desktop/ultimate-fantasy/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-12-20T18:25:56.080Z] [runtime-status] [34470] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/lexel/Desktop/ultimate-fantasy/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to /Users/lexel/Dropbox/Documents/ultimate-fantasy.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-12-20T18:25:56.081Z] [runtime-status] [34470] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/lexel/Desktop/ultimate-fantasy/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-12-20T18:25:56.228Z] [runtime-status] [34470] Trigger "updateleague" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "updateleague"
+[debug] [2019-12-20T18:25:56.229Z] [runtime-status] [34470] triggerDefinition {"httpsTrigger":{},"name":"updateleague","entryPoint":"updateleague"}
+[debug] [2019-12-20T18:25:56.229Z] [runtime-status] [34470] Running updateleague in mode HTTPS
+[debug] [2019-12-20T18:25:56.232Z] [runtime-status] [34470] Attempting to listen to socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_34470.sock
+[debug] [2019-12-20T18:25:56.234Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-20T18:25:56.239Z] [runtime-status] [34470] Ephemeral server handling OPTIONS request
+[debug] [2019-12-20T18:25:56.243Z] [runtime-status] [34470] Ephemeral server survived.
+[debug] [2019-12-20T18:25:56.246Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2019-12-20T18:25:56.246Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2019-12-20T18:25:56.246Z] Accepted request POST /ultimate-fantasy-fe04f/us-central1/updateleague --> updateleague
+[debug] [2019-12-20T18:25:56.251Z] [worker-pool] addWorker(updateleague)
+[debug] [2019-12-20T18:25:56.251Z] [worker-pool] Adding worker with key updateleague, total=2
+[debug] [2019-12-20T18:25:56.251Z] [worker-pool] submitWork(triggerId=updateleague)
+[debug] [2019-12-20T18:25:56.251Z] [worker-updateleague-a09ababf-4607-4851-bf4e-609edbf92ad5]: Assigning socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_34471.sock
+[debug] [2019-12-20T18:25:56.251Z] [worker-updateleague-a09ababf-4607-4851-bf4e-609edbf92ad5]: BUSY
+[info] i  functions: Finished "updateleague" in ~1s
+[debug] [2019-12-20T18:25:56.251Z] [worker-updateleague-7564cb69-427f-4f99-8ed5-69f7f6fa1504]: IDLE
+[debug] [2019-12-20T18:25:56.251Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2019-12-20T18:25:56.452Z] [runtime-status] [34471] Functions runtime initialized. {"cwd":"/Users/lexel/Desktop/ultimate-fantasy/functions","node_version":"12.14.0"}
+[debug] [2019-12-20T18:25:56.454Z] [runtime-status] [34471] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2019-12-20T18:25:56.455Z] [runtime-status] [34471] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"/Users/lexel/Desktop/ultimate-fantasy/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-12-20T18:25:56.456Z] [runtime-status] [34471] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/lexel/Desktop/ultimate-fantasy/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to /Users/lexel/Dropbox/Documents/ultimate-fantasy.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-12-20T18:25:56.457Z] [runtime-status] [34471] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/lexel/Desktop/ultimate-fantasy/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-12-20T18:25:56.545Z] [runtime-status] [34471] Trigger "updateleague" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "updateleague"
+[debug] [2019-12-20T18:25:56.546Z] [runtime-status] [34471] triggerDefinition {"httpsTrigger":{},"name":"updateleague","entryPoint":"updateleague"}
+[debug] [2019-12-20T18:25:56.546Z] [runtime-status] [34471] Running updateleague in mode HTTPS
+[debug] [2019-12-20T18:25:56.549Z] [runtime-status] [34471] Attempting to listen to socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_34471.sock
+[debug] [2019-12-20T18:25:56.551Z] [functions] Runtime ready! Sending request!
+[debug] [2019-12-20T18:25:56.573Z] [runtime-status] [34471] Ephemeral server handling POST request
+[debug] [2019-12-20T18:25:56.575Z] [runtime-status] [34471] Ephemeral server survived.
+[info] i  functions: Finished "updateleague" in ~1s
+[debug] [2019-12-20T18:25:58.271Z] [worker-updateleague-a09ababf-4607-4851-bf4e-609edbf92ad5]: IDLE
+[debug] [2019-12-20T18:25:58.271Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  Se updateo el Trepaquesube con exito
+[info] >  Se updateo el Nigeria ni sabe con exito
+[info] >  Se updateo el Los Mortales con exito
+[info] >  Se updateo el Gravity con exito
+[info] >  Se updateo el Avengers con exito

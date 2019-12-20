@@ -21,6 +21,7 @@
                     drop-placeholder="Drop file here..."
                 ></b-form-file>
                 <b-button @click="ExcelToJSON(file)" variant="primary">Upload</b-button>
+                <b-spinner v-if="LoadingPetition" variant="success"></b-spinner>
             </b-col>
         </b-row>
     </b-container>
@@ -37,17 +38,25 @@ export default {
             leagues: [],
             Loading: false,
             eventName: null,
+            LoadingPetition: false,
         }
     },
     methods: {
-        ExcelToJSON(file) {
+        async ExcelToJSON(file) {
             if (this.eventName != null) {
+                this.LoadingPetition = true
                 xlsxParser
                     .onFileSelection(file)
-                    .then(data => {
-                        api.updateleague({eventName: this.eventName, obj: data})
+                    .then(async data => {
+                        await api.updateleague({
+                            eventName: this.eventName,
+                            obj: data,
+                        })
+                        this.LoadingPetition = false
+                        alert('Se updateo satisfactoriamente la liga')
                     })
                     .catch(error => {
+                        alert('Hubo un error con el update de esta liga')
                         console.log(`Error: ${error}`)
                     })
             } else {
