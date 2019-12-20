@@ -28,7 +28,7 @@ exports.createleague = functions.https.onRequest(async (req, res) => {
 exports.updateleague = functions.https.onRequest(async (req, res) => {
     cors(req, res, async () => {
         try {
-            await league.updateLeague(req.body)
+            await league.updateLeague(req.body.eventName, req.body.obj)
             res.status(200).send({status: 'created'})
         } catch (err) {
             console.log(err)

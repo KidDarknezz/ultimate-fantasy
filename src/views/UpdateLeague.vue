@@ -5,7 +5,13 @@
                 <h3>Updatear Data</h3>
             </b-col>
         </b-row>
-        <b-row>
+        <b-row v-if="Loading">
+            <b-spinner variant="info" style="width: 7rem; height: 7rem;" label="Large Spinner"></b-spinner>
+        </b-row>
+        <b-row v-if="!Loading">
+            <b-col cols="12">
+                <b-form-select label="Nombre de la liga" v-model="eventName" :options="leagues"></b-form-select>
+            </b-col>
             <b-col cols="12" style="margin-top: 20px;">
                 <b-form-file
                     v-model="file"
@@ -28,23 +34,32 @@ export default {
     data() {
         return {
             file: null,
+            leagues: [],
+            Loading: false,
+            eventName: null,
         }
     },
     methods: {
         ExcelToJSON(file) {
-            xlsxParser
-                .onFileSelection(file)
-                .then(data => {
-                    api.updateleague(data)
-                })
-                .catch(error => {
-                    console.log(`Error: ${error}`)
-                })
+            if (this.eventName != null) {
+                xlsxParser
+                    .onFileSelection(file)
+                    .then(data => {
+                        api.updateleague({eventName: this.eventName, obj: data})
+                    })
+                    .catch(error => {
+                        console.log(`Error: ${error}`)
+                    })
+            } else {
+                alert('Por favor escoger un nombre de la Liga')
+            }
         },
     },
-    beforeMount() {
-        api.returnleaguenames().then(data => {
-            console.log(data)
+    async beforeMount() {
+        this.Loading = true
+        api.returnleaguenames().then(leagues => {
+            this.leagues = leagues.data['status']
+            this.Loading = false
         })
     },
 }
