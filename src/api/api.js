@@ -7,8 +7,13 @@ import Request from './request'
 //         'Content-Type': 'application/json',
 //     })
 
-// Scores
-export const updateInfo = data =>
-    Request.post('/updateInfo', data, {
+// League
+export const updateleague = data =>
+    Request.post('/updateleague', data, {
+        'Content-Type': 'application/json',
+    })
+
+export const createleague = data =>
+    Request.post('/createleague', data, {
         'Content-Type': 'application/json',
     })

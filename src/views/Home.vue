@@ -16,10 +16,11 @@
         <b-row v-if="admin">
             <b-col cols="12">
                 <h4>YOu are an admin</h4>
-                <router-link to="/create-info">Crear Info</router-link><br />
-                <router-link to="/create-roster">Crear roster</router-link
-                ><br />
-                <router-link to="/update-info">Update Info</router-link>
+                <router-link to="/create-league">Crear Info</router-link>
+                <br />
+                <router-link to="/create-roster">Crear roster</router-link>
+                <br />
+                <router-link to="/update-league">Update Info</router-link>
             </b-col>
         </b-row>
         <!-- <b-row class="content">
