@@ -1,13 +1,13 @@
 const admin = require('firebase-admin')
 
-async function updateLeague(object) {
+async function updateLeague(eventName, object) {
     const db = admin.firestore()
     let Data = await formatObject(object)
-    let name = 'CDS2020'
+    console.log(`DATA: ${JSON.stringify(Data)}`)
     let CurrentData = {}
     for await (const equipo of Object.keys(Data)) {
         await db
-            .collection(name)
+            .collection(eventName)
             .doc(equipo)
             .get()
             .then(doc => {
@@ -25,13 +25,15 @@ async function updateLeague(object) {
         })
     }
     Object.keys(Data).forEach(equipo => {
-        db.collection(name)
+        db.collection(eventName)
             .doc(equipo)
             .update(CurrentData[equipo])
             .then(() => {
+                console.log(`Se updateo el ${equipo} con exito`)
                 Promise.resolve()
             })
             .catch(err => {
+                console.log(err)
                 Promise.reject(err)
             })
     })
