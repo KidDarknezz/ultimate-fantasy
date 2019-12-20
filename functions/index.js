@@ -16,11 +16,22 @@ exports.helloWorld = functions.https.onRequest((request, response) => {
     response.send('Hello from Firebase!')
 })
 
-exports.updateInfo = functions.https.onRequest(async (req, res) => {
+exports.createleague = functions.https.onRequest(async (req, res) => {
     cors(req, res, async () => {
         try {
-            await league.updateScores(req.body)
+            await league.createLeague(req.body.eventName, req.body.obj)
             res.status(200).send({status: 'updated'})
+        } catch (err) {
+            console.log(err)
+            res.status(400).send({err: err})
+        }
+    })
+})
+exports.updateleague = functions.https.onRequest(async (req, res) => {
+    cors(req, res, async () => {
+        try {
+            await league.updateLeague(req.body)
+            res.status(200).send({status: 'created'})
         } catch (err) {
             console.log(err)
             res.status(400).send({err: err})
