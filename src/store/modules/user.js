@@ -1,8 +1,12 @@
 import * as api from '@/api/api'
+import * as firebase from 'firebase/app'
+import 'firebase/auth'
+import 'firebase/firestore'
 
 export default {
     state: {
         user: '',
+        admin: false,
         token: localStorage.getItem('user-token') || '',
         uid: localStorage.getItem('uid') || '',
         userModuleError: '',
@@ -16,6 +20,9 @@ export default {
         },
         setToken: (state, payload) => {
             state.token = payload
+        },
+        setAdmin: (state, payload) => {
+            state.admin = payload
         },
         userSuccess: state => {
             state.status = 'success'
@@ -34,6 +41,18 @@ export default {
                 commit('setToken', token)
                 localStorage.setItem('user-token', token)
                 localStorage.setItem('uid', user.uid)
+                var db = firebase.firestore()
+                db.collection('Users')
+                    .doc(user.uid)
+                    .get()
+                    .then(doc => {
+                        if (doc.exists) {
+                            commit('setAdmin', doc.data().isAdmin)
+                        }
+                    })
+                    .catch(function(error) {
+                        console.log('Error getting document:', error)
+                    })
             } catch (error) {
                 console.log(`Error in store: ${error}`)
                 return error
@@ -49,5 +68,6 @@ export default {
         user: state => state.user,
         uid: state => state.uid,
         isAuthenticated: state => !!state.token,
+        isAdmin: state => state.admin,
     },
 }

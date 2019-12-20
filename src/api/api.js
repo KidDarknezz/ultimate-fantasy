@@ -6,3 +6,9 @@ import Request from './request'
 //     Request.get('/allitems', {
 //         'Content-Type': 'application/json',
 //     })
+
+// Scores
+export const updateInfo = data =>
+    Request.post('/updateInfo', data, {
+        'Content-Type': 'application/json',
+    })
