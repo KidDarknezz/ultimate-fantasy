@@ -24,6 +24,7 @@
 
 <script>
 import xlsxParser from 'xlsx-parse-json'
+import * as api from '@/api/api'
 import {type} from 'os'
 
 export default {
@@ -34,10 +35,14 @@ export default {
     },
     methods: {
         ExcelToJSON(file) {
-            let obj
-            xlsxParser.onFileSelection(file).then(data => {
-                obj = data
-            })
+            xlsxParser
+                .onFileSelection(file)
+                .then(data => {
+                    api.updateInfo(data)
+                })
+                .catch(error => {
+                    console.log(`Error: ${error}`)
+                })
         },
     },
 }
