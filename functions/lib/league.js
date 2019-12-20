@@ -3,7 +3,6 @@ const admin = require('firebase-admin')
 async function updateLeague(eventName, object) {
     const db = admin.firestore()
     let Data = await formatObject(object)
-    console.log(`DATA: ${JSON.stringify(Data)}`)
     let CurrentData = {}
     for await (const equipo of Object.keys(Data)) {
         await db

@@ -892,3 +892,24 @@
 [info] >  Se updateo el Los Mortales con exito
 [info] >  Se updateo el Avengers con exito
 [info] >  Se updateo el Nigeria ni sabe con exito
+[debug] [2019-12-20T18:11:37.376Z] File /Users/lexel/Desktop/ultimate-fantasy/functions/lib/league.js changed, reloading triggers
+[debug] [2019-12-20T18:11:38.382Z] [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2019-12-20T18:11:38.382Z] [worker-~diagnostic~-26eb2555-5a0d-453e-acef-4db1a0a235c6]: FINISHING
+[debug] [2019-12-20T18:11:38.382Z] [worker-pool] Shutting down IDLE worker (updateleague)
+[debug] [2019-12-20T18:11:38.382Z] [worker-updateleague-8bd17129-d226-47d5-8ca4-62d8311ed278]: FINISHING
+[debug] [2019-12-20T18:11:38.389Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2019-12-20T18:11:38.389Z] [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2019-12-20T18:11:38.389Z] [worker-pool] submitWork(triggerId=)
+[debug] [2019-12-20T18:11:38.389Z] [worker-~diagnostic~-74661b38-4b3c-4cb5-9df8-2a57d452192b]: Assigning socketPath: /var/folders/0r/j02q061d08zbswd0g8rmv82r0000gn/T/fire_emu_27277.sock
+[debug] [2019-12-20T18:11:38.389Z] [worker-~diagnostic~-74661b38-4b3c-4cb5-9df8-2a57d452192b]: BUSY
+[debug] [2019-12-20T18:11:38.390Z] [worker-~diagnostic~-26eb2555-5a0d-453e-acef-4db1a0a235c6]: exited
+[debug] [2019-12-20T18:11:38.390Z] [worker-~diagnostic~-26eb2555-5a0d-453e-acef-4db1a0a235c6]: FINISHED
+[debug] [2019-12-20T18:11:38.390Z] [worker-updateleague-8bd17129-d226-47d5-8ca4-62d8311ed278]: exited
+[debug] [2019-12-20T18:11:38.390Z] [worker-updateleague-8bd17129-d226-47d5-8ca4-62d8311ed278]: FINISHED
+[debug] [2019-12-20T18:11:38.600Z] [runtime-status] [27277] Functions runtime initialized. {"cwd":"/Users/lexel/Desktop/ultimate-fantasy/functions","node_version":"12.14.0"}
+[debug] [2019-12-20T18:11:38.602Z] [runtime-status] [27277] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2019-12-20T18:11:38.603Z] [runtime-status] [27277] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"/Users/lexel/Desktop/ultimate-fantasy/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-12-20T18:11:38.604Z] [runtime-status] [27277] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/lexel/Desktop/ultimate-fantasy/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to /Users/lexel/Dropbox/Documents/ultimate-fantasy.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-12-20T18:11:38.605Z] [runtime-status] [27277] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/lexel/Desktop/ultimate-fantasy/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-12-20T18:11:38.699Z] [worker-~diagnostic~-74661b38-4b3c-4cb5-9df8-2a57d452192b]: IDLE
