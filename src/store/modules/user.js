@@ -1,3 +1,5 @@
+//TODO: Tengo que cambiar como funciona lo del admin y hacer los tokens dentro del api
+
 import * as api from '@/api/api'
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
@@ -5,6 +7,7 @@ import 'firebase/firestore'
 
 export default {
     state: {
+        userInfo: '',
         user: '',
         admin: false,
         token: localStorage.getItem('user-token') || '',
