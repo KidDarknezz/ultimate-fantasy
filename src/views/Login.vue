@@ -1,56 +1,55 @@
 <template>
-    <b-container>
-        <b-alert
-            :show="dismissCountDown"
-            dismissible
-            variant="danger"
-            @dismissed="0"
-            @dismiss-count-down="countDownChanged"
-            >{{ errorMessage }}</b-alert
-        >
-
-        <b-row class="row" style="padding-top: 70px;">
-            <b-col>
-                <h3>
-                    DEM
-                    <i>tasy</i>
-                </h3>
-            </b-col>
-        </b-row>
-        <b-row style="margin-top: 50px">
-            <b-col cols="12">
-                <label>Correo:</label>
-                <input
-                    type="email"
-                    class="form-control"
-                    placeholder="test@test.com"
-                    v-model="email"
-                    @keyup.enter="login"
-                />
-            </b-col>
-            <b-col cols="12" style="margin-top: 20px;">
-                <label>Contraseña:</label>
-                <input
-                    type="password"
-                    class="form-control"
-                    placeholder="password"
-                    v-model="password"
-                    @keyup.enter="login"
-                />
-            </b-col>
-        </b-row>
-        <br />
-        <b-row>
-            <b-col cols="12">
-                <button class="btn btn-success" @click="login">
-                    Iniciar sesion
-                </button>
-                <br />
-                <br />
-                <router-link to="/create-account">Crear cuenta</router-link>
-            </b-col>
-        </b-row>
-    </b-container>
+    <div>
+        <div class="header">
+        </div>
+        <b-container>
+            <b-alert
+                :show="dismissCountDown"
+                dismissible
+                variant="danger"
+                @dismissed="0"
+                @dismiss-count-down="countDownChanged"
+                >{{ errorMessage }}</b-alert
+            >
+            <b-row class="row">
+                <b-col cols="4" offset="4">
+                    <img src="@/assets/DEM_White_PNG.png" class="img-fluid">
+                </b-col>
+            </b-row>
+            <b-row style="margin-top: 50px">
+                <b-col cols="12">
+                    <label>Correo:</label>
+                    <input
+                        type="email"
+                        class="form-control"
+                        placeholder="test@test.com"
+                        v-model="email"
+                        @keyup.enter="login"
+                    />
+                </b-col>
+                <b-col cols="12" style="margin-top: 20px;">
+                    <label>Contraseña:</label>
+                    <input
+                        type="password"
+                        class="form-control"
+                        placeholder="password"
+                        v-model="password"
+                        @keyup.enter="login"
+                    />
+                </b-col>
+            </b-row>
+            <b-row style="margin-top: 45px;">
+                <b-col cols="12">
+                    <button class="dem-fantasy-cta" @click="login">
+                        Iniciar sesion
+                    </button>
+                </b-col>
+            </b-row>
+        </b-container>
+        <div class="dem-fantasy-bottom-menu">
+            <router-link to="/create-account" class="dem-fantasy-create-acc-cta">Crear cuenta</router-link>
+        </div>
+    </div>
 </template>
 
 <script>

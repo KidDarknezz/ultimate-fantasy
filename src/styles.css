@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&display=swap');
+/*@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&display=swap');
 
 body {
 	font-family: 'Comfortaa', cursive;
@@ -51,4 +51,39 @@ body {
 
 input {
 	margin-bottom: 20px;
+}*/
+
+body {
+	background-color: #333;
+	color: #fff;
+}
+
+.header {
+	background-color: #000;
+	border-bottom: solid 3px #FFBE0A;
+	height: 65px;
+}
+
+.dem-fantasy-cta {
+	color: #fff;
+	background: rgb(255,190,10);
+	background: linear-gradient(-90deg, rgba(255,190,10,1) 0%, rgba(167,95,2,1) 100%);
+	border: none;
+	padding: 10px 25px;
+	border-radius: 6px;
+}
+
+.dem-fantasy-bottom-menu {
+	background-color: #000;
+	color: #fff;
+	border-top: solid 3px #FFBE0A;
+	padding: 15px 0;
+	position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.dem-fantasy-create-acc-cta {
+	width: 100% !important;
+	color: #fff;
 }
