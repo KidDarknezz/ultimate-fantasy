@@ -34,7 +34,7 @@
                     <input
                         type="password"
                         class="form-control"
-                        placeholder="password"
+                        placeholder="**********"
                         v-model="password"
                         @keyup.enter="login"
                     />
