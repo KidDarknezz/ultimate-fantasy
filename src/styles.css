@@ -110,3 +110,24 @@ body {
 	text-align: center; 
 	font-size: 50px;
 }
+
+.dem-fantasy-roster-player {
+	background-color: #fff; 
+	color: #333; 
+	padding: 10px;
+}
+
+.dem-fantasy-roster p {
+	color: #FFBE0A;
+	font-weight: 700;
+}
+
+.dem-fantasy-roster-score {
+	font-size: 20px; 
+	font-weight: 700;
+}
+
+.dem-fantasy-player-stats {
+	text-align: center; 
+	margin-top: 15px;
+}
