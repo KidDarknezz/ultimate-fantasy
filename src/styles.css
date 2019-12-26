@@ -71,6 +71,7 @@ body {
 	border: none;
 	padding: 10px 25px;
 	border-radius: 6px;
+	text-transform: uppercase;
 }
 
 .dem-fantasy-bottom-menu {
@@ -86,4 +87,26 @@ body {
 .dem-fantasy-create-acc-cta {
 	width: 100% !important;
 	color: #fff;
+}
+
+.dem-fantasy-tile {
+	background-position: center center;
+	background-size: cover;
+	width: 100%;
+	height: 150px;
+	margin-top: 0;
+}
+
+.dem-fantasy-ranking {
+	background-image: url("assets/bg-placeholder.jpg");
+}
+
+.dem-fantasy-myteam {
+	background-image: url("assets/bg-placeholder.jpg");
+}
+
+.dem-fantasy-tile p {
+	margin-top: 35px;
+	text-align: center; 
+	font-size: 50px;
 }

@@ -1,6 +1,7 @@
 <template>
     <div>
         <div class="header">
+            <h2 style="font-size: 25px; padding-top: 15px; margin-left: 15px;">Inicia sesion</h2>
         </div>
         <b-container>
             <b-alert
@@ -13,6 +14,7 @@
             >
             <b-row class="row">
                 <b-col cols="4" offset="4">
+                    <br>
                     <img src="@/assets/DEM_White_PNG.png" class="img-fluid">
                 </b-col>
             </b-row>
