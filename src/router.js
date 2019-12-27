@@ -9,6 +9,8 @@ import CreateAccount from '@/views/CreateAccount.vue'
 import CreateRoster from '@/views/CreateRoster.vue'
 import TeamRoster from '@/views/TeamRoster.vue'
 import UpdateLeague from '@/views/UpdateLeague.vue'
+import Welcome from '@/views/Welcome.vue'
+import MyTeam from '@/views/MyTeam.vue'
 
 Vue.use(Router)
 const ifAuthenticated = (to, from, next) => {
@@ -65,6 +67,16 @@ export default new Router({
             name: '',
             component: UpdateLeague,
             beforeEnter: ifAuthenticatedAndAdmin,
+        },
+        {
+            path: '/welcome',
+            name: 'welcome',
+            component: Welcome,
+        },
+        {
+            path: '/my-team',
+            name: 'my-team',
+            component: MyTeam,
         },
     ],
 })

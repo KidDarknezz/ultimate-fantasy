@@ -1,50 +1,54 @@
 <template>
-    <b-container>
-        <b-alert
-            :show="dismissCountDown"
-            dismissible
-            variant="danger"
-            @dismissed="0"
-            @dismiss-count-down="countDownChanged"
-            >{{ errorMessage }}</b-alert
-        >
-        <b-row class="heading">
-            <b-col cols="12">
-                <h3>Crear cuenta</h3>
-            </b-col>
-        </b-row>
-        <b-row>
-            <b-col cols="12">
-                <label>Nombre:</label>
-                <input
-                    type="text"
-                    class="form-control"
-                    placeholder="John Doe"
-                    v-model="name"
-                />
-                <label>Email:</label>
-                <input
-                    type="email"
-                    class="form-control"
-                    placeholder="john.doe@test.com"
-                    v-model="email"
-                />
-                <label>Contraseña</label>
-                <input
-                    type="password"
-                    class="form-control"
-                    placeholder="password"
-                    v-model="password"
-                />
-                <label>Nombra tu equipo fantasy</label>
-                <input type="text" class="form-control" v-model="teamName" />
-                <br />
-                <button @click="createUserAccount" class="btn btn-success">
-                    Seleccionar roster
-                </button>
-            </b-col>
-        </b-row>
-    </b-container>
+    <div>
+        <div class="header">
+            <h2 style="font-size: 25px; padding-top: 15px; margin-left: 15px;">Crea tu cuenta</h2>
+        </div>
+        <b-container>
+            <b-alert
+                :show="dismissCountDown"
+                dismissible
+                variant="danger"
+                @dismissed="0"
+                @dismiss-count-down="countDownChanged"
+                >{{ errorMessage }}</b-alert
+            >
+            <br>
+            <b-row>
+                <b-col cols="12">
+                    <label>Nombre:</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        placeholder="John Doe"
+                        v-model="name"
+                    />
+                    <br>
+                    <label>Email:</label>
+                    <input
+                        type="email"
+                        class="form-control"
+                        placeholder="john.doe@test.com"
+                        v-model="email"
+                    />
+                    <br>
+                    <label>Contraseña</label>
+                    <input
+                        type="password"
+                        class="form-control"
+                        placeholder="**********"
+                        v-model="password"
+                    />
+                    <!-- <label>Nombra tu equipo fantasy</label>
+                    <input type="text" class="form-control" v-model="teamName" />
+                    <br /> -->
+                    <br>
+                    <button @click="createUserAccount" class="dem-fantasy-cta">
+                        Crear cuenta
+                    </button>
+                </b-col>
+            </b-row>
+        </b-container>
+    </div>
 </template>
 
 <script>

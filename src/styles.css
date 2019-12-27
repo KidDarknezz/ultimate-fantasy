@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&display=swap');
+/*@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&display=swap');
 
 body {
 	font-family: 'Comfortaa', cursive;
@@ -51,4 +51,84 @@ body {
 
 input {
 	margin-bottom: 20px;
+}*/
+
+body {
+	background-color: #333;
+	color: #fff;
+}
+
+.header {
+	background-color: #000;
+	border-bottom: solid 3px #FFBE0A;
+	height: 65px;
+}
+
+.dem-fantasy-cta {
+	color: #fff;
+	background: rgb(255,190,10);
+	background: linear-gradient(-90deg, rgba(255,190,10,1) 0%, rgba(167,95,2,1) 100%);
+	border: none;
+	padding: 10px 25px;
+	border-radius: 6px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.dem-fantasy-bottom-menu {
+	background-color: #000;
+	color: #fff;
+	border-top: solid 3px #FFBE0A;
+	padding: 15px 0;
+	position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.dem-fantasy-create-acc-cta {
+	width: 100% !important;
+	color: #fff;
+}
+
+.dem-fantasy-tile {
+	background-position: center center;
+	background-size: cover;
+	width: 100%;
+	height: 150px;
+	margin-top: 0;
+}
+
+.dem-fantasy-ranking {
+	background-image: url("assets/bg-placeholder.jpg");
+}
+
+.dem-fantasy-myteam {
+	background-image: url("assets/bg-placeholder.jpg");
+}
+
+.dem-fantasy-tile p {
+	margin-top: 35px;
+	text-align: center; 
+	font-size: 50px;
+}
+
+.dem-fantasy-roster-player {
+	background-color: #fff; 
+	color: #333; 
+	padding: 10px;
+}
+
+.dem-fantasy-roster p {
+	color: #FFBE0A;
+	font-weight: 700;
+}
+
+.dem-fantasy-roster-score {
+	font-size: 20px; 
+	font-weight: 700;
+}
+
+.dem-fantasy-player-stats {
+	text-align: center; 
+	margin-top: 15px;
 }
