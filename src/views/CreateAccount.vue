@@ -10,19 +10,13 @@
                 variant="danger"
                 @dismissed="0"
                 @dismiss-count-down="countDownChanged"
-                >{{ errorMessage }}</b-alert
-            >
-            <br>
+            >{{ errorMessage }}</b-alert>
+            <br />
             <b-row>
                 <b-col cols="12">
                     <label>Nombre:</label>
-                    <input
-                        type="text"
-                        class="form-control"
-                        placeholder="John Doe"
-                        v-model="name"
-                    />
-                    <br>
+                    <input type="text" class="form-control" placeholder="John Doe" v-model="name" />
+                    <br />
                     <label>Email:</label>
                     <input
                         type="email"
@@ -30,7 +24,7 @@
                         placeholder="john.doe@test.com"
                         v-model="email"
                     />
-                    <br>
+                    <br />
                     <label>Contraseña</label>
                     <input
                         type="password"
@@ -40,11 +34,9 @@
                     />
                     <!-- <label>Nombra tu equipo fantasy</label>
                     <input type="text" class="form-control" v-model="teamName" />
-                    <br /> -->
-                    <br>
-                    <button @click="createUserAccount" class="dem-fantasy-cta">
-                        Crear cuenta
-                    </button>
+                    <br />-->
+                    <br />
+                    <button @click="createUserAccount" class="dem-fantasy-cta">Crear cuenta</button>
                 </b-col>
             </b-row>
         </b-container>
@@ -74,12 +66,7 @@ export default {
             this.dismissCountDown = dismissCountDown
         },
         async createUserAccount() {
-            if (
-                this.name == '' ||
-                this.email == '' ||
-                this.password == '' ||
-                this.teamName == ''
-            ) {
+            if (this.name == '' || this.email == '' || this.password == '') {
                 alert('Porfavor llena todos los campos')
             } else {
                 firebase
@@ -92,7 +79,6 @@ export default {
                         db.collection('Users')
                             .doc(user.uid)
                             .set({
-                                teamName: this.teamName,
                                 userName: this.name,
                                 userEmail: this.email,
                                 userCredit: 300,
