@@ -11,6 +11,7 @@ import TeamRoster from '@/views/TeamRoster.vue'
 import UpdateLeague from '@/views/UpdateLeague.vue'
 import Welcome from '@/views/Welcome.vue'
 import MyTeam from '@/views/MyTeam.vue'
+import ForgotPassword from '@/views/ForgotPassword.vue'
 
 Vue.use(Router)
 const ifAuthenticated = (to, from, next) => {
@@ -30,8 +31,8 @@ export default new Router({
     routes: [
         {
             path: '/',
-            name: 'home',
-            component: Home,
+            name: 'Welcome',
+            component: Welcome,
             beforeEnter: ifAuthenticated,
         },
         {
@@ -69,14 +70,21 @@ export default new Router({
             beforeEnter: ifAuthenticatedAndAdmin,
         },
         {
-            path: '/welcome',
-            name: 'welcome',
-            component: Welcome,
+            path: '/home/:leagueName?',
+            name: 'home',
+            component: Home,
+            beforeEnter: ifAuthenticated,
         },
         {
             path: '/my-team',
             name: 'my-team',
             component: MyTeam,
+            beforeEnter: ifAuthenticated,
+        },
+        {
+            path: '/passwordReset',
+            name: 'forgotPassword',
+            component: ForgotPassword,
         },
     ],
 })
