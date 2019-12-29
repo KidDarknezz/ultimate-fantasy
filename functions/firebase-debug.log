@@ -1691,3 +1691,429 @@
 [warn] ⚠  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to /Users/lexel/Dropbox/Documents/ultimate-fantasy.json. Non-emulated services will access production using these credentials. Be careful!
 [debug] [2019-12-24T22:14:59.107Z] [runtime-status] [22582] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/lexel/Desktop/ultimate-fantasy/functions/node_modules/firebase-functions/lib/index.js"}
 [debug] [2019-12-24T22:14:59.197Z] [worker-~diagnostic~-0f03d2a5-909f-41bd-8d74-ff97454aafaf]: IDLE
+[debug] [2019-12-29T04:47:39.612Z] ----------------------------------------------------------------------
+[debug] [2019-12-29T04:47:39.615Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\diego\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2019-12-29T04:47:39.615Z] CLI Version:   7.7.0
+[debug] [2019-12-29T04:47:39.615Z] Platform:      win32
+[debug] [2019-12-29T04:47:39.615Z] Node Version:  v10.16.0
+[debug] [2019-12-29T04:47:39.616Z] Time:          Sat Dec 28 2019 23:47:39 GMT-0500 (Colombia Standard Time)
+[debug] [2019-12-29T04:47:39.616Z] ----------------------------------------------------------------------
+[debug] [2019-12-29T04:47:39.617Z] 
+[debug] [2019-12-29T04:47:39.635Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-12-29T04:47:39.635Z] > authorizing via signed-in user
+[debug] [2019-12-29T04:47:39.635Z] [iam] checking project ultimate-fantasy-fe04f for permissions ["firebase.projects.get"]
+[debug] [2019-12-29T04:47:39.637Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-12-29T04:47:39.637Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-12-29T04:47:40.042Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-29T04:47:40.047Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/ultimate-fantasy-fe04f:testIamPermissions  
+
+[debug] [2019-12-29T04:47:40.556Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-29T04:47:40.556Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/ultimate-fantasy-fe04f  
+ 
+[debug] [2019-12-29T04:47:41.052Z] <<< HTTP RESPONSE 200
+[warn] !  Your requested "node" version "8" doesn't match your global version "10"
+[info] +  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\Users\diego\Desktop\ultimate-fantasy\functions" for Cloud Functions...
+[debug] [2019-12-29T04:47:43.612Z] [worker-~diagnostic~-6a3530c5-876c-4560-bf53-f93a3a27152f]: BUSY
+[debug] [2019-12-29T04:47:44.010Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions","node_version":"10.16.0"}
+[debug] [2019-12-29T04:47:44.012Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-12-29T04:47:44.015Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-29T04:47:44.018Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to C:/Users/diego/Dropbox/Documents/ultimate-fantasy.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-12-29T04:47:44.020Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] +  functions[auth]: http function initialized (http://localhost:5000/ultimate-fantasy-fe04f/us-central1/auth).
+[info] +  functions[createleague]: http function initialized (http://localhost:5000/ultimate-fantasy-fe04f/us-central1/createleague).
+[info] +  functions[updateleague]: http function initialized (http://localhost:5000/ultimate-fantasy-fe04f/us-central1/updateleague).
+[info] +  functions[returnleaguenames]: http function initialized (http://localhost:5000/ultimate-fantasy-fe04f/us-central1/returnleaguenames).
+[debug] [2019-12-29T04:47:44.474Z] [worker-~diagnostic~-6a3530c5-876c-4560-bf53-f93a3a27152f]: exited
+[debug] [2019-12-29T04:47:44.474Z] [worker-~diagnostic~-6a3530c5-876c-4560-bf53-f93a3a27152f]: FINISHED
+[debug] [2019-12-29T04:47:49.834Z] Accepted request GET /ultimate-fantasy-fe04f/us-central1/returnleaguenames --> returnleaguenames
+[debug] [2019-12-29T04:47:49.853Z] [worker-returnleaguenames-690e5c4d-dbc3-418b-b4df-11497f1ac649]: BUSY
+[debug] [2019-12-29T04:47:50.218Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions","node_version":"10.16.0"}
+[debug] [2019-12-29T04:47:50.220Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-12-29T04:47:50.223Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-29T04:47:50.224Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to C:/Users/diego/Dropbox/Documents/ultimate-fantasy.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-12-29T04:47:50.226Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-29T04:47:50.383Z] [runtime-status] Trigger "returnleaguenames" has been found, beginning invocation! {}
+[info] i  functions: Beginning execution of "returnleaguenames"
+[debug] [2019-12-29T04:47:50.384Z] [runtime-status]  {"httpsTrigger":{},"name":"returnleaguenames","entryPoint":"returnleaguenames"}
+[debug] [2019-12-29T04:47:50.384Z] [runtime-status] Running returnleaguenames in mode HTTPS {}
+[debug] [2019-12-29T04:47:50.389Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\10672"}
+[debug] [2019-12-29T04:47:50.391Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\10672"}
+[debug] [2019-12-29T04:47:50.396Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-12-29T04:47:50.982Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "returnleaguenames" in ~1s
+[debug] [2019-12-29T04:47:52.196Z] [worker-returnleaguenames-690e5c4d-dbc3-418b-b4df-11497f1ac649]: IDLE
+[debug] [2019-12-29T04:50:00.041Z] File C:\Users\diego\Desktop\ultimate-fantasy\functions\lib\league.js changed, reloading triggers
+[debug] [2019-12-29T04:50:01.042Z] [worker-pool]: Shutting down IDLE worker (returnleaguenames)
+[debug] [2019-12-29T04:50:01.059Z] [worker-~diagnostic~-9d083887-fc09-4be2-aab2-f5a661d92839]: BUSY
+[debug] [2019-12-29T04:50:01.059Z] [worker-returnleaguenames-690e5c4d-dbc3-418b-b4df-11497f1ac649]: exited
+[debug] [2019-12-29T04:50:01.059Z] [worker-returnleaguenames-690e5c4d-dbc3-418b-b4df-11497f1ac649]: FINISHED
+[debug] [2019-12-29T04:50:01.456Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions","node_version":"10.16.0"}
+[debug] [2019-12-29T04:50:01.457Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-12-29T04:50:01.461Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-29T04:50:01.463Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to C:/Users/diego/Dropbox/Documents/ultimate-fantasy.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-12-29T04:50:01.465Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-29T04:50:01.637Z] [worker-~diagnostic~-9d083887-fc09-4be2-aab2-f5a661d92839]: exited
+[debug] [2019-12-29T04:50:01.638Z] [worker-~diagnostic~-9d083887-fc09-4be2-aab2-f5a661d92839]: FINISHED
+[debug] [2019-12-29T04:50:13.838Z] File C:\Users\diego\Desktop\ultimate-fantasy\functions\lib\league.js changed, reloading triggers
+[debug] [2019-12-29T04:50:14.847Z] [worker-~diagnostic~-5cb565c0-82c0-436a-bdac-74064d2f17ab]: BUSY
+[debug] [2019-12-29T04:50:15.236Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions","node_version":"10.16.0"}
+[debug] [2019-12-29T04:50:15.237Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-12-29T04:50:15.240Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-29T04:50:15.242Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to C:/Users/diego/Dropbox/Documents/ultimate-fantasy.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-12-29T04:50:15.243Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-29T04:50:15.425Z] [worker-~diagnostic~-5cb565c0-82c0-436a-bdac-74064d2f17ab]: exited
+[debug] [2019-12-29T04:50:15.425Z] [worker-~diagnostic~-5cb565c0-82c0-436a-bdac-74064d2f17ab]: FINISHED
+[debug] [2019-12-29T04:50:54.888Z] Accepted request GET /ultimate-fantasy-fe04f/us-central1/returnleaguenames --> returnleaguenames
+[debug] [2019-12-29T04:50:54.895Z] [worker-returnleaguenames-dcd67c38-c647-4e49-9638-f44b8bad1f96]: BUSY
+[debug] [2019-12-29T04:50:55.259Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions","node_version":"10.16.0"}
+[debug] [2019-12-29T04:50:55.261Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-12-29T04:50:55.264Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-29T04:50:55.265Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to C:/Users/diego/Dropbox/Documents/ultimate-fantasy.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-12-29T04:50:55.266Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-29T04:50:55.421Z] [runtime-status] Trigger "returnleaguenames" has been found, beginning invocation! {}
+[info] i  functions: Beginning execution of "returnleaguenames"
+[debug] [2019-12-29T04:50:55.422Z] [runtime-status]  {"httpsTrigger":{},"name":"returnleaguenames","entryPoint":"returnleaguenames"}
+[debug] [2019-12-29T04:50:55.422Z] [runtime-status] Running returnleaguenames in mode HTTPS {}
+[debug] [2019-12-29T04:50:55.427Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\42232"}
+[debug] [2019-12-29T04:50:55.428Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\42232"}
+[debug] [2019-12-29T04:50:55.433Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-12-29T04:50:55.727Z] [runtime-status] Ephemeral server survived. {}
+[info] >  No matching documents.
+[info] i  functions: Finished "returnleaguenames" in ~1s
+[debug] [2019-12-29T04:50:56.919Z] [worker-returnleaguenames-dcd67c38-c647-4e49-9638-f44b8bad1f96]: IDLE
+[debug] [2019-12-29T04:51:04.707Z] Accepted request OPTIONS /ultimate-fantasy-fe04f/us-central1/createleague --> createleague
+[debug] [2019-12-29T04:51:04.717Z] [worker-createleague-1593dc00-0faf-42ed-b668-3a02776ce37b]: BUSY
+[debug] [2019-12-29T04:51:05.070Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions","node_version":"10.16.0"}
+[debug] [2019-12-29T04:51:05.071Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-12-29T04:51:05.074Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-29T04:51:05.075Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to C:/Users/diego/Dropbox/Documents/ultimate-fantasy.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-12-29T04:51:05.077Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-29T04:51:05.223Z] [runtime-status] Trigger "createleague" has been found, beginning invocation! {}
+[info] i  functions: Beginning execution of "createleague"
+[debug] [2019-12-29T04:51:05.224Z] [runtime-status]  {"httpsTrigger":{},"name":"createleague","entryPoint":"createleague"}
+[debug] [2019-12-29T04:51:05.224Z] [runtime-status] Running createleague in mode HTTPS {}
+[debug] [2019-12-29T04:51:05.230Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\8688"}
+[debug] [2019-12-29T04:51:05.231Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\8688"}
+[debug] [2019-12-29T04:51:05.238Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-12-29T04:51:05.241Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "createleague" in ~1s
+[debug] [2019-12-29T04:51:05.244Z] [worker-createleague-1593dc00-0faf-42ed-b668-3a02776ce37b]: IDLE
+[debug] [2019-12-29T04:51:05.247Z] Accepted request POST /ultimate-fantasy-fe04f/us-central1/createleague --> createleague
+[debug] [2019-12-29T04:51:05.247Z] [worker-createleague-1593dc00-0faf-42ed-b668-3a02776ce37b]: BUSY
+[debug] [2019-12-29T04:51:05.253Z] [runtime-status] Trigger "createleague" has been found, beginning invocation! {}
+[info] i  functions: Beginning execution of "createleague"
+[debug] [2019-12-29T04:51:05.254Z] [runtime-status]  {"httpsTrigger":{},"name":"createleague","entryPoint":"createleague"}
+[debug] [2019-12-29T04:51:05.254Z] [runtime-status] Running createleague in mode HTTPS {}
+[debug] [2019-12-29T04:51:05.254Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\8688"}
+[debug] [2019-12-29T04:51:05.255Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\8688"}
+[debug] [2019-12-29T04:51:05.281Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-12-29T04:51:05.585Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "createleague" in ~1s
+[debug] [2019-12-29T04:51:05.601Z] [worker-createleague-1593dc00-0faf-42ed-b668-3a02776ce37b]: IDLE
+[info] >  [+]Updated Succesfully Avengers
+[info] >  [+]Updated Succesfully Nigeria ni sabe
+[info] >  [+]Updated Succesfully Los Mortales
+[info] >  [+]Updated Succesfully Gravity
+[info] >  [+]Updated Succesfully Trepaquesube
+[debug] [2019-12-29T04:51:54.670Z] Accepted request GET /ultimate-fantasy-fe04f/us-central1/returnleaguenames --> returnleaguenames
+[debug] [2019-12-29T04:51:54.670Z] [worker-returnleaguenames-dcd67c38-c647-4e49-9638-f44b8bad1f96]: BUSY
+[debug] [2019-12-29T04:51:54.670Z] [runtime-status] Trigger "returnleaguenames" has been found, beginning invocation! {}
+[info] i  functions: Beginning execution of "returnleaguenames"
+[debug] [2019-12-29T04:51:54.671Z] [runtime-status]  {"httpsTrigger":{},"name":"returnleaguenames","entryPoint":"returnleaguenames"}
+[debug] [2019-12-29T04:51:54.671Z] [runtime-status] Running returnleaguenames in mode HTTPS {}
+[debug] [2019-12-29T04:51:54.671Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\42232"}
+[debug] [2019-12-29T04:51:54.672Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\42232"}
+[debug] [2019-12-29T04:51:54.675Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-12-29T04:51:54.675Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "returnleaguenames" in ~1s
+[debug] [2019-12-29T04:51:54.918Z] [worker-returnleaguenames-dcd67c38-c647-4e49-9638-f44b8bad1f96]: IDLE
+[debug] [2019-12-29T04:53:23.923Z] File C:\Users\diego\Desktop\ultimate-fantasy\functions\lib\league.js changed, reloading triggers
+[debug] [2019-12-29T04:53:24.924Z] [worker-pool]: Shutting down IDLE worker (returnleaguenames)
+[debug] [2019-12-29T04:53:24.924Z] [worker-pool]: Shutting down IDLE worker (createleague)
+[debug] [2019-12-29T04:53:24.931Z] [worker-~diagnostic~-130bc0ba-b6c4-4bfd-8d9a-b0fbb0bc0385]: BUSY
+[debug] [2019-12-29T04:53:24.932Z] [worker-returnleaguenames-dcd67c38-c647-4e49-9638-f44b8bad1f96]: exited
+[debug] [2019-12-29T04:53:24.932Z] [worker-returnleaguenames-dcd67c38-c647-4e49-9638-f44b8bad1f96]: FINISHED
+[debug] [2019-12-29T04:53:24.932Z] [worker-createleague-1593dc00-0faf-42ed-b668-3a02776ce37b]: exited
+[debug] [2019-12-29T04:53:24.932Z] [worker-createleague-1593dc00-0faf-42ed-b668-3a02776ce37b]: FINISHED
+[debug] [2019-12-29T04:53:25.288Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions","node_version":"10.16.0"}
+[debug] [2019-12-29T04:53:25.290Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-12-29T04:53:25.293Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-29T04:53:25.294Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to C:/Users/diego/Dropbox/Documents/ultimate-fantasy.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-12-29T04:53:25.296Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-29T04:53:25.484Z] [worker-~diagnostic~-130bc0ba-b6c4-4bfd-8d9a-b0fbb0bc0385]: exited
+[debug] [2019-12-29T04:53:25.484Z] [worker-~diagnostic~-130bc0ba-b6c4-4bfd-8d9a-b0fbb0bc0385]: FINISHED
+[debug] [2019-12-29T04:53:29.451Z] Accepted request GET /ultimate-fantasy-fe04f/us-central1/returnleaguenames --> returnleaguenames
+[debug] [2019-12-29T04:53:29.459Z] [worker-returnleaguenames-bfab2c4a-eabe-4dd0-86f8-3b9ddea19b3d]: BUSY
+[debug] [2019-12-29T04:53:29.791Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions","node_version":"10.16.0"}
+[debug] [2019-12-29T04:53:29.793Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-12-29T04:53:29.796Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-29T04:53:29.797Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to C:/Users/diego/Dropbox/Documents/ultimate-fantasy.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-12-29T04:53:29.799Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-29T04:53:29.950Z] [runtime-status] Trigger "returnleaguenames" has been found, beginning invocation! {}
+[info] i  functions: Beginning execution of "returnleaguenames"
+[debug] [2019-12-29T04:53:29.951Z] [runtime-status]  {"httpsTrigger":{},"name":"returnleaguenames","entryPoint":"returnleaguenames"}
+[debug] [2019-12-29T04:53:29.951Z] [runtime-status] Running returnleaguenames in mode HTTPS {}
+[debug] [2019-12-29T04:53:29.957Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\43108"}
+[debug] [2019-12-29T04:53:29.958Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\43108"}
+[debug] [2019-12-29T04:53:29.964Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-12-29T04:53:30.286Z] [runtime-status] Ephemeral server survived. {}
+[info] >  Doc: {"_ref":{"_firestore":{"_settings":{"credentials":{"private_key":"-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDOWyW8y1fBhvxq\ntsKXtCJH4BtpUwCmMc0W6OduAljIxfHDEkJZe2J0qM6gMh8wOj3fV5hmRs5HEHWb\nfFC8T05An09J1fYLFCgDKxSnZgp8VKEISrwrA3X7h24JUITv2Ux954aQOMn/j+uS\nYt0V+UDfSp2yBOvHyuEgAYwCaKM01kaRJ5qrBycX1zhz0IwwRa/58XG9zxbkDmrq\ni/rJjKDLfEWdRnV80EB7Bceno1UdqcH02M0lxhUAtt4VDBzGAf9+jUfWT4Hq/7Lo\n1fdTNzF7thpr9/ArmTB2PeNIkPRusy2Mi9HDSwKp0lfTyRssNH7o30OpA3vqHe4I\noH0QKsvTAgMBAAECggEAVlfxHGQBHir7JzO9jHiE94ogLhva469m3zUo0PEOcUPR\n+wuC06o68hFIE+OlBSr5hKBEVlc+LKIIc7y6k3Cjj4qZRI3QW6Zdb6XxCHI75PYM\nQ0nyHhVeopZyRld4qFtGFFByD5qTeumfaisP0wfuSwAPp9NDTN/o/tlm2gMqdwqI\ncBaUJ5b0fS1QlDFQgpLYRNzr10aTDeaytnGA39aHSYaCScE1UycAaxZsBEx90ewP\n+bRD0tHxdCjb2ibPQwYgDCTQskv6C6eu0sUPTV71pWan/uPR61BHI1s2p2LSc5fS\nLnfUFsm6NDnNEtwy8VIDAwwJviahGOIzREUuysC4wQKBgQD7iCeyBG3f4Un0W/v5\n1FKYOq92KG3Oc8hyGjCXLe8hQgLYaQSgIE4sOxPLUwaLXGSkhPxvNM3P+9zbAW/Y\n+6mBLllPYiTW4/QZkXZLZO3r3D3rUy5aVPyM7lj4q27lvxQVFF3PAybNX11ZF8qQ\naVuY+tr29y4NSm1o1yP4/p4OYwKBgQDSBY3+cDyYCgqp5Iqu9uODXsqhWBQrBu7d\nhlLrNC7EkE9TLJHBJ+PKB/rhqVGUY5RM3SQH/Ocgf0tFYxZXmh+0WFXoJLu9WOu5\nDzEyzp4V4KEBNRg4eNfz6du/s7FSkgZxREYcJ/313YxXLGH3uvpQ/7UNSSQjU99i\nKW9XwzXP0QKBgQCop1+ubmfZ0K6MyUyH9ES5S8gwmuUdo+bIEyV3iNYpX6CWyLvQ\nPjkMUURxdacStI3K/lxgmHBTv5YTxr/fJsc+FfzOTIlVCR24Mx+1Z+Rb3J4r9udC\nrG92c652dkRyig+GHtTTpFJVLFdkEJ7C+9HuHm3JYG2hfcEkpfS51MfX7wKBgGz5\nLt0ntXkaNMBEcmUoe5KNm8wt3IEa3tQYv2uFLwMU8ePxS0uS/BG3JEj0xvyc0rUz\nRV/TrMVi51aAfHZF5U95SlHixXsQ6XajWF7JcKNfY4sx1nhu03afEEOe5FI4rJkW\n2N4BLjfllc0hnU+iOAHRPEtBeTvPaCgR4dEC3CgRAoGAYBxcsLHcSl/nIWM5N2ox\n7yDmRO5HArXdDDRhq/ESucr67i6CPKzWFck1aC+bVRvm7M3csPDuxecL/FJUt+rS\nA/q6+MHpe+Z7TgF+pMunsIqNeUF16TpxxqbREtmZUVIzwaTdn59fsm3hgogE2BjB\nyTUbWdUCMCi5xs/QRalwS/Y=\n-----END PRIVATE KEY-----\n","client_email":"firebase-adminsdk-k4a27@ultimate-fantasy-fe04f.iam.gserviceaccount.com"},"projectId":"ultimate-fantasy-fe04f","firebaseVersion":"8.7.0","libName":"gccl","libVersion":"2.6.0 fire/8.7.0"},"_settingsFrozen":true,"_serializer":{"timestampsInSnapshots":true},"_projectId":"ultimate-fantasy-fe04f","_lastSuccessfulRequest":1577595211561,"_preferTransactions":false,"_clientPool":{"concurrentOperationLimit":100,"activeClients":{}}},"_path":{"segments":["Leagues","gqA1GdOMrbpmr9NA2oXr"],"projectId":"ultimate-fantasy-fe04f","databaseId":"(default)"}},"_fieldsProto":{"banner":{"stringValue":"https://via.placeholder.com/150","valueType":"stringValue"},"eventName":{"stringValue":"CDS 2020","valueType":"stringValue"}},"_serializer":{"timestampsInSnapshots":true},"_readTime":{"_seconds":1577595207,"_nanoseconds":207341000},"_createTime":{"_seconds":1577595062,"_nanoseconds":462960000},"_updateTime":{"_seconds":1577595062,"_nanoseconds":462960000}}
+[info] i  functions: Finished "returnleaguenames" in ~1s
+[debug] [2019-12-29T04:53:31.584Z] [worker-returnleaguenames-bfab2c4a-eabe-4dd0-86f8-3b9ddea19b3d]: IDLE
+[debug] [2019-12-29T04:54:30.884Z] File C:\Users\diego\Desktop\ultimate-fantasy\functions\lib\league.js changed, reloading triggers
+[debug] [2019-12-29T04:54:31.885Z] [worker-pool]: Shutting down IDLE worker (returnleaguenames)
+[debug] [2019-12-29T04:54:31.894Z] [worker-~diagnostic~-074a3f8e-5026-485d-b762-2ae9e1655f8c]: BUSY
+[debug] [2019-12-29T04:54:31.895Z] [worker-returnleaguenames-bfab2c4a-eabe-4dd0-86f8-3b9ddea19b3d]: exited
+[debug] [2019-12-29T04:54:31.895Z] [worker-returnleaguenames-bfab2c4a-eabe-4dd0-86f8-3b9ddea19b3d]: FINISHED
+[debug] [2019-12-29T04:54:32.242Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions","node_version":"10.16.0"}
+[debug] [2019-12-29T04:54:32.244Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-12-29T04:54:32.246Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-29T04:54:32.248Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to C:/Users/diego/Dropbox/Documents/ultimate-fantasy.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-12-29T04:54:32.249Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-29T04:54:32.430Z] [worker-~diagnostic~-074a3f8e-5026-485d-b762-2ae9e1655f8c]: exited
+[debug] [2019-12-29T04:54:32.430Z] [worker-~diagnostic~-074a3f8e-5026-485d-b762-2ae9e1655f8c]: FINISHED
+[debug] [2019-12-29T04:54:37.395Z] Accepted request GET /ultimate-fantasy-fe04f/us-central1/returnleaguenames --> returnleaguenames
+[debug] [2019-12-29T04:54:37.402Z] [worker-returnleaguenames-9daf5ed9-724a-4882-9537-a3c78a4c9959]: BUSY
+[debug] [2019-12-29T04:54:37.758Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions","node_version":"10.16.0"}
+[debug] [2019-12-29T04:54:37.759Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-12-29T04:54:37.762Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-29T04:54:37.763Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to C:/Users/diego/Dropbox/Documents/ultimate-fantasy.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-12-29T04:54:37.765Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-29T04:54:37.912Z] [runtime-status] Trigger "returnleaguenames" has been found, beginning invocation! {}
+[info] i  functions: Beginning execution of "returnleaguenames"
+[debug] [2019-12-29T04:54:37.913Z] [runtime-status]  {"httpsTrigger":{},"name":"returnleaguenames","entryPoint":"returnleaguenames"}
+[debug] [2019-12-29T04:54:37.913Z] [runtime-status] Running returnleaguenames in mode HTTPS {}
+[debug] [2019-12-29T04:54:37.921Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\37380"}
+[debug] [2019-12-29T04:54:37.921Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\37380"}
+[debug] [2019-12-29T04:54:37.927Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-12-29T04:54:38.241Z] [runtime-status] Ephemeral server survived. {}
+[info] >  Doc: undefined
+[info] i  functions: Finished "returnleaguenames" in ~1s
+[debug] [2019-12-29T04:54:39.467Z] [worker-returnleaguenames-9daf5ed9-724a-4882-9537-a3c78a4c9959]: IDLE
+[debug] [2019-12-29T04:59:48.784Z] File C:\Users\diego\Desktop\ultimate-fantasy\functions\lib\league.js changed, reloading triggers
+[debug] [2019-12-29T04:59:49.785Z] [worker-pool]: Shutting down IDLE worker (returnleaguenames)
+[debug] [2019-12-29T04:59:49.792Z] [worker-~diagnostic~-3273b983-585d-40ad-94f7-1218dd8d4e96]: BUSY
+[debug] [2019-12-29T04:59:49.793Z] [worker-returnleaguenames-9daf5ed9-724a-4882-9537-a3c78a4c9959]: exited
+[debug] [2019-12-29T04:59:49.793Z] [worker-returnleaguenames-9daf5ed9-724a-4882-9537-a3c78a4c9959]: FINISHED
+[debug] [2019-12-29T04:59:50.120Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions","node_version":"10.16.0"}
+[debug] [2019-12-29T04:59:50.122Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-12-29T04:59:50.124Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-29T04:59:50.126Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to C:/Users/diego/Dropbox/Documents/ultimate-fantasy.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-12-29T04:59:50.128Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-29T04:59:50.300Z] [worker-~diagnostic~-3273b983-585d-40ad-94f7-1218dd8d4e96]: exited
+[debug] [2019-12-29T04:59:50.300Z] [worker-~diagnostic~-3273b983-585d-40ad-94f7-1218dd8d4e96]: FINISHED
+[debug] [2019-12-29T05:00:45.411Z] File C:\Users\diego\Desktop\ultimate-fantasy\functions\lib\league.js changed, reloading triggers
+[debug] [2019-12-29T05:00:46.434Z] [worker-~diagnostic~-f736be97-4b16-42c8-a4f2-021319b7b0af]: BUSY
+[debug] [2019-12-29T05:00:46.805Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions","node_version":"10.16.0"}
+[debug] [2019-12-29T05:00:46.807Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-12-29T05:00:46.810Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-29T05:00:46.811Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to C:/Users/diego/Dropbox/Documents/ultimate-fantasy.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-12-29T05:00:46.813Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-29T05:00:47.003Z] [worker-~diagnostic~-f736be97-4b16-42c8-a4f2-021319b7b0af]: exited
+[debug] [2019-12-29T05:00:47.003Z] [worker-~diagnostic~-f736be97-4b16-42c8-a4f2-021319b7b0af]: FINISHED
+[debug] [2019-12-29T05:00:50.330Z] File C:\Users\diego\Desktop\ultimate-fantasy\functions\lib\league.js changed, reloading triggers
+[debug] [2019-12-29T05:00:51.337Z] [worker-~diagnostic~-9c14f8cb-ef89-4e3c-81f9-7cc03783486d]: BUSY
+[debug] [2019-12-29T05:00:51.707Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions","node_version":"10.16.0"}
+[debug] [2019-12-29T05:00:51.709Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-12-29T05:00:51.713Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-29T05:00:51.715Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to C:/Users/diego/Dropbox/Documents/ultimate-fantasy.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-12-29T05:00:51.716Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-29T05:00:51.886Z] [worker-~diagnostic~-9c14f8cb-ef89-4e3c-81f9-7cc03783486d]: exited
+[debug] [2019-12-29T05:00:51.887Z] [worker-~diagnostic~-9c14f8cb-ef89-4e3c-81f9-7cc03783486d]: FINISHED
+[debug] [2019-12-29T05:00:59.887Z] Accepted request GET /ultimate-fantasy-fe04f/us-central1/returnleaguenames --> returnleaguenames
+[debug] [2019-12-29T05:00:59.894Z] [worker-returnleaguenames-8c51111a-83e2-4cc1-883f-6b44085f037c]: BUSY
+[debug] [2019-12-29T05:01:00.256Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions","node_version":"10.16.0"}
+[debug] [2019-12-29T05:01:00.258Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-12-29T05:01:00.262Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-29T05:01:00.264Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to C:/Users/diego/Dropbox/Documents/ultimate-fantasy.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-12-29T05:01:00.265Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-29T05:01:00.415Z] [runtime-status] Trigger "returnleaguenames" has been found, beginning invocation! {}
+[info] i  functions: Beginning execution of "returnleaguenames"
+[debug] [2019-12-29T05:01:00.415Z] [runtime-status]  {"httpsTrigger":{},"name":"returnleaguenames","entryPoint":"returnleaguenames"}
+[debug] [2019-12-29T05:01:00.416Z] [runtime-status] Running returnleaguenames in mode HTTPS {}
+[debug] [2019-12-29T05:01:00.420Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\35736"}
+[debug] [2019-12-29T05:01:00.421Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\35736"}
+[debug] [2019-12-29T05:01:00.427Z] [runtime-status] Ephemeral server used! {}
+[info] >  Error: Value for argument "opStr" is invalid. Acceptable values are: <, <=, ==, >, >=, array-contains, in, array-contains-any
+[debug] [2019-12-29T05:01:00.430Z] [runtime-status] Ephemeral server survived. {}
+[info] >  Error: Value for argument "opStr" is invalid. Acceptable values are: <, <=, ==, >, >=, array-contains, in, array-contains-any
+[info] >      at Object.validateEnumValue (C:\Users\diego\Desktop\ultimate-fantasy\functions\node_modules\@google-cloud\firestore\build\src\validate.js:310:15)
+[info] >      at validateQueryOperator (C:\Users\diego\Desktop\ultimate-fantasy\functions\node_modules\@google-cloud\firestore\build\src\reference.js:1816:16)
+[info] >      at CollectionReference.where (C:\Users\diego\Desktop\ultimate-fantasy\functions\node_modules\@google-cloud\firestore\build\src\reference.js:958:17)
+[info] >      at Object.returnLeaguesNames (C:\Users\diego\Desktop\ultimate-fantasy\functions\lib\league.js:70:14)
+[info] >      at cors (C:\Users\diego\Desktop\ultimate-fantasy\functions\index.js:55:37)
+[info] >      at cors (C:\Users\diego\Desktop\ultimate-fantasy\functions\node_modules\cors\lib\index.js:188:7)
+[info] >      at C:\Users\diego\Desktop\ultimate-fantasy\functions\node_modules\cors\lib\index.js:224:17
+[info] >      at originCallback (C:\Users\diego\Desktop\ultimate-fantasy\functions\node_modules\cors\lib\index.js:214:15)
+[info] >      at C:\Users\diego\Desktop\ultimate-fantasy\functions\node_modules\cors\lib\index.js:219:13
+[info] >      at optionsCallback (C:\Users\diego\Desktop\ultimate-fantasy\functions\node_modules\cors\lib\index.js:199:9)
+[info] i  functions: Finished "returnleaguenames" in ~1s
+[debug] [2019-12-29T05:01:00.441Z] [worker-returnleaguenames-8c51111a-83e2-4cc1-883f-6b44085f037c]: IDLE
+[debug] [2019-12-29T05:02:29.360Z] File C:\Users\diego\Desktop\ultimate-fantasy\functions\lib\league.js changed, reloading triggers
+[debug] [2019-12-29T05:02:30.361Z] [worker-pool]: Shutting down IDLE worker (returnleaguenames)
+[debug] [2019-12-29T05:02:30.369Z] [worker-~diagnostic~-0c3f98a1-e613-4820-bcef-e8e1648b09f1]: BUSY
+[debug] [2019-12-29T05:02:30.370Z] [worker-returnleaguenames-8c51111a-83e2-4cc1-883f-6b44085f037c]: exited
+[debug] [2019-12-29T05:02:30.370Z] [worker-returnleaguenames-8c51111a-83e2-4cc1-883f-6b44085f037c]: FINISHED
+[debug] [2019-12-29T05:02:30.777Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions","node_version":"10.16.0"}
+[debug] [2019-12-29T05:02:30.779Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-12-29T05:02:30.783Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-29T05:02:30.785Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to C:/Users/diego/Dropbox/Documents/ultimate-fantasy.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-12-29T05:02:30.786Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-29T05:02:30.969Z] [worker-~diagnostic~-0c3f98a1-e613-4820-bcef-e8e1648b09f1]: exited
+[debug] [2019-12-29T05:02:30.969Z] [worker-~diagnostic~-0c3f98a1-e613-4820-bcef-e8e1648b09f1]: FINISHED
+[debug] [2019-12-29T05:02:36.425Z] File C:\Users\diego\Desktop\ultimate-fantasy\functions\lib\league.js changed, reloading triggers
+[debug] [2019-12-29T05:02:37.433Z] [worker-~diagnostic~-59909744-c730-427a-9159-22e0376176f1]: BUSY
+[debug] [2019-12-29T05:02:37.825Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions","node_version":"10.16.0"}
+[debug] [2019-12-29T05:02:37.827Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-12-29T05:02:37.832Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-29T05:02:37.834Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to C:/Users/diego/Dropbox/Documents/ultimate-fantasy.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-12-29T05:02:37.836Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-29T05:02:38.031Z] [worker-~diagnostic~-59909744-c730-427a-9159-22e0376176f1]: exited
+[debug] [2019-12-29T05:02:38.032Z] [worker-~diagnostic~-59909744-c730-427a-9159-22e0376176f1]: FINISHED
+[debug] [2019-12-29T05:02:44.166Z] Accepted request GET /ultimate-fantasy-fe04f/us-central1/returnleaguenames --> returnleaguenames
+[debug] [2019-12-29T05:02:44.174Z] [worker-returnleaguenames-33681250-c1a5-4d3e-b141-4202b0e70c38]: BUSY
+[debug] [2019-12-29T05:02:44.514Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions","node_version":"10.16.0"}
+[debug] [2019-12-29T05:02:44.516Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-12-29T05:02:44.520Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-29T05:02:44.521Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to C:/Users/diego/Dropbox/Documents/ultimate-fantasy.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-12-29T05:02:44.522Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-29T05:02:44.684Z] [runtime-status] Trigger "returnleaguenames" has been found, beginning invocation! {}
+[info] i  functions: Beginning execution of "returnleaguenames"
+[debug] [2019-12-29T05:02:44.685Z] [runtime-status]  {"httpsTrigger":{},"name":"returnleaguenames","entryPoint":"returnleaguenames"}
+[debug] [2019-12-29T05:02:44.685Z] [runtime-status] Running returnleaguenames in mode HTTPS {}
+[debug] [2019-12-29T05:02:44.690Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\34496"}
+[debug] [2019-12-29T05:02:44.691Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\34496"}
+[debug] [2019-12-29T05:02:44.696Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-12-29T05:02:45.006Z] [runtime-status] Ephemeral server survived. {}
+[info] >  Doc: {"banner":"https://via.placeholder.com/150","eventName":"CDS 2020"}
+[info] i  functions: Finished "returnleaguenames" in ~1s
+[debug] [2019-12-29T05:02:46.331Z] [worker-returnleaguenames-33681250-c1a5-4d3e-b141-4202b0e70c38]: IDLE
+[debug] [2019-12-29T05:03:00.385Z] File C:\Users\diego\Desktop\ultimate-fantasy\functions\lib\league.js changed, reloading triggers
+[debug] [2019-12-29T05:03:01.387Z] [worker-pool]: Shutting down IDLE worker (returnleaguenames)
+[debug] [2019-12-29T05:03:01.394Z] [worker-~diagnostic~-db2c7f87-7f24-4fee-a62a-7cd009639673]: BUSY
+[debug] [2019-12-29T05:03:01.394Z] [worker-returnleaguenames-33681250-c1a5-4d3e-b141-4202b0e70c38]: exited
+[debug] [2019-12-29T05:03:01.394Z] [worker-returnleaguenames-33681250-c1a5-4d3e-b141-4202b0e70c38]: FINISHED
+[debug] [2019-12-29T05:03:01.733Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions","node_version":"10.16.0"}
+[debug] [2019-12-29T05:03:01.735Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-12-29T05:03:01.738Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-29T05:03:01.739Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to C:/Users/diego/Dropbox/Documents/ultimate-fantasy.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-12-29T05:03:01.740Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-29T05:03:01.914Z] [worker-~diagnostic~-db2c7f87-7f24-4fee-a62a-7cd009639673]: exited
+[debug] [2019-12-29T05:03:01.915Z] [worker-~diagnostic~-db2c7f87-7f24-4fee-a62a-7cd009639673]: FINISHED
+[debug] [2019-12-29T05:03:04.953Z] Accepted request GET /ultimate-fantasy-fe04f/us-central1/returnleaguenames --> returnleaguenames
+[debug] [2019-12-29T05:03:04.959Z] [worker-returnleaguenames-8d8dca08-0183-4a52-8495-6c142e2263bf]: BUSY
+[debug] [2019-12-29T05:03:05.325Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions","node_version":"10.16.0"}
+[debug] [2019-12-29T05:03:05.326Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-12-29T05:03:05.329Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-29T05:03:05.330Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to C:/Users/diego/Dropbox/Documents/ultimate-fantasy.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-12-29T05:03:05.331Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-29T05:03:05.487Z] [runtime-status] Trigger "returnleaguenames" has been found, beginning invocation! {}
+[info] i  functions: Beginning execution of "returnleaguenames"
+[debug] [2019-12-29T05:03:05.488Z] [runtime-status]  {"httpsTrigger":{},"name":"returnleaguenames","entryPoint":"returnleaguenames"}
+[debug] [2019-12-29T05:03:05.488Z] [runtime-status] Running returnleaguenames in mode HTTPS {}
+[debug] [2019-12-29T05:03:05.492Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\41932"}
+[debug] [2019-12-29T05:03:05.493Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\41932"}
+[debug] [2019-12-29T05:03:05.498Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-12-29T05:03:05.783Z] [runtime-status] Ephemeral server survived. {}
+[info] >  Doc: "CDS 2020"
+[info] i  functions: Finished "returnleaguenames" in ~1s
+[debug] [2019-12-29T05:03:07.009Z] [worker-returnleaguenames-8d8dca08-0183-4a52-8495-6c142e2263bf]: IDLE
+[debug] [2019-12-29T05:03:24.289Z] File C:\Users\diego\Desktop\ultimate-fantasy\functions\lib\league.js changed, reloading triggers
+[debug] [2019-12-29T05:03:25.291Z] [worker-pool]: Shutting down IDLE worker (returnleaguenames)
+[debug] [2019-12-29T05:03:25.298Z] [worker-~diagnostic~-bd80e588-6a65-46ad-b39a-84626513133a]: BUSY
+[debug] [2019-12-29T05:03:25.300Z] [worker-returnleaguenames-8d8dca08-0183-4a52-8495-6c142e2263bf]: exited
+[debug] [2019-12-29T05:03:25.300Z] [worker-returnleaguenames-8d8dca08-0183-4a52-8495-6c142e2263bf]: FINISHED
+[debug] [2019-12-29T05:03:25.643Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions","node_version":"10.16.0"}
+[debug] [2019-12-29T05:03:25.645Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-12-29T05:03:25.648Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-29T05:03:25.649Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to C:/Users/diego/Dropbox/Documents/ultimate-fantasy.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-12-29T05:03:25.651Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-29T05:03:25.818Z] [worker-~diagnostic~-bd80e588-6a65-46ad-b39a-84626513133a]: exited
+[debug] [2019-12-29T05:03:25.818Z] [worker-~diagnostic~-bd80e588-6a65-46ad-b39a-84626513133a]: FINISHED
+[debug] [2019-12-29T05:03:52.506Z] Accepted request GET /ultimate-fantasy-fe04f/us-central1/returnleaguenames --> returnleaguenames
+[debug] [2019-12-29T05:03:52.513Z] [worker-returnleaguenames-46682744-363d-47df-91d7-c499694c472b]: BUSY
+[debug] [2019-12-29T05:03:52.842Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions","node_version":"10.16.0"}
+[debug] [2019-12-29T05:03:52.843Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-12-29T05:03:52.846Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-29T05:03:52.848Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to C:/Users/diego/Dropbox/Documents/ultimate-fantasy.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-12-29T05:03:52.849Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-29T05:03:53.009Z] [runtime-status] Trigger "returnleaguenames" has been found, beginning invocation! {}
+[info] i  functions: Beginning execution of "returnleaguenames"
+[debug] [2019-12-29T05:03:53.010Z] [runtime-status]  {"httpsTrigger":{},"name":"returnleaguenames","entryPoint":"returnleaguenames"}
+[debug] [2019-12-29T05:03:53.010Z] [runtime-status] Running returnleaguenames in mode HTTPS {}
+[debug] [2019-12-29T05:03:53.016Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\39840"}
+[debug] [2019-12-29T05:03:53.016Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\39840"}
+[debug] [2019-12-29T05:03:53.022Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-12-29T05:03:53.327Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "returnleaguenames" in ~1s
+[debug] [2019-12-29T05:03:54.536Z] [worker-returnleaguenames-46682744-363d-47df-91d7-c499694c472b]: IDLE
+[debug] [2019-12-29T05:04:00.834Z] Accepted request OPTIONS /ultimate-fantasy-fe04f/us-central1/updateleague --> updateleague
+[debug] [2019-12-29T05:04:00.851Z] [worker-updateleague-e4df8a15-ad01-4008-b5ed-b23476abe374]: BUSY
+[debug] [2019-12-29T05:04:01.215Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions","node_version":"10.16.0"}
+[debug] [2019-12-29T05:04:01.216Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-12-29T05:04:01.219Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-12-29T05:04:01.221Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to C:/Users/diego/Dropbox/Documents/ultimate-fantasy.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-12-29T05:04:01.222Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-12-29T05:04:01.381Z] [runtime-status] Trigger "updateleague" has been found, beginning invocation! {}
+[info] i  functions: Beginning execution of "updateleague"
+[debug] [2019-12-29T05:04:01.382Z] [runtime-status]  {"httpsTrigger":{},"name":"updateleague","entryPoint":"updateleague"}
+[debug] [2019-12-29T05:04:01.382Z] [runtime-status] Running updateleague in mode HTTPS {}
+[debug] [2019-12-29T05:04:01.387Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\37380"}
+[debug] [2019-12-29T05:04:01.387Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\37380"}
+[debug] [2019-12-29T05:04:01.392Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-12-29T05:04:01.395Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "updateleague" in ~1s
+[debug] [2019-12-29T05:04:01.398Z] [worker-updateleague-e4df8a15-ad01-4008-b5ed-b23476abe374]: IDLE
+[debug] [2019-12-29T05:04:01.400Z] Accepted request POST /ultimate-fantasy-fe04f/us-central1/updateleague --> updateleague
+[debug] [2019-12-29T05:04:01.400Z] [worker-updateleague-e4df8a15-ad01-4008-b5ed-b23476abe374]: BUSY
+[debug] [2019-12-29T05:04:01.410Z] [runtime-status] Trigger "updateleague" has been found, beginning invocation! {}
+[info] i  functions: Beginning execution of "updateleague"
+[debug] [2019-12-29T05:04:01.411Z] [runtime-status]  {"httpsTrigger":{},"name":"updateleague","entryPoint":"updateleague"}
+[debug] [2019-12-29T05:04:01.411Z] [runtime-status] Running updateleague in mode HTTPS {}
+[debug] [2019-12-29T05:04:01.411Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\37380"}
+[debug] [2019-12-29T05:04:01.411Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\37380"}
+[debug] [2019-12-29T05:04:01.424Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-12-29T05:04:01.425Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "updateleague" in ~2s
+[debug] [2019-12-29T05:04:03.560Z] [worker-updateleague-e4df8a15-ad01-4008-b5ed-b23476abe374]: IDLE
+[info] >  Se updateo el Avengers con exito
+[info] >  Se updateo el Trepaquesube con exito
+[info] >  Se updateo el Gravity con exito
+[info] >  Se updateo el Nigeria ni sabe con exito
+[info] >  Se updateo el Los Mortales con exito
+[debug] [2019-12-29T05:04:19.056Z] Accepted request GET /ultimate-fantasy-fe04f/us-central1/returnleaguenames --> returnleaguenames
+[debug] [2019-12-29T05:04:19.056Z] [worker-returnleaguenames-46682744-363d-47df-91d7-c499694c472b]: BUSY
+[debug] [2019-12-29T05:04:19.056Z] [runtime-status] Trigger "returnleaguenames" has been found, beginning invocation! {}
+[info] i  functions: Beginning execution of "returnleaguenames"
+[debug] [2019-12-29T05:04:19.057Z] [runtime-status]  {"httpsTrigger":{},"name":"returnleaguenames","entryPoint":"returnleaguenames"}
+[debug] [2019-12-29T05:04:19.057Z] [runtime-status] Running returnleaguenames in mode HTTPS {}
+[debug] [2019-12-29T05:04:19.057Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\39840"}
+[debug] [2019-12-29T05:04:19.058Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\diego\\Desktop\\ultimate-fantasy\\functions\\39840"}
+[debug] [2019-12-29T05:04:19.059Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-12-29T05:04:19.060Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "returnleaguenames" in ~1s
+[debug] [2019-12-29T05:04:19.216Z] [worker-returnleaguenames-46682744-363d-47df-91d7-c499694c472b]: IDLE
