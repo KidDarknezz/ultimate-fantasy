@@ -1,4 +1,5 @@
 const admin = require('firebase-admin')
+const firebase = require('firebase')
 
 async function updateLeague(eventName, object) {
     const db = admin.firestore()
@@ -58,7 +59,8 @@ async function createLeague(event, object) {
         .set({
             eventNickName: event.eventNickName,
             eventName: event.eventName,
-            banner: 'https://via.placeholder.com/150',
+            banner: event.eventBanner,
+            logo: event.eventLogo,
             isActive: true,
         })
 }

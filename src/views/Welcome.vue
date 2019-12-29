@@ -34,11 +34,11 @@
                 v-for="(league, index) in leagues"
                 :key="index"
                 class="dem-fantasy-tile"
-                :style="{ backgroundImage: 'url(' + require('@/assets/IMG_9556.jpg') + ')' }"
+                :style="{ backgroundImage: 'url(' + league.banner + ')' }"
             >
                 <b-row>
                     <b-col cols="2">
-                        <img src="@/assets/cds.png" style="padding-top: 10px;" class="img-fluid" />
+                        <img :src="league.logo" style="padding-top: 10px;" class="img-fluid" />
                     </b-col>
                     <b-col cols="10">
                         <h4>{{league.eventName}}</h4>
@@ -67,6 +67,8 @@ import * as api from '@/api/api'
 
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
+import 'firebase/storage'
+
 export default {
     data() {
         return {
