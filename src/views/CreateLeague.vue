@@ -2,7 +2,7 @@
     <b-container>
         <b-row>
             <b-col cols="12">
-                <h3>Importar Data</h3>
+                <h3>Crear Liga</h3>
             </b-col>
         </b-row>
         <b-row v-if="Loading">
@@ -10,8 +10,12 @@
         </b-row>
         <b-row v-if="!Loading">
             <b-col cols="12" style="margin-top: 20px;">
+                <label>Nick del Evento:</label>
+                <b-form-input v-model="event.eventNickName"></b-form-input>
+            </b-col>
+            <b-col cols="12" style="margin-top: 20px;">
                 <label>Nombre del Evento:</label>
-                <b-form-input v-model="eventName"></b-form-input>
+                <b-form-input v-model="event.eventName"></b-form-input>
             </b-col>
             <b-col cols="12" style="margin-top: 20px;">
                 <b-form-file
@@ -47,20 +51,25 @@ export default {
             file: null,
             leagues: [],
             Loading: false,
-            eventName: null,
+            event: {
+                eventNickName: null,
+                eventName: null,
+                eventLogo: null,
+                eventBanner: null,
+            },
             LoadingPetition: false,
         }
     },
     methods: {
         async ExcelToJSON(file) {
-            if (this.eventName != null) {
+            if (this.event.eventNickName != null) {
                 this.LoadingPetition = true
-                if (!this.leagues.includes(this.eventName)) {
+                if (!this.leagues.includes(this.event.eventNickName)) {
                     xlsxParser
                         .onFileSelection(file)
                         .then(async data => {
                             await api.createleague({
-                                eventName: this.eventName,
+                                event: this.event,
                                 obj: data,
                             })
                             this.LoadingPetition = false
@@ -74,7 +83,7 @@ export default {
                 } else {
                     this.LoadingPetition = false
                     alert(
-                        'Este nombre de la liga ya esta en uso por favor escoge otro'
+                        'Este nickname de la liga ya esta en uso por favor escoge otro'
                     )
                 }
             } else {
