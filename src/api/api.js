@@ -21,3 +21,7 @@ export const returnleaguenames = () =>
     Request.get('/returnleaguenames', {
         'Content-Type': 'application/json',
     })
+export const returnactiveleagues = () =>
+    Request.get('/returnactiveleagues', {
+        'Content-Type': 'application/json',
+    })
