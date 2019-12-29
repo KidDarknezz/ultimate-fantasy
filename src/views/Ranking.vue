@@ -27,7 +27,7 @@
         <!-- END MY RANKING INFO -->
 
         <!-- GLOBAL RANKING -->
-        <b-container style="margin-top: 0;">
+        <b-container style="margin-top: 0; margin-bottom: 70px;">
         	<b-row class="dem-fantasy-ranking-list-item">
         		<b-col cols="2">
         			<p class="dem-fantasy-ranking-number dem-fantasy-ranking-first">1</p>
@@ -75,5 +75,12 @@
         	</b-row>
         </b-container>
         <!-- END GLOBAL RANKING -->
+
+        <!-- BOTTOM MENU -->
+        <div class="dem-fantasy-bottom-menu">
+            <router-link to="/" class="dem-fantasy-create-acc-cta">AYUDA</router-link>
+            <router-link to="/" class="dem-fantasy-create-acc-cta">ATRAS</router-link>
+        </div>
+        <!-- END BOTTOM MENU -->
 	</div>
 </template>
