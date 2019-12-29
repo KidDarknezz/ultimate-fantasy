@@ -11,17 +11,58 @@
         </div>
         <!-- END HEADER -->
 
-        <!-- PICKED ROSTER -->
-        <div>
-        	<p>picked roster</p>
-        </div>
-        <!--  END PICKED ROSTER -->
+        <!-- CREDITS -->
+        <b-container>
+        	<b-row>
+        		<b-col cols="12">
+        			<h2 style="text-align: center;">
+        				Creditos disponibles:
+        				<br>
+        				<strong>150</strong>
+        			</h2>
+        		</b-col>
+        	</b-row>
+        </b-container>
+        <!--  END CREDITS -->
 
-        <div class="container">
+        <!-- TEAMS LIST -->
+        <b-container>
+        	<b-row>
+        		<b-col cols="12 dem-fantasy-rosterpick-team">
+        			<div v-b-toggle="'collapse-1'" style="background-color: #FFBE0A; color: #333; padding: 6px 10px 3px 10px;">
+        				<h4><strong>Team Name</strong></h4>
+        			</div>
+        			<b-collapse id="collapse-1" style="background-color: #fff; color: #333;">
+        				<div style="padding: 10px;">
+							<div class="form-check" style="padding-top: 10px; padding-bottom: 10px;" v-for="player in 20">
+	    						<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+								<label class="form-check-label" for="defaultCheck1">
+									<strong>Player Name</strong> - 150 Cdts
+								</label>
+							</div>
+        				</div>
+        			</b-collapse>
+        		</b-col>
+        	</b-row>
+        </b-container>
+        <!-- END TEAMS LIST -->
+
+        <!-- SPACING -->
+        <div style="height: 60px;"></div>
+        <!-- END SPACING -->
+
+        <!-- BOTTOM MENU -->
+        <div class="dem-fantasy-bottom-menu">
+            <router-link to="/" class="dem-fantasy-create-acc-cta">AYUDA</router-link>
+            <router-link to="/" class="dem-fantasy-create-acc-cta">ATRAS</router-link>
+        </div>
+        <!-- END BOTTOM MENU -->
+
+        <!-- <div class="container">
 			<div class="row">
-				<!-- <div class="col-xs-12">
+				<div class="col-xs-12">
 					<input type="text" class="form-control" v-model="teamData.name">
-				</div> -->
+				</div>
 				<div class="col-xs-12">
 					<div class="form-check">
 						<div v-for="player in allPlayers">
@@ -33,7 +74,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 	
 </template>

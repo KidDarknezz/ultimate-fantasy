@@ -57,7 +57,7 @@ export default new Router({
             path: '/create-roster',
             name: 'create-roster',
             component: CreateRoster,
-            beforeEnter: ifAuthenticatedAndAdmin,
+            //beforeEnter: ifAuthenticatedAndAdmin,
         },
         {
             path: '/team/:id',

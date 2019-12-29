@@ -83,6 +83,7 @@ body {
 	position: fixed;
     bottom: 0;
     width: 100%;
+    margin-bottom: -2px;
 }
 
 .dem-fantasy-create-acc-cta {
@@ -185,4 +186,9 @@ body {
 
 .dem-fantasy-ranking-self {
 	background-color: #FFBE0A;
+}
+
+.dem-fantasy-rosterpick-team {
+	margin-bottom: 15px;
+	cursor: pointer;
 }
