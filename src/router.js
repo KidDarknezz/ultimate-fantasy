@@ -70,8 +70,8 @@ export default new Router({
             beforeEnter: ifAuthenticatedAndAdmin,
         },
         {
-            path: '/home/:leagueName?',
             name: 'home',
+            path: '/home/:leagueName?',
             component: Home,
             beforeEnter: ifAuthenticated,
         },
