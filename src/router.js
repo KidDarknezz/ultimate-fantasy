@@ -13,6 +13,7 @@ import Welcome from '@/views/Welcome.vue'
 import MyTeam from '@/views/MyTeam.vue'
 import ForgotPassword from '@/views/ForgotPassword.vue'
 import Ranking from '@/views/Ranking.vue'
+import CreateTeam from '@/views/CreateTeam.vue'
 
 Vue.use(Router)
 const ifAuthenticated = (to, from, next) => {
@@ -56,7 +57,7 @@ export default new Router({
             path: '/create-roster',
             name: 'create-roster',
             component: CreateRoster,
-            // beforeEnter: ifAuthenticatedAndAdmin,
+            beforeEnter: ifAuthenticatedAndAdmin,
         },
         {
             path: '/team/:id',
@@ -91,6 +92,11 @@ export default new Router({
             path: '/ranking',
             name: 'ranking',
             component: Ranking,
+        },
+        {
+            path: '/create-team',
+            name: 'create-team',
+            component: CreateTeam,
         },
     ],
 })
