@@ -7,9 +7,7 @@ import 'firebase/firestore'
 
 export default {
     state: {
-        userInfo: '',
         user: '',
-        admin: false,
         token: localStorage.getItem('user-token') || '',
         uid: localStorage.getItem('uid') || '',
         userModuleError: '',
@@ -24,9 +22,6 @@ export default {
         setToken: (state, payload) => {
             state.token = payload
         },
-        setAdmin: (state, payload) => {
-            state.admin = payload
-        },
         userSuccess: state => {
             state.status = 'success'
         },
@@ -39,7 +34,6 @@ export default {
         setCurrentUser: async ({commit, dispatch}, user) => {
             try {
                 let token = await user.getIdToken()
-                commit('setUser', user)
                 commit('setUid', user.uid)
                 commit('setToken', token)
                 localStorage.setItem('user-token', token)
@@ -50,7 +44,7 @@ export default {
                     .get()
                     .then(doc => {
                         if (doc.exists) {
-                            commit('setAdmin', doc.data().isAdmin)
+                            commit('setUser', doc.data())
                         }
                     })
                     .catch(function(error) {
@@ -71,6 +65,6 @@ export default {
         user: state => state.user,
         uid: state => state.uid,
         isAuthenticated: state => !!state.token,
-        isAdmin: state => state.admin,
+        isAdmin: state => state.user.isAdmin,
     },
 }
