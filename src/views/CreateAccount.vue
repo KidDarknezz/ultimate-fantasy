@@ -81,8 +81,6 @@ export default {
                             .set({
                                 userName: this.name,
                                 userEmail: this.email,
-                                userCredit: 300,
-                                rosterPicked: false,
                                 isAdmin: false,
                             })
                             .then(() => {
