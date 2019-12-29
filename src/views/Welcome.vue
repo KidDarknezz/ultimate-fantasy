@@ -7,7 +7,7 @@
                 class="img-fluid"
                 style="float: left; margin-right: 15px;"
             />
-            <h2 style="font-size: 25px; padding-top: 15px">Alejandro Millan</h2>
+            <h2 style="font-size: 25px; padding-top: 15px">{{user.userName}}</h2>
         </div>
         <!-- END HEADER -->
 
