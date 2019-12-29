@@ -41,6 +41,7 @@ async function updateLeague(eventName, object) {
 async function createLeague(eventName, object) {
     const db = admin.firestore()
     let Data = formatObject(object)
+    //Agrega los jugadores
     Object.keys(Data).forEach(equipo => {
         db.collection(eventName)
             .doc(equipo)
@@ -53,8 +54,9 @@ async function createLeague(eventName, object) {
             })
     })
     db.collection('Leagues')
-        .doc(eventName)
+        .doc()
         .set({
+            eventName: eventName,
             banner: 'https://via.placeholder.com/150',
         })
 }
@@ -65,6 +67,7 @@ async function returnLeaguesNames() {
     try {
         await db
             .collection('Leagues')
+
             .get()
             .then(snapshot => {
                 if (snapshot.empty) {
@@ -73,7 +76,7 @@ async function returnLeaguesNames() {
                 }
 
                 snapshot.forEach(doc => {
-                    Leagues.push(doc.id)
+                    Leagues.push(doc.data().eventName)
                 })
             })
             .catch(err => {
