@@ -2,7 +2,7 @@
     <b-container>
         <b-row>
             <b-col cols="12">
-                <h3>Updatear Data</h3>
+                <h3>Updatear Liga</h3>
             </b-col>
         </b-row>
         <b-row v-if="Loading">
@@ -10,7 +10,7 @@
         </b-row>
         <b-row v-if="!Loading">
             <b-col cols="12">
-                <b-form-select label="Nombre de la liga" v-model="eventName" :options="leagues"></b-form-select>
+                <b-form-select label="Nick de la liga" v-model="eventNickName" :options="leagues"></b-form-select>
             </b-col>
             <b-col cols="12" style="margin-top: 20px;">
                 <b-form-file
@@ -37,19 +37,19 @@ export default {
             file: null,
             leagues: [],
             Loading: false,
-            eventName: null,
+            eventNickName: null,
             LoadingPetition: false,
         }
     },
     methods: {
         async ExcelToJSON(file) {
-            if (this.eventName != null) {
+            if (this.eventNickName != null) {
                 this.LoadingPetition = true
                 xlsxParser
                     .onFileSelection(file)
                     .then(async data => {
                         await api.updateleague({
-                            eventName: this.eventName,
+                            eventNickName: this.eventNickName,
                             obj: data,
                         })
                         this.LoadingPetition = false
