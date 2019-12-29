@@ -132,3 +132,57 @@ body {
 	text-align: center; 
 	margin-top: 15px;
 }
+
+.dem-fantasy-my-ranking-info {
+	border-bottom: solid 3px #FFBE0A;
+	margin: 0;
+	padding: 15px;
+}
+
+.dem-fantasy-my-ranking-info h2 {
+	padding: 0;
+}
+
+.dem-fantasy-my-ranking-info h3 {
+	text-align: left;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+.dem-fantasy-my-ranking-info h4 {
+	font-weight: 300;
+	font-size: 20px;
+}
+
+.dem-fantasy-ranking-list-item {
+	background-color :#fff;
+	color: #333;
+	padding: 15px 0;
+	margin-bottom: 5px;
+}
+
+.dem-fantasy-ranking-number {
+	font-size: 40px;
+	margin: 0;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	border-radius: 25px;
+	line-height: 45px;	
+}
+
+.dem-fantasy-ranking-first {
+	background-color: #FFBE0A;
+}
+
+.dem-fantasy-ranking-second {
+	background-color: #AAA;
+}
+
+.dem-fantasy-ranking-third {
+	background-color: #C87A2C;
+}
+
+.dem-fantasy-ranking-self {
+	background-color: #FFBE0A;
+}
