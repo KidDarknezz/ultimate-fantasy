@@ -58,7 +58,36 @@ async function createLeague(eventName, object) {
         .set({
             eventName: eventName,
             banner: 'https://via.placeholder.com/150',
+            isActive: true,
         })
+}
+
+async function returnActiveLeagues() {
+    const Leagues = []
+    const db = admin.firestore()
+    try {
+        await db
+            .collection('Leagues')
+            .where('isActive', '=', true)
+            .get()
+            .then(snapshot => {
+                if (snapshot.empty) {
+                    console.log('No matching documents.')
+                    return
+                }
+                snapshot.forEach(doc => {
+                    Leagues.push(doc.data())
+                })
+            })
+            .catch(err => {
+                console.log('Error getting documents', err)
+            })
+
+        return Promise.resolve(Leagues)
+    } catch (error) {
+        console.log(error)
+        return Promise.reject(error)
+    }
 }
 
 async function returnLeaguesNames() {
@@ -67,7 +96,6 @@ async function returnLeaguesNames() {
     try {
         await db
             .collection('Leagues')
-
             .get()
             .then(snapshot => {
                 if (snapshot.empty) {
@@ -122,4 +150,5 @@ module.exports = {
     updateLeague,
     createLeague,
     returnLeaguesNames,
+    returnActiveLeagues,
 }
