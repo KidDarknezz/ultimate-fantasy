@@ -1,6 +1,5 @@
 //TODO: Tengo que cambiar como funciona lo del admin y hacer los tokens dentro del api
 
-import * as api from '@/api/api'
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/firestore'
@@ -11,6 +10,7 @@ export default {
         token: localStorage.getItem('user-token') || '',
         uid: localStorage.getItem('uid') || '',
         userModuleError: '',
+        participatingLeagues: new Set(),
     },
     mutations: {
         setUser: (state, payload) => {
@@ -21,6 +21,9 @@ export default {
         },
         setToken: (state, payload) => {
             state.token = payload
+        },
+        setparticipatingLeagues: (state, payload) => {
+            state.participatingLeagues.add(payload)
         },
         userSuccess: state => {
             state.status = 'success'
@@ -60,11 +63,37 @@ export default {
             localStorage.removeItem('user-token')
             localStorage.removeItem('uid')
         },
+        getParticipatingLeagues: async ({commit, state}, uid) => {
+            try {
+                var db = firebase.firestore()
+                let userRef = db.collection('Users').doc(uid)
+                userRef
+                    .collection('participatingLeagues')
+                    .get()
+                    .then(snapshot => {
+                        if (!snapshot.empty) {
+                            snapshot.forEach(doc => {
+                                commit('setparticipatingLeagues', {
+                                    ...doc.data(),
+                                    id: doc.id,
+                                })
+                            })
+                        }
+                    })
+                    .catch(err => {
+                        console.log('Error getting documents', err)
+                    })
+            } catch (error) {
+                console.log(`Error in store: ${error}`)
+                return error
+            }
+        },
     },
     getters: {
         user: state => state.user,
         uid: state => state.uid,
         isAuthenticated: state => !!state.token,
         isAdmin: state => state.user.isAdmin,
+        participatingLeagues: state => state.participatingLeagues,
     },
 }

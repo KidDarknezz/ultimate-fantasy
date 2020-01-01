@@ -25,3 +25,7 @@ export const returnactiveleagues = () =>
     Request.get('/returnactiveleagues', {
         'Content-Type': 'application/json',
     })
+export const subscribetoleague = data =>
+    Request.post('/subscribetoleague', data, {
+        'Content-Type': 'application/json',
+    })

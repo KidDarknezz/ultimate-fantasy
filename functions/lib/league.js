@@ -79,7 +79,7 @@ async function returnActiveLeagues() {
                     return
                 }
                 snapshot.forEach(doc => {
-                    Leagues.push(doc.data())
+                    Leagues.push({...doc.data(), id: doc.id})
                 })
             })
             .catch(err => {
@@ -120,6 +120,44 @@ async function returnLeaguesNames() {
         return Promise.reject(error)
     }
 }
+
+async function subscribeToLeague(uid, league) {
+    //Necesito buscar el id de la liga y agregarselo a el uid como un nuevo collection
+    const db = admin.firestore()
+    try {
+        let userRef = db.collection('Users').doc(uid)
+        db.collection('Leagues')
+            .where('eventNickName', '==', league.eventNickName)
+            .get()
+            .then(snapshot => {
+                if (snapshot.empty) {
+                    console.log('No matching documents.')
+                    return
+                }
+
+                snapshot.forEach(doc => {
+                    // console.log(doc.id, '=>', doc.data())
+                    let data = doc.data()
+                    userRef
+                        .collection('participatingLeagues')
+                        .doc(doc.id)
+                        .set({
+                            eventNickName: data.eventNickName,
+                            roaster: [],
+                            creadit: 150,
+                            teamName: '',
+                            score: 0,
+                        })
+                })
+            })
+            .catch(err => {
+                console.log('Error getting documents', err)
+            })
+    } catch (error) {
+        console.log(error)
+        return Promise.reject(error)
+    }
+}
 function formatObject(object) {
     let Data = {}
     let jsonImportedData = object['Sheet1']
@@ -154,4 +192,5 @@ module.exports = {
     createLeague,
     returnLeaguesNames,
     returnActiveLeagues,
+    subscribeToLeague,
 }

@@ -44,20 +44,29 @@
                         <h4>{{league.eventName}}</h4>
                     </b-col>
                     <b-col cols="12">
-                        <button class="dem-fantasy-cta">Participar</button>
+                        <button
+                            v-if="!checkIfSubscribed(league.id)"
+                            @click="subscribeToLeague(league)"
+                            class="dem-fantasy-cta"
+                        >Unirse</button>
+                        <button v-if="checkIfSubscribed(league.id)" class="dem-fantasy-cta">Meterse</button>
                     </b-col>
                 </b-row>
             </b-container>
-            <b-row v-if="admin">
-                <b-col cols="12">
-                    <h4>You are an admin</h4>
-                    <router-link to="/create-league">Crear Info</router-link>
-                    <br />
-                    <router-link to="/create-roster">Crear roster</router-link>
-                    <br />
-                    <router-link to="/update-league">Update Info</router-link>
-                </b-col>
-            </b-row>
+            <br />
+            <br />
+            <b-container>
+                <b-row v-if="admin">
+                    <b-col cols="12">
+                        <h4>You are an admin</h4>
+                        <router-link to="/create-league">Crear Info</router-link>
+                        <br />
+                        <router-link to="/create-roster">Crear roster</router-link>
+                        <br />
+                        <router-link to="/update-league">Update Info</router-link>
+                    </b-col>
+                </b-row>
+            </b-container>
             <!-- END FANTASY LIST -->
         </div>
     </div>
@@ -67,7 +76,6 @@ import * as api from '@/api/api'
 
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
-import 'firebase/storage'
 
 export default {
     data() {
@@ -83,8 +91,28 @@ export default {
         user() {
             return this.$store.getters.user
         },
+        uid() {
+            return this.$store.getters.uid
+        },
+        participatingLeagues() {
+            return this.$store.getters.participatingLeagues
+        },
     },
     methods: {
+        checkIfSubscribed(leagueId) {
+            if (this.participatingLeagues.size > 0) {
+                return this.participatingLeagues.forEach(league => {
+                    if (league.id === leagueId) {
+                        console.log('true')
+                        return true
+                    } else {
+                        return false
+                    }
+                })
+            } else {
+                return false
+            }
+        },
         async logout() {
             firebase
                 .auth()
@@ -97,11 +125,19 @@ export default {
                     console.log(error)
                 })
         },
+        async subscribeToLeague(league) {
+            await api
+                .subscribetoleague({uid: this.uid, league})
+                .then(response => {
+                    this.$store.dispatch('getParticipatingLeagues', this.uid)
+                })
+        },
     },
     async beforeMount() {
         this.Loading = true
         api.returnactiveleagues().then(leagues => {
             this.leagues = leagues.data['status']
+            this.$store.dispatch('getParticipatingLeagues', this.uid)
             this.Loading = false
         })
     },
