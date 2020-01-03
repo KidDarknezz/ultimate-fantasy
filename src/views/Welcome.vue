@@ -44,8 +44,12 @@
                         <h4>{{league.eventName}}</h4>
                     </b-col>
                     <b-col cols="12">
-                        <button @click="subscribeToLeague(league)" class="dem-fantasy-cta">Unirse</button>
-                        <!-- <button v-if="checkIfSubscribed(league.id)" class="dem-fantasy-cta">Meterse</button> -->
+                        <button v-if="checkIfSubscribed(league.id)" class="dem-fantasy-cta">Meterse</button>
+                        <button
+                            v-else
+                            @click="subscribeToLeague(league)"
+                            class="dem-fantasy-cta"
+                        >Unirse</button>
                     </b-col>
                 </b-row>
             </b-container>
@@ -96,25 +100,14 @@ export default {
         async getParticipatingLeagues() {
             try {
                 api.returnsubscribeleagues({uid: this.uid}).then(response => {
-                    console.log(JSON.stringify(response.data, null, 2))
+                    this.participatingLeagues = response.data.status
                 })
             } catch (error) {
                 console.log(`Error in returnsubscribeleagues: ${error}`)
             }
         },
         checkIfSubscribed(leagueId) {
-            if (this.participatingLeagues.size > 0) {
-                return this.participatingLeagues.forEach(league => {
-                    if (league.id === leagueId) {
-                        console.log('true')
-                        return true
-                    } else {
-                        return false
-                    }
-                })
-            } else {
-                return false
-            }
+            return this.participatingLeagues.includes(leagueId)
         },
         async logout() {
             firebase
