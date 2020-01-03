@@ -44,12 +44,8 @@
                         <h4>{{league.eventName}}</h4>
                     </b-col>
                     <b-col cols="12">
-                        <button
-                            v-if="!checkIfSubscribed(league.id)"
-                            @click="subscribeToLeague(league)"
-                            class="dem-fantasy-cta"
-                        >Unirse</button>
-                        <button v-if="checkIfSubscribed(league.id)" class="dem-fantasy-cta">Meterse</button>
+                        <button @click="subscribeToLeague(league)" class="dem-fantasy-cta">Unirse</button>
+                        <!-- <button v-if="checkIfSubscribed(league.id)" class="dem-fantasy-cta">Meterse</button> -->
                     </b-col>
                 </b-row>
             </b-container>
@@ -82,6 +78,7 @@ export default {
         return {
             Loading: false,
             leagues: [],
+            participatingLeagues: [],
         }
     },
     computed: {
@@ -94,11 +91,17 @@ export default {
         uid() {
             return this.$store.getters.uid
         },
-        participatingLeagues() {
-            return this.$store.getters.participatingLeagues
-        },
     },
     methods: {
+        async getParticipatingLeagues() {
+            try {
+                api.returnsubscribeleagues({uid: this.uid}).then(response => {
+                    console.log(JSON.stringify(response.data, null, 2))
+                })
+            } catch (error) {
+                console.log(`Error in returnsubscribeleagues: ${error}`)
+            }
+        },
         checkIfSubscribed(leagueId) {
             if (this.participatingLeagues.size > 0) {
                 return this.participatingLeagues.forEach(league => {
@@ -126,18 +129,26 @@ export default {
                 })
         },
         async subscribeToLeague(league) {
-            await api
-                .subscribetoleague({uid: this.uid, league})
-                .then(response => {
-                    this.$store.dispatch('getParticipatingLeagues', this.uid)
-                })
+            try {
+                await api
+                    .subscribetoleague({uid: this.uid, league})
+                    .then(async () => {
+                        this.$router.push(`/home`)
+                    })
+                    .catch(error => {
+                        console.log(`Error in subscribetoleague ${error}`)
+                    })
+            } catch (error) {
+                alert('Se produjo un error al suscribirse a una liga')
+                console.log(error)
+            }
         },
     },
     async beforeMount() {
         this.Loading = true
-        api.returnactiveleagues().then(leagues => {
+        api.returnactiveleagues().then(async leagues => {
             this.leagues = leagues.data['status']
-            this.$store.dispatch('getParticipatingLeagues', this.uid)
+            await this.getParticipatingLeagues()
             this.Loading = false
         })
     },

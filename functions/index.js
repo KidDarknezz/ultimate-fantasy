@@ -85,6 +85,17 @@ exports.subscribetoleague = functions.https.onRequest(async (req, res) => {
         }
     })
 })
+exports.returnsubscribeleagues = functions.https.onRequest(async (req, res) => {
+    cors(req, res, async () => {
+        try {
+            let data = await league.returnSubscribeLeagues(req.body.uid)
+            res.status(200).send({status: data})
+        } catch (err) {
+            console.log(err)
+            res.status(400).send({err: err})
+        }
+    })
+})
 
 //Necesito un endpoint que me mande todos los nombres de los jugadores para poder hacer el search bar
 //Necesito un endpoint que retorne solo mi informacion

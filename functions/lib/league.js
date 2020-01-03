@@ -126,7 +126,8 @@ async function subscribeToLeague(uid, league) {
     const db = admin.firestore()
     try {
         let userRef = db.collection('Users').doc(uid)
-        db.collection('Leagues')
+        return db
+            .collection('Leagues')
             .where('eventNickName', '==', league.eventNickName)
             .get()
             .then(snapshot => {
@@ -149,6 +150,7 @@ async function subscribeToLeague(uid, league) {
                             score: 0,
                         })
                 })
+                return Promise.resolve('Ok')
             })
             .catch(err => {
                 console.log('Error getting documents', err)
@@ -158,6 +160,28 @@ async function subscribeToLeague(uid, league) {
         return Promise.reject(error)
     }
 }
+
+async function returnSubscribeLeagues(uid) {
+    const db = admin.firestore()
+    let leagues = []
+    let userRef = db.collection('Users').doc(uid)
+    return userRef
+        .collection('participatingLeagues')
+        .get()
+        .then(snapshot => {
+            if (!snapshot.empty) {
+                snapshot.forEach(doc => {
+                    leagues.push(doc.id)
+                })
+            }
+            return leagues
+        })
+        .catch(err => {
+            console.log('Error getting documents', err)
+            return leagues
+        })
+}
+
 function formatObject(object) {
     let Data = {}
     let jsonImportedData = object['Sheet1']
@@ -193,4 +217,5 @@ module.exports = {
     returnLeaguesNames,
     returnActiveLeagues,
     subscribeToLeague,
+    returnSubscribeLeagues,
 }

@@ -29,3 +29,7 @@ export const subscribetoleague = data =>
     Request.post('/subscribetoleague', data, {
         'Content-Type': 'application/json',
     })
+export const returnsubscribeleagues = data =>
+    Request.post('/returnsubscribeleagues', data, {
+        'Content-Type': 'application/json',
+    })
