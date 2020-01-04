@@ -181,6 +181,35 @@ async function returnSubscribeLeagues(uid) {
         })
 }
 
+async function checkSteps(uid, leagueId) {
+    const db = admin.firestore()
+    let userRef = db.collection('Users').doc(uid)
+    return userRef
+        .collection('participatingLeagues')
+        .doc(leagueId)
+        .get()
+        .then(doc => {
+            if (!doc.exists) {
+                return ''
+            } else {
+                let data = doc.data()
+                if (data.teamName === '') {
+                    return 'Team Name = Null'
+                }
+                if (data.roaster.length === 0) {
+                    return 'Roaster = Null'
+                }
+                if (data.roaster.length > 1 && data.teamName != '') {
+                    return 'Everything Ok'
+                }
+            }
+        })
+        .catch(err => {
+            console.log('Error getting documents', err)
+            return err
+        })
+}
+
 function formatObject(object) {
     let Data = {}
     let jsonImportedData = object['Sheet1']
@@ -217,4 +246,5 @@ module.exports = {
     returnActiveLeagues,
     subscribeToLeague,
     returnSubscribeLeagues,
+    checkSteps,
 }

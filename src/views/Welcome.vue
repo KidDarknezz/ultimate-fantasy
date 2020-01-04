@@ -44,7 +44,11 @@
                         <h4>{{league.eventName}}</h4>
                     </b-col>
                     <b-col cols="12">
-                        <button v-if="checkIfSubscribed(league.id)" class="dem-fantasy-cta">Meterse</button>
+                        <button
+                            v-if="checkIfSubscribed(league.id)"
+                            @click="checkSteps(league.id)"
+                            class="dem-fantasy-cta"
+                        >Meterse</button>
                         <button
                             v-else
                             @click="subscribeToLeague(league)"
@@ -97,6 +101,13 @@ export default {
         },
     },
     methods: {
+        async checkSteps(leagueId) {
+            api.checksteps({uid: this.uid, leagueId: leagueId}).then(
+                response => {
+                    console.log(response.data)
+                }
+            )
+        },
         async getParticipatingLeagues() {
             try {
                 api.returnsubscribeleagues({uid: this.uid}).then(response => {
@@ -126,7 +137,7 @@ export default {
                 await api
                     .subscribetoleague({uid: this.uid, league})
                     .then(async () => {
-                        this.$router.push(`/home`)
+                        this.$router.push(`/createteamname`)
                     })
                     .catch(error => {
                         console.log(`Error in subscribetoleague ${error}`)

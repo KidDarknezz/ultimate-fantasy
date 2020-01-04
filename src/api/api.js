@@ -33,3 +33,7 @@ export const returnsubscribeleagues = data =>
     Request.post('/returnsubscribeleagues', data, {
         'Content-Type': 'application/json',
     })
+export const checksteps = data =>
+    Request.post('/checksteps', data, {
+        'Content-Type': 'application/json',
+    })
