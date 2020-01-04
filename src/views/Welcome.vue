@@ -137,7 +137,7 @@ export default {
                 await api
                     .subscribetoleague({uid: this.uid, league})
                     .then(async () => {
-                        this.$router.push(`/createteamname`)
+                        this.$router.push(`/createteamname/`)
                     })
                     .catch(error => {
                         console.log(`Error in subscribetoleague ${error}`)
