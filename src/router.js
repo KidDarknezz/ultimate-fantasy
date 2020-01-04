@@ -7,13 +7,12 @@ import Login from '@/views/Login.vue'
 import CreateLeague from '@/views/CreateLeague.vue'
 import CreateAccount from '@/views/CreateAccount.vue'
 import CreateRoster from '@/views/CreateRoster.vue'
-import TeamRoster from '@/views/TeamRoster.vue'
 import UpdateLeague from '@/views/UpdateLeague.vue'
 import Welcome from '@/views/Welcome.vue'
 import MyTeam from '@/views/MyTeam.vue'
 import ForgotPassword from '@/views/ForgotPassword.vue'
 import Ranking from '@/views/Ranking.vue'
-import CreateTeam from '@/views/CreateTeam.vue'
+import CreateTeamName from '@/views/CreateTeamName.vue'
 
 Vue.use(Router)
 const ifAuthenticated = (to, from, next) => {
@@ -32,71 +31,66 @@ export default new Router({
     base: process.env.BASE_URL,
     routes: [
         {
+            name: 'welcome',
             path: '/',
-            name: 'Welcome',
             component: Welcome,
             beforeEnter: ifAuthenticated,
         },
         {
+            name: 'createLeague',
             path: '/create-league',
-            name: 'create-league',
             component: CreateLeague,
             beforeEnter: ifAuthenticatedAndAdmin,
         },
         {
-            path: '/login',
             name: 'login',
+            path: '/login',
             component: Login,
         },
         {
+            name: 'createAccount',
             path: '/create-account',
-            name: 'create-account',
             component: CreateAccount,
         },
         {
+            name: 'createRoster',
             path: '/create-roster',
-            name: 'create-roster',
             component: CreateRoster,
             beforeEnter: ifAuthenticatedAndAdmin,
         },
         {
-            path: '/team/:id',
-            name: '',
-            component: TeamRoster,
-            // beforeEnter: ifAuthenticatedAndAdmin,
-        },
-        {
+            name: 'updateLeague',
             path: '/update-league',
-            name: '',
             component: UpdateLeague,
             beforeEnter: ifAuthenticatedAndAdmin,
         },
         {
             name: 'home',
-            path: '/home/:leagueName?',
+            path: '/home/:leagueId',
             component: Home,
             beforeEnter: ifAuthenticated,
         },
         {
+            name: 'myTeam',
             path: '/my-team',
-            name: 'my-team',
             component: MyTeam,
             beforeEnter: ifAuthenticated,
         },
         {
-            path: '/passwordReset',
             name: 'forgotPassword',
+            path: '/passwordReset',
             component: ForgotPassword,
         },
         {
-            path: '/ranking',
             name: 'ranking',
+            path: '/ranking',
             component: Ranking,
         },
         {
-            path: '/create-team',
-            name: 'create-team',
-            component: CreateTeam,
+            name: 'createTeamName',
+            path: '/createteamname/:leagueId',
+            component: CreateTeamName,
+            beforeEnter: ifAuthenticated,
         },
     ],
 })
