@@ -14,6 +14,7 @@ import MyTeam from '@/views/MyTeam.vue'
 import ForgotPassword from '@/views/ForgotPassword.vue'
 import Ranking from '@/views/Ranking.vue'
 import CreateTeam from '@/views/CreateTeam.vue'
+import RosterPick from '@/views/RosterPick.vue'
 
 Vue.use(Router)
 const ifAuthenticated = (to, from, next) => {
@@ -97,6 +98,11 @@ export default new Router({
             path: '/create-team',
             name: 'create-team',
             component: CreateTeam,
+        },
+        {
+            path: '/roster-pick',
+            name: 'roster-pick',
+            component: RosterPick,
         },
     ],
 })
