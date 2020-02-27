@@ -37,11 +37,12 @@
                         v-model="password"
                         @keyup.enter="login"
                     />
+                    <br />
+                    <router-link
+                        to="/passwordReset"
+                        style="color: #fff; cursor: pointer;"
+                    >Olvide la Contraseña</router-link>
                 </b-col>
-                <router-link
-                    to="/passwordReset"
-                    class="dem-fantasy-create-acc-cta"
-                >Olvide la Contraseña</router-link>
             </b-row>
             <b-row style="margin-top: 45px;">
                 <b-col cols="12">
