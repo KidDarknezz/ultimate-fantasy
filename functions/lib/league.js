@@ -194,13 +194,13 @@ async function checkSteps(uid, leagueId) {
             } else {
                 let data = doc.data()
                 if (data.teamName === '') {
-                    return 'Team Name = Null'
+                    return 'TeamNameNull'
                 }
                 if (data.roaster.length === 0) {
-                    return 'Roaster = Null'
+                    return 'RoasterNull'
                 }
                 if (data.roaster.length > 1 && data.teamName != '') {
-                    return 'Everything Ok'
+                    return 'EverythingOk'
                 }
             }
         })

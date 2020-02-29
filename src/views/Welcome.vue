@@ -104,7 +104,15 @@ export default {
         async checkSteps(leagueId) {
             api.checksteps({uid: this.uid, leagueId: leagueId}).then(
                 response => {
-                    console.log(response.data)
+                    if (response.data.status === 'TeamNameNull') {
+                        this.$router.push({path: `/createteamname/${leagueId}`})
+                    }
+                    if (response.data.status === 'RoasterNull') {
+                        this.$router.push({path: `/createroster/${leagueId}`})
+                    }
+                    if (response.data.status === 'EverythingOk') {
+                        this.$router.push({path: `/ranking/${leagueId}`})
+                    }
                 }
             )
         },

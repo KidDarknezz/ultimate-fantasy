@@ -54,7 +54,7 @@ export default new Router({
         },
         {
             name: 'createRoster',
-            path: '/create-roster',
+            path: '/createroster/:leagueId',
             component: CreateRoster,
             beforeEnter: ifAuthenticatedAndAdmin,
         },
@@ -83,7 +83,7 @@ export default new Router({
         },
         {
             name: 'ranking',
-            path: '/ranking',
+            path: '/ranking/:leagueId',
             component: Ranking,
         },
         {
