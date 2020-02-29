@@ -4,6 +4,7 @@ import router from './router'
 import store from './store/store'
 import BootstrapVue from 'bootstrap-vue'
 import VueResource from 'vue-resource'
+import VuePageTransition from 'vue-page-transition'
 
 import firebase from 'firebase/app'
 
@@ -26,6 +27,7 @@ firebase.initializeApp(firebaseConfig)
 
 Vue.use(BootstrapVue)
 Vue.use(VueResource)
+Vue.use(VuePageTransition)
 
 Vue.config.productionTip = false
 
