@@ -75,10 +75,27 @@
 <script>
 import Header from '@/components/Header'
 import NavBar from '@/components/NavBar'
+import * as api from '@/api/api'
 export default {
+    data() {
+        return {
+            Loading: false,
+            teamName: '',
+            teamNames: [],
+        }
+    },
     components: {
         Header,
         NavBar,
+    },
+    async beforeMount() {
+        this.Loading = true
+        let leagueId = this.$route.params.leagueId
+        console.log(leagueId)
+        api.returnleaguebyid({leagueId: leagueId}).then(async response => {
+            console.log(response.data)
+        })
+        this.Loading = false
     },
 }
 </script>

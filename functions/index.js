@@ -49,6 +49,17 @@ exports.updateleague = functions.https.onRequest(async (req, res) => {
         }
     })
 })
+exports.returnleaguebyid = functions.https.onRequest(async (req, res) => {
+    cors(req, res, async () => {
+        try {
+            let data = await league.returnLeagueById(req.body.leagueId)
+            res.status(200).send({status: data})
+        } catch (err) {
+            console.log(err)
+            res.status(400).send({err: err})
+        }
+    })
+})
 exports.returnleaguenames = functions.https.onRequest(async (req, res) => {
     cors(req, res, async () => {
         try {
@@ -107,11 +118,11 @@ exports.checksteps = functions.https.onRequest(async (req, res) => {
         }
     })
 })
-exports.returnteamnamesinleaague = functions.https.onRequest(
+exports.returnteamnamesinleague = functions.https.onRequest(
     async (req, res) => {
         cors(req, res, async () => {
             try {
-                let data = await league.returnTeamNamesInLeaague(
+                let data = await league.returnTeamNamesInLeague(
                     req.body.leagueId
                 )
                 res.status(200).send({status: data})
@@ -122,10 +133,10 @@ exports.returnteamnamesinleaague = functions.https.onRequest(
         })
     }
 )
-exports.addteamnametoleaague = functions.https.onRequest(async (req, res) => {
+exports.addteamnametoleague = functions.https.onRequest(async (req, res) => {
     cors(req, res, async () => {
         try {
-            let data = await league.addTeamNameToLeaague(
+            let data = await league.addTeamNameToLeague(
                 req.body.leagueId,
                 req.body.teamName,
                 req.body.uid

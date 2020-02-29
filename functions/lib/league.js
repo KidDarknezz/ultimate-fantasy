@@ -65,6 +65,24 @@ async function createLeague(event, object) {
         })
 }
 
+async function returnLeagueById(leagueId) {
+    const db = admin.firestore()
+    await db
+        .collection('Leagues')
+        .doc(leagueId)
+        .get()
+        .then(doc => {
+            if (!doc.exists) {
+                return ''
+            } else {
+                return doc.data()
+            }
+        })
+        .catch(err => {
+            console.log('Error getting documents', err)
+            return err
+        })
+}
 async function returnActiveLeagues() {
     const Leagues = []
     const db = admin.firestore()
@@ -178,7 +196,7 @@ async function returnSubscribeLeagues(uid) {
         })
         .catch(err => {
             console.log('Error getting documents', err)
-            return leagues
+            return err
         })
 }
 
@@ -211,7 +229,7 @@ async function checkSteps(uid, leagueId) {
         })
 }
 
-async function returnTeamNamesInLeaague(leagueId) {
+async function returnTeamNamesInLeague(leagueId) {
     const db = admin.firestore()
     let leagueRef = db.collection('Leagues').doc(leagueId)
     return leagueRef
@@ -228,7 +246,7 @@ async function returnTeamNamesInLeaague(leagueId) {
             return err
         })
 }
-async function addTeamNameToLeaague(leagueId, teamName, uid) {
+async function addTeamNameToLeague(leagueId, teamName, uid) {
     const db = admin.firestore()
     await db
         .collection('Leagues')
@@ -284,9 +302,10 @@ module.exports = {
     createLeague,
     returnLeaguesNames,
     returnActiveLeagues,
+    returnLeagueById,
     subscribeToLeague,
     returnSubscribeLeagues,
-    returnTeamNamesInLeaague,
-    addTeamNameToLeaague,
+    returnTeamNamesInLeague,
+    addTeamNameToLeague,
     checkSteps,
 }
