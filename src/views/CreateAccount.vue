@@ -40,15 +40,23 @@
                 </b-col>
             </b-row>
         </b-container>
+
+        <!-- BOTTOM MENU -->
+        <NavBar></NavBar>
+        <!-- END BOTTOM MENU -->
     </div>
 </template>
 
 <script>
+import NavBar from '@/components/NavBar'
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/firestore'
 
 export default {
+    components: {
+        NavBar,
+    },
     data() {
         return {
             name: '',
