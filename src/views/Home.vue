@@ -1,14 +1,7 @@
 <template>
     <div>
         <!-- HEADER -->
-        <div class="row-fluid header" @click="logout()">
-            <img
-                src="@/assets/user-placeholder.jpg"
-                class="img-fluid"
-                style="float: left; margin-right: 15px;"
-            />
-            <h2 style="font-size: 25px; padding-top: 15px">Alejandro Millan</h2>
-        </div>
+        <Header></Header>
         <!-- END HEADER -->
 
         <!-- SUB HEADER -->
@@ -60,10 +53,7 @@
         <!-- END CONTENT -->
 
         <!-- BOTTOM MENU -->
-        <div class="dem-fantasy-bottom-menu">
-            <router-link to="/" class="dem-fantasy-create-acc-cta">AYUDA</router-link>
-            <router-link to="/" class="dem-fantasy-create-acc-cta">ATRAS</router-link>
-        </div>
+        <NavBar></NavBar>
         <!-- END BOTTOM MENU -->
 
         <!--         <b-container>
@@ -117,11 +107,19 @@
 </template>
 
 <script>
+import Header from '@/components/Header'
+import NavBar from '@/components/NavBar'
+
 import * as firebase from 'firebase/app'
+
 import 'firebase/auth'
 import 'firebase/firestore'
 
 export default {
+    components: {
+        Header,
+        NavBar,
+    },
     data() {
         return {
             loginUser: {},

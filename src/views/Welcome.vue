@@ -5,14 +5,7 @@
         </b-row>
         <div v-if="!Loading">
             <!-- HEADER -->
-            <div class="row-fluid header" @click="logout">
-                <img
-                    src="@/assets/user-placeholder.jpg"
-                    class="img-fluid"
-                    style="float: left; margin-right: 15px;"
-                />
-                <h2 style="font-size: 25px; padding-top: 15px">{{user.userName}}</h2>
-            </div>
+            <Header></Header>
             <!-- END HEADER -->
 
             <!-- WELCOME MSG -->
@@ -76,12 +69,17 @@
     </div>
 </template>
 <script>
+import Header from '@/components/Header'
+
 import * as api from '@/api/api'
 
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
 
 export default {
+    components: {
+        Header,
+    },
     data() {
         return {
             Loading: false,
