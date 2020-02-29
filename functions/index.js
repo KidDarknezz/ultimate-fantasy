@@ -107,6 +107,36 @@ exports.checksteps = functions.https.onRequest(async (req, res) => {
         }
     })
 })
+exports.returnteamnamesinleaague = functions.https.onRequest(
+    async (req, res) => {
+        cors(req, res, async () => {
+            try {
+                let data = await league.returnTeamNamesInLeaague(
+                    req.body.leagueId
+                )
+                res.status(200).send({status: data})
+            } catch (err) {
+                console.log(err)
+                res.status(400).send({err: err})
+            }
+        })
+    }
+)
+exports.addteamnametoleaague = functions.https.onRequest(async (req, res) => {
+    cors(req, res, async () => {
+        try {
+            let data = await league.addTeamNameToLeaague(
+                req.body.leagueId,
+                req.body.teamName,
+                req.body.uid
+            )
+            res.status(200).send({status: data})
+        } catch (err) {
+            console.log(err)
+            res.status(400).send({err: err})
+        }
+    })
+})
 
 //Necesito un endpoint que me mande todos los nombres de los jugadores para poder hacer el search bar
 //Necesito un endpoint que retorne solo mi informacion

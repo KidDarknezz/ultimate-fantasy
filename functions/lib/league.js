@@ -61,6 +61,7 @@ async function createLeague(event, object) {
             banner: event.eventBanner,
             logo: event.eventLogo,
             isActive: true,
+            teamNames: [],
         })
 }
 
@@ -210,6 +211,45 @@ async function checkSteps(uid, leagueId) {
         })
 }
 
+async function returnTeamNamesInLeaague(leagueId) {
+    const db = admin.firestore()
+    let leagueRef = db.collection('Leagues').doc(leagueId)
+    return leagueRef
+        .get()
+        .then(doc => {
+            if (!doc.exists) {
+                return ''
+            } else {
+                return doc.data().teamNames
+            }
+        })
+        .catch(err => {
+            console.log('Error getting documents', err)
+            return err
+        })
+}
+async function addTeamNameToLeaague(leagueId, teamName, uid) {
+    const db = admin.firestore()
+    await db
+        .collection('Leagues')
+        .doc(leagueId)
+        .update({
+            teamNames: admin.firestore.FieldValue.arrayUnion(teamName),
+        })
+        .then(() => {
+            let userRef = db.collection('Users').doc(uid)
+            return userRef
+                .collection('participatingLeagues')
+                .doc(leagueId)
+                .update({
+                    teamName: teamName,
+                })
+        })
+        .catch(err => {
+            console.log('Error updating documents', err)
+            return err
+        })
+}
 function formatObject(object) {
     let Data = {}
     let jsonImportedData = object['Sheet1']
@@ -246,5 +286,7 @@ module.exports = {
     returnActiveLeagues,
     subscribeToLeague,
     returnSubscribeLeagues,
+    returnTeamNamesInLeaague,
+    addTeamNameToLeaague,
     checkSteps,
 }
