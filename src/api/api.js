@@ -38,11 +38,11 @@ export const checksteps = data =>
         'Content-Type': 'application/json',
     })
 export const returnteamnamesinleague = data =>
-    Request.post('/returnteamnamesinleaague', data, {
+    Request.post('/returnteamnamesinleague', data, {
         'Content-Type': 'application/json',
     })
 export const addteamnametoleague = data =>
-    Request.post('/addteamnametoleaague', data, {
+    Request.post('/addteamnametoleague', data, {
         'Content-Type': 'application/json',
     })
 export const returnleaguebyid = data =>

@@ -67,9 +67,8 @@ async function createLeague(event, object) {
 
 async function returnLeagueById(leagueId) {
     const db = admin.firestore()
-    await db
-        .collection('Leagues')
-        .doc(leagueId)
+    let leagueRef = db.collection('Leagues').doc(leagueId)
+    return leagueRef
         .get()
         .then(doc => {
             if (!doc.exists) {

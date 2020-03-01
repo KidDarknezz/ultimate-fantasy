@@ -126,18 +126,6 @@ export default {
         checkIfSubscribed(leagueId) {
             return this.participatingLeagues.includes(leagueId)
         },
-        async logout() {
-            firebase
-                .auth()
-                .signOut()
-                .then(async () => {
-                    await this.$store.dispatch('UserLogout')
-                    this.$router.push('/login')
-                })
-                .catch(error => {
-                    console.log(error)
-                })
-        },
         async subscribeToLeague(league) {
             try {
                 await api

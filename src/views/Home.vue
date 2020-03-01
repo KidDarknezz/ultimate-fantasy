@@ -135,20 +135,6 @@ export default {
             return this.$store.getters.uid
         },
     },
-    methods: {
-        async logout() {
-            firebase
-                .auth()
-                .signOut()
-                .then(async () => {
-                    await this.$store.dispatch('UserLogout')
-                    this.$router.push('/login')
-                })
-                .catch(error => {
-                    console.log(error)
-                })
-        },
-    },
 }
 </script>
 

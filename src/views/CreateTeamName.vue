@@ -78,7 +78,7 @@ export default {
         async addTeamName(teamName) {
             if (teamName != '') {
                 if (!this.teamNames.includes(teamName)) {
-                    api.addteamnametoleaague({
+                    api.addteamnametoleague({
                         leagueId: this.$route.params.leagueId,
                         teamName: teamName,
                         uid: this.uid,
@@ -96,23 +96,11 @@ export default {
                 alert('Porfavor Introduce un nombre para tu equipo')
             }
         },
-        async logout() {
-            firebase
-                .auth()
-                .signOut()
-                .then(async () => {
-                    await this.$store.dispatch('UserLogout')
-                    this.$router.push('/login')
-                })
-                .catch(error => {
-                    console.log(error)
-                })
-        },
     },
     async beforeMount() {
         this.Loading = true
         let leagueId = this.$route.params.leagueId
-        api.returnteamnamesinleaague({leagueId: leagueId}).then(
+        api.returnteamnamesinleague({leagueId: leagueId}).then(
             async response => {
                 response.data.status.forEach(element => {
                     this.teamNames.push(element)
