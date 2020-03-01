@@ -61,7 +61,7 @@ async function createLeague(event, object) {
             banner: event.eventBanner,
             logo: event.eventLogo,
             isActive: true,
-            teamNames: {},
+            teamNames: [],
         })
 }
 
@@ -214,7 +214,7 @@ async function checkSteps(uid, leagueId) {
                 if (data.teamName === '') {
                     return 'TeamNameNull'
                 }
-                if (data.roaster.length === 0) {
+                if (data.roaster.length > 0) {
                     return 'RoasterNull'
                 }
                 if (data.roaster.length > 1 && data.teamName != '') {
@@ -247,11 +247,13 @@ async function returnTeamNamesInLeague(leagueId) {
 }
 async function addTeamNameToLeague(leagueId, teamName, uid) {
     const db = admin.firestore()
+    let obj = {}
+    obj[teamName] = uid
     await db
         .collection('Leagues')
         .doc(leagueId)
         .update({
-            teamNames: admin.firestore.FieldValue.arrayUnion({teamName: uid}),
+            teamNames: admin.firestore.FieldValue.arrayUnion(obj),
         })
         .then(() => {
             let userRef = db.collection('Users').doc(uid)
