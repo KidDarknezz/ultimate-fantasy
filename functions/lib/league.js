@@ -61,7 +61,7 @@ async function createLeague(event, object) {
             banner: event.eventBanner,
             logo: event.eventLogo,
             isActive: true,
-            teamNames: [],
+            teamNames: {},
         })
 }
 
@@ -251,7 +251,7 @@ async function addTeamNameToLeague(leagueId, teamName, uid) {
         .collection('Leagues')
         .doc(leagueId)
         .update({
-            teamNames: admin.firestore.FieldValue.arrayUnion(teamName),
+            teamNames: admin.firestore.FieldValue.arrayUnion({teamName: uid}),
         })
         .then(() => {
             let userRef = db.collection('Users').doc(uid)

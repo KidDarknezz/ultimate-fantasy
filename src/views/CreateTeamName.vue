@@ -102,9 +102,11 @@ export default {
         let leagueId = this.$route.params.leagueId
         api.returnteamnamesinleague({leagueId: leagueId}).then(
             async response => {
-                response.data.status.forEach(element => {
-                    this.teamNames.push(element)
-                })
+                if (!response) {
+                    response.data.status.forEach(element => {
+                        this.teamNames.push(element)
+                    })
+                }
             }
         )
         this.Loading = false
