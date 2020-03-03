@@ -58,7 +58,9 @@ export default {
             }
         },
         UserLogout: async ({commit, dispatch}) => {
-            commit('setUser', {})
+            commit('setUser', '')
+            commit('setUid', '')
+            commit('setToken', '')
             localStorage.removeItem('user-token')
             localStorage.removeItem('uid')
         },
