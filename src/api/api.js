@@ -49,3 +49,11 @@ export const returnleaguebyid = data =>
     Request.post('/returnleaguebyid', data, {
         'Content-Type': 'application/json',
     })
+export const returnteamsinleague = data =>
+    Request.post('/returnteamsinleague', data, {
+        'Content-Type': 'application/json',
+    })
+export const saverostertouid = data =>
+    Request.post('/saverostertouid', data, {
+        'Content-Type': 'application/json',
+    })

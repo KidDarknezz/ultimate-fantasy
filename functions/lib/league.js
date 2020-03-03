@@ -161,7 +161,7 @@ async function subscribeToLeague(uid, league) {
                         .doc(doc.id)
                         .set({
                             eventNickName: data.eventNickName,
-                            roaster: [],
+                            roster: [],
                             creadit: 150,
                             teamName: '',
                             score: 0,
@@ -214,10 +214,10 @@ async function checkSteps(uid, leagueId) {
                 if (data.teamName === '') {
                     return 'TeamNameNull'
                 }
-                if (data.roaster.length > 0) {
+                if (data.roster.length === 0) {
                     return 'RoasterNull'
                 }
-                if (data.roaster.length > 1 && data.teamName != '') {
+                if (data.roster.length > 1 && data.teamName != '') {
                     return 'EverythingOk'
                 }
             }
@@ -269,6 +269,51 @@ async function addTeamNameToLeague(leagueId, teamName, uid) {
             return err
         })
 }
+async function returnTeamsInLeague(leagueId) {
+    const db = admin.firestore()
+    return db
+        .collection('Leagues')
+        .doc(leagueId)
+        .get()
+        .then(doc => {
+            let eventNickName = doc.data().eventNickName
+            return db
+                .collection(eventNickName)
+                .get()
+                .then(snapshot => {
+                    let data = []
+                    snapshot.forEach(doc => {
+                        let obj = {
+                            name: doc.id,
+                            Jugadores: doc.data().Jugadores,
+                        }
+                        data.push(obj)
+                    })
+                    return data
+                })
+        })
+        .catch(err => {
+            console.log('Error updating documents', err)
+            return err
+        })
+}
+async function saveRosterToUid(uid, leagueId, roster) {
+    const db = admin.firestore()
+    let userRef = db.collection('Users').doc(uid)
+    return userRef
+        .collection('participatingLeagues')
+        .doc(leagueId)
+        .update({
+            roster: roster,
+        })
+        .then(() => {
+            return 'Ok'
+        })
+        .catch(err => {
+            console.log('Error getting documents', err)
+            return err
+        })
+}
 function formatObject(object) {
     let Data = {}
     let jsonImportedData = object['Sheet1']
@@ -308,5 +353,7 @@ module.exports = {
     returnSubscribeLeagues,
     returnTeamNamesInLeague,
     addTeamNameToLeague,
+    returnTeamsInLeague,
     checkSteps,
+    saveRosterToUid,
 }
