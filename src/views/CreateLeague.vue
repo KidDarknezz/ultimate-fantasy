@@ -17,19 +17,18 @@
                 <label>Nombre del Evento:</label>
                 <b-form-input v-model="event.eventName"></b-form-input>
             </b-col>
-            <b-col cols="12" style="margin-top: 20px;">
-                <label>Logo del Evento:</label>
+            <!-- <b-col cols="12" style="margin-top: 20px;">
+                 <label>Logo del Evento:</label>
                 <b-form-file
                     v-model="event.eventLogo"
                     :state="Boolean(event.eventLogo)"
                     accept=".png"
                     placeholder="Choose a file or drop it here..."
                     drop-placeholder="Drop file here..."
-                ></b-form-file>
+                ></b-form-file> 
 
-                <!-- <textarea class="form-control" rows="12" v-model="importedData"></textarea> -->
-            </b-col>
-            <b-col cols="12" style="margin-top: 20px;">
+            </b-col>-->
+            <!-- <b-col cols="12" style="margin-top: 20px;">
                 <label>Banner del Evento:</label>
                 <b-form-file
                     v-model="event.eventBanner"
@@ -38,9 +37,7 @@
                     placeholder="Choose a file or drop it here..."
                     drop-placeholder="Drop file here..."
                 ></b-form-file>
-
-                <!-- <textarea class="form-control" rows="12" v-model="importedData"></textarea> -->
-            </b-col>
+            </b-col>-->
             <b-col cols="12" style="margin-top: 20px;">
                 <label>Excel del Evento:</label>
 
@@ -146,7 +143,7 @@ export default {
         async ExcelToJSON(file) {
             if (this.event.eventNickName != null) {
                 this.LoadingPetition = true
-                await this.uploadToStorage()
+                // await this.uploadToStorage()
                 if (!this.leagues.includes(this.event.eventNickName)) {
                     xlsxParser
                         .onFileSelection(file)
@@ -155,8 +152,8 @@ export default {
                                 event: {
                                     eventNickName: this.event.eventNickName,
                                     eventName: this.event.eventName,
-                                    eventLogo: this.logoFullPath,
-                                    eventBanner: this.bannerFullPath,
+                                    // eventLogo: this.logoFullPath,
+                                    // eventBanner: this.bannerFullPath,
                                 },
                                 obj: data,
                             })
