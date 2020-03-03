@@ -56,7 +56,7 @@ export default new Router({
             name: 'createRoster',
             path: '/createroster/:leagueId',
             component: CreateRoster,
-            beforeEnter: ifAuthenticatedAndAdmin,
+            beforeEnter: ifAuthenticated,
         },
         {
             name: 'updateLeague',
@@ -72,7 +72,7 @@ export default new Router({
         },
         {
             name: 'myTeam',
-            path: '/my-team',
+            path: '/myteam/:leagueId',
             component: MyTeam,
             beforeEnter: ifAuthenticated,
         },
